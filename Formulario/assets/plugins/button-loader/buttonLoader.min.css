@@ -1,0 +1,1 @@
+.spinner{display:inline-block;opacity:0;width:0;-webkit-transition:opacity .25s,width .25s;-moz-transition:opacity .25s,width .25s;-o-transition:opacity .25s,width .25s;transition:opacity .25s,width .25s}.has-spinner.active{cursor:progress}.has-spinner.active .spinner{opacity:1;width:auto}.has-spinner.btn.active .spinner{min-width:20px}

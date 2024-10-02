@@ -1,0 +1,2611 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genesyslab.Platform.Routing.Protocols</name>
+    </assembly>
+    <members>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServerProtocol.OnOpened">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext">
+            <summary>
+             OperationContext, which imitates TEvent, is used in conjunction with methods that operate on interactions, and provides information about those interactions. Its contents can be changed when these methods are executed. Because of this, it can be present in both Requests and Events. For example, if a method executes a strategy, then it can update the user data of the associated call while the strategy is executing. OperationContext will reflect this update.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext.Create">
+            <summary>
+             Creates message "OperationContext" with no parameters set.
+            </summary>
+            <returns>OperationContext instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext.Create(Genesyslab.Platform.Routing.Protocols.RoutingServer.CallType,System.String,System.String,System.String,System.String,System.String,System.String,System.String,Genesyslab.Platform.Commons.Collections.KeyValueCollection,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "OperationContext" with all parameters set.
+            </summary>
+            <param name="callType"></param>
+            <param name="thisQueue"></param>
+            <param name="thisLocation"></param>
+            <param name="otherDN"></param>
+            <param name="aNI"></param>
+            <param name="dNIS"></param>
+            <param name="cED"></param>
+            <param name="mediaType"></param>
+            <param name="userData"></param>
+            <param name="extensions"></param>
+            <returns>OperationContext instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext.CallType">
+            <summary>
+             Property "CallType".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext.ThisQueue">
+            <summary>
+             Property "ThisQueue".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext.ThisLocation">
+            <summary>
+             Property "ThisLocation".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext.OtherDN">
+            <summary>
+             Property "OtherDN".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext.ANI">
+            <summary>
+             Property "ANI".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext.DNIS">
+            <summary>
+             Property "DNIS".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext.CED">
+            <summary>
+             Property "CED".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext.MediaType">
+            <summary>The media type of a target.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext.UserData">
+            <summary>
+             Property "UserData".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext.Extensions">
+            <summary>
+             Property "Extensions".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestRegisterClient">
+            <summary>
+             Indicates that the request was unknown to URS, or that some parameters were missing or invalid.
+            </summary>
+            <remarks>
+            <strong>Related Requests: All</strong>
+            </remarks>
+            <example>Here is a sample of the console output for a typical EventError:
+            <code>
+            'EventError' (1) attributes:
+                            R_cdn_status [int] = 0 [Released]
+                            R_cdn [str] = ""
+                            R_ErrorCode [int] = 4 [NotAvailable]
+                            R_tserver [str] = ""
+                            R_refID [int] = 1
+                            R_time [str] = ""
+                            R_path [str] = "&lt;Path>"
+            </code>
+            </example>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestRegisterClient.Create">
+            <summary>
+             Creates message "RequestRegisterClient" with no parameters set.
+            </summary>
+            <returns>RequestRegisterClient instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestRegisterClient.Create(System.String,Genesyslab.Platform.Routing.Protocols.RoutingServer.ClientType)">
+            <summary>
+             Creates message "RequestRegisterClient" with all parameters set.
+            </summary>
+            <param name="clientName"></param>
+            <param name="clientType"></param>
+            <returns>RequestRegisterClient instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestRegisterClient.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestRegisterClient.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestRegisterClient.ClientName">
+            <summary>
+             Property "ClientName".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestRegisterClient.ClientType">
+            <summary>
+             Property "ClientType".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestRegisterClient.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestRegisterClient.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestRegisterClient.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestUnregisterClient">
+            <summary>
+            This event contains information about URS's handling of the specified
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestLoadStrategy" />,
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestNotify" />, or
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestReleaseStrategy" />.
+            It can contain the loading status of any single routing point.
+            </summary>
+            <remarks>
+            <strong>Related Requests:</strong>
+            <list type="table">
+            <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestLoadStrategy" /></term>
+                <description>Allows you to load a compiled strategy or schedule in URS, provide a name for it, and optionally associate the strategy  with a routing point.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestNotify" /></term>
+                <description>Asks for the current loading status of all routing points that were loaded by means of the specified RequestLoadStrategy.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestReleaseStrategy" /></term>
+                <description>Disassociates a routing point from a strategy that was previously loaded with RequestLoadStrategy.</description>
+                </item>
+            </list>
+            </remarks>
+            <example>Here is a sample of the console output for a typical EventInfo:
+            <code>
+            'EventInfo' (2) attributes:
+                            R_Message [str] = "ATTENTION: Strategy has been loaded from ooo-file."
+                            R_cdn_status [int] = 1 [Loaded]
+                            R_cdn [str] = "RP_sip1"
+                            R_ErrorCode [int] = 0 [NoError]
+                            R_tserver [str] = "TServerSip1"
+                            R_refID [int] = 1
+                            R_time [str] = "06/30/2010 10:00:29"
+                            R_path [str] = "&lt;Path>"
+            </code>
+            </example>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestUnregisterClient.Create">
+            <summary>
+             Creates message "RequestUnregisterClient" with no parameters set.
+            </summary>
+            <returns>RequestUnregisterClient instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestUnregisterClient.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestUnregisterClient.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestUnregisterClient.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestUnregisterClient.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestUnregisterClient.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestLoadStrategy">
+            <summary>
+            This request allows you to load a compiled strategy or schedule in URS, provide 
+            a name for it, and optionally associate the strategy  with a routing point.
+            </summary>
+            <remarks>
+            <para>If you use this request to associate a strategy with a routing point, all interactions
+            arriving on the routing point will be processed with that strategy.</para>
+            <strong>Required parameters:</strong>
+            <list type="table">
+                <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term>RoutingPoint</term>
+                <description>The routing point to be associated with the strategy.</description>
+                </item>
+                <item>
+                <term>TServer</term>
+                <description>The T-Server to be used by the strategy.</description>
+                </item>
+                <item>
+                <term>Path</term>
+                <description>The path to the file containing the strategy.</description>
+                </item>
+            </list>
+            <strong>Related Events:</strong>
+            <list type="table">
+                <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo" /></term>
+                <description>Contains information about URS's handling of your request.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError" /></term>
+                <description>Indicates that the request was unknown to URS, or that some parameters were missing or invalid.</description>
+                </item>
+            </list>
+            </remarks>
+            <example>
+            <code>
+            RequestLoadStrategy requestLoadStrategy = 
+            	RequestLoadStrategy.Create();
+            requestLoadStrategy.TServer = "TheT-Server";
+            requestLoadStrategy.RoutingPoint = "TheRoutingPoint";
+            requestLoadStrategy.Path = "&lt;Path to the strategy&gt;";
+            
+            IMessage response = protocol.Request(requestLoadStrategy);
+            </code>
+            </example>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestLoadStrategy.Create">
+            <summary>
+             Creates message "RequestLoadStrategy" with no parameters set.
+            </summary>
+            <returns>RequestLoadStrategy instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestLoadStrategy.Create(System.String,System.String,System.String,System.String)">
+            <summary>
+             Creates message "RequestLoadStrategy" with all parameters set.
+            </summary>
+            <param name="tServer">The T-Server to be used by the strategy associated with this request.</param>
+            <param name="routingPoint"></param>
+            <param name="path"></param>
+            <param name="strategy">The routing strategy that is to be executed.</param>
+            <returns>RequestLoadStrategy instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestLoadStrategy.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestLoadStrategy.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestLoadStrategy.ReferenceId">
+            <summary>The reference ID that connects a response to a request.
+            If set to 0, it means that the ReferenceId should be assigned by ReferenceBuilder.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestLoadStrategy.TServer">
+            <summary>The T-Server to be used by the strategy associated with this request.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestLoadStrategy.RoutingPoint">
+            <summary>The routing point that is to be loaded or released.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestLoadStrategy.Path">
+            <summary>The path to the routing strategy that is to be loaded.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestLoadStrategy.Strategy">
+            <summary>The routing strategy that is to be executed.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestLoadStrategy.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestLoadStrategy.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestLoadStrategy.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestReleaseStrategy">
+            <summary>
+            This request disassociates a routing point from a strategy that was previously loaded
+            with RequestLoadStrategy; it can even completely unload the strategy from the 
+            router's memory.
+            </summary>
+            <remarks><strong>Required parameters:</strong>
+            <list type="table">
+                <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term>RoutingPoint</term>
+                <description>The routing point currently associated with the strategy that is to be released.</description>
+                </item>
+                <item>
+                <term>TServer</term>
+                <description>The T-Server being used by the strategy.</description>
+                </item>
+            </list>
+            <strong>Related Events:</strong>
+            <list type="table">
+                <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo" /></term>
+                <description>Contains information about URS's handling of your request.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError" /></term>
+                <description>Indicates that the request was unknown to URS, or that some parameters were missing or invalid.</description>
+                </item>
+            </list>
+            </remarks>
+            <example>
+            <code>
+            RequestReleaseStrategy requestReleaseStrategy = 
+            	RequestReleaseStrategy.Create();
+            requestReleaseStrategy.TServer = "TheT-Server";
+            requestReleaseStrategy.RoutingPoint = "TheRoutingPoint";
+            
+            IMessage response = protocol.Request(requestReleaseStrategy);
+            </code>
+            </example>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestReleaseStrategy.Create">
+            <summary>
+             Creates message "RequestReleaseStrategy" with no parameters set.
+            </summary>
+            <returns>RequestReleaseStrategy instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestReleaseStrategy.Create(System.String,System.String)">
+            <summary>
+             Creates message "RequestReleaseStrategy" with all parameters set.
+            </summary>
+            <param name="tServer">The T-Server to be used by the strategy associated with this request.</param>
+            <param name="routingPoint"></param>
+            <returns>RequestReleaseStrategy instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestReleaseStrategy.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestReleaseStrategy.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestReleaseStrategy.ReferenceId">
+            <summary>The reference ID that connects a response to a request.
+            If set to 0, it means that the ReferenceId should be assigned by ReferenceBuilder.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestReleaseStrategy.TServer">
+            <summary>The T-Server to be used by the strategy associated with this request.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestReleaseStrategy.RoutingPoint">
+            <summary>The routing point that is to be loaded or released.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestReleaseStrategy.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestReleaseStrategy.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestReleaseStrategy.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestNotify">
+            <summary>
+            This request asks for the current loading status of all routing points that 
+            were loaded by means of the specified RequestLoadStrategy.
+            </summary>
+            <remarks><strong>Required parameters: None</strong>
+            <para> </para>
+            <strong>Related Events:</strong>
+            <list type="table">
+                <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo" /></term>
+                <description>Contains information about URS's handling of your request.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError" /></term>
+                <description>Indicates that the request was unknown to URS, or that some parameters were missing or invalid.</description>
+                </item>
+            </list>
+            </remarks>
+            <example>
+            <code>
+            RequestNotify requestNotify = 
+            	RequestNotify.Create();
+            
+            protocol.send(requestNotify);
+            </code>
+            </example>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestNotify.Create">
+            <summary>
+             Creates message "RequestNotify" with no parameters set.
+            </summary>
+            <returns>RequestNotify instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestNotify.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestNotify.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestNotify.ReferenceId">
+            <summary>The reference ID that connects a response to a request.
+            If set to 0, it means that the ReferenceId should be assigned by ReferenceBuilder.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestNotify.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestNotify.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestNotify.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecute">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecute.Create">
+            <summary>
+             Creates message "RequestExecute" with no parameters set.
+            </summary>
+            <returns>RequestExecute instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecute.Create(Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "RequestExecute" with all parameters set.
+            </summary>
+            <param name="envelope"></param>
+            <returns>RequestExecute instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecute.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecute.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecute.ReferenceId">
+            <summary>The reference ID that connects a response to a request.
+            If set to 0, it means that the ReferenceId should be assigned by ReferenceBuilder.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecute.Envelope">
+            <summary>
+             Property "Envelope".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecute.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecute.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecute.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestDebug">
+            <summary>
+            This request can be used for debugging SCXML strategies. It is deprecated, 
+            because the SCXML engine was moved into a separate component (Orchestration 
+            Server) with its own debugging interface.
+            </summary>
+            <remarks><strong>Required parameters:</strong>
+            <list type="table">
+                <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term>DebugMessage</term>
+                <description>A debugging message of your choice.</description>
+                </item>
+            </list>
+            <strong>Related Events:</strong>
+            <list type="table">
+                <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventDebug" /></term>
+                <description>Contains the current debugging content of the specified session.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError" /></term>
+                <description>Indicates that the request was unknown to URS, or that some parameters were missing or invalid.</description>
+                </item>
+            </list>
+            </remarks>
+            <example>
+            <code>
+            RequestDebug requestDebug = RequestDebug.Create();
+            requestDebug.DebugMessage = "Debugging Message";
+            
+            IMessage response = protocol.Request(requestDebug);
+            </code>
+            </example>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestDebug.Create">
+            <summary>
+             Creates message "RequestDebug" with no parameters set.
+            </summary>
+            <returns>RequestDebug instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestDebug.Create(System.String)">
+            <summary>
+             Creates message "RequestDebug" with all parameters set.
+            </summary>
+            <param name="debugMessage">A debugging message of your choice.</param>
+            <returns>RequestDebug instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestDebug.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestDebug.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestDebug.ReferenceId">
+            <summary>The reference ID that connects a response to a request.
+            If set to 0, it means that the ReferenceId should be assigned by ReferenceBuilder.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestDebug.DebugMessage">
+            <summary>A debugging message of your choice.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestDebug.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestDebug.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestDebug.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy">
+            <summary>
+            Requests that URS execute the specified routing strategy.
+            </summary>
+            <remarks>
+            <para>The response to this request includes the extensions of the associated 
+            interaction at the moment the strategy completed execution. Additional 
+            output information can be passed through the execution context. Depending 
+            on the strategy, this request can take a significant amount of time to complete.</para>
+            <strong>Required parameters:</strong>
+            <list type="table">
+                <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term>Strategy</term>
+                <description>The routing strategy that is to be executed.</description>
+                </item>
+                <item>
+                <term>Tenant</term>
+                <description>The contact center in whose environment the routing strategy is to be executed.</description>
+                </item>
+            </list>
+            <strong>Related Events:</strong>
+            <list type="table">
+                <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionAck" /></term>
+                <description>Indicates that the request executed successfully; provides information about the results of its execution.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionError" /></term>
+                <description>Indicates that the request was not executed successfully.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionInProgress" /></term>
+                <description>Indicates that URS has accepted the request and started to execute it.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError" /></term>
+                <description>Indicates that the request was unknown to URS, or that some parameters were missing or invalid.</description>
+                </item>
+            </list>
+            </remarks>
+            <example>
+            <code>
+            RequestExecuteStrategy requestExecuteStrategy =
+            	RequestExecuteStrategy.Create();
+            requestExecuteStrategy.Strategy = "TheRoutingStrategyName";
+            requestExecuteStrategy.Tenant = "TheTenant";
+            
+            IMessage response = protocol.Request(requestExecuteStrategy);
+            </code>
+            </example>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy.Create">
+            <summary>
+             Creates message "RequestExecuteStrategy" with no parameters set.
+            </summary>
+            <returns>RequestExecuteStrategy instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy.Create(System.String,System.String,Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext)">
+            <summary>
+             Creates message "RequestExecuteStrategy" with all parameters set.
+            </summary>
+            <param name="strategy">The routing strategy that is to be executed.</param>
+            <param name="tenant">The contact center in whose environment a request is to be executed.</param>
+            <param name="context">Provides information about the associated interaction, using a format similar to TEvent.</param>
+            <returns>RequestExecuteStrategy instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy.ReferenceId">
+            <summary>The reference ID that connects a response to a request.
+            If set to 0, it means that the ReferenceId should be assigned by ReferenceBuilder.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy.Strategy">
+            <summary>The routing strategy that is to be executed.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy.Tenant">
+            <summary>The contact center in whose environment a request is to be executed.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy.Context">
+            <summary>Provides information about the associated interaction, using a format similar to TEvent.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget">
+            <summary>
+            This request asks URS to select the most suitable target from a set of 
+            eligible targets, such as agent groups.
+            </summary>
+            <remarks>
+            <para>Depending on the specified wait time, this request can take a 
+            significant amount of time to complete.</para>
+            <strong>Required parameters:</strong>
+            <list type="table">
+                <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term>Tenant</term>
+                <description>The contact center in whose environment the target is to be found.</description>
+                </item>
+                <item>
+                <term>Targets</term>
+                <description>A list of eligible routing targets.</description>
+                </item>
+                <item>
+                <term>Statistic</term>
+                <description>The statistic to be applied.</description>
+                </item>
+                <item>
+                <term>StatisticUsage</term>
+                <description>Indicates whether to select the minimum, maximum, or any value.</description>
+                </item>
+                <item>
+                <term>VirtualQueue</term>
+                <description>The queue that interactions will be placed into.</description>
+                </item>
+            </list>
+            <strong>Related Events:</strong>
+            <list type="table">
+                <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionAck" /></term>
+                <description>Indicates that the request executed successfully; provides information about the results of its execution.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionError" /></term>
+                <description>Indicates that the request was not executed successfully.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionInProgress" /></term>
+                <description>Indicates that URS has accepted the request and started to execute it.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError" /></term>
+                <description>Indicates that the request was unknown to URS, or that some parameters were missing or invalid.</description>
+                </item>
+            </list>
+            </remarks>
+            <example>
+            <code>
+            RequestFindTarget requestFindTarget = 
+            	RequestFindTarget.Create();
+            requestFindTarget.Tenant = "TheTenant";
+            requestFindTarget.Targets = "TheTargetList";
+            requestFindTarget.Timeout = 5;
+            requestFindTarget.Statistic = "TheStatistic";
+            requestFindTarget.StatisticUsage = StatisticUsage.Max;
+            requestFindTarget.VirtualQueue = "TheQueue";
+            requestFindTarget.Priority = 1;
+            requestFindTarget.MediaType = "TheMediaType";
+            
+            IMessage response = protocol.Request(requestFindTarget);
+            </code>
+            </example>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget.Create">
+            <summary>
+             Creates message "RequestFindTarget" with no parameters set.
+            </summary>
+            <returns>RequestFindTarget instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget.Create(System.String,System.String,System.Int32,System.String,Genesyslab.Platform.Routing.Protocols.RoutingServer.StatisticUsage,System.String,System.Int32,System.String)">
+            <summary>
+             Creates message "RequestFindTarget" with all parameters set.
+            </summary>
+            <param name="tenant">The contact center in whose environment a request is to be executed.</param>
+            <param name="targets">A list of eligible routing targets.</param>
+            <param name="timeout">The length of time to wait before cancelling a request.</param>
+            <param name="statistic">The type of statistic to be associated with a request.</param>
+            <param name="statisticUsage">Indicates whether to select the minimum, the maximum, or any value for a given statistic.</param>
+            <param name="virtualQueue">The queue that interactions will be placed into.</param>
+            <param name="priority"></param>
+            <param name="mediaType"></param>
+            <returns>RequestFindTarget instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget.ReferenceId">
+            <summary>The reference ID that connects a response to a request.
+            If set to 0, it means that the ReferenceId should be assigned by ReferenceBuilder.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget.Tenant">
+            <summary>The contact center in whose environment a request is to be executed.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget.Targets">
+            <summary>A list of eligible routing targets.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget.Timeout">
+            <summary>The length of time to wait before cancelling a request.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget.Statistic">
+            <summary>The type of statistic to be associated with a request.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget.StatisticUsage">
+            <summary>Indicates whether to select the minimum, the maximum, or any value for a given statistic.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget.VirtualQueue">
+            <summary>The queue that interactions will be placed into.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget.Priority">
+            <summary>Sets the default priority for the interactions processed by the selected target.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget.MediaType">
+            <summary>The media type of a target.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic">
+            <summary>
+            This request asks URS to provide the statistics values for the specified list of targets.
+            You can use it to determine why the router chose a particular target or so 
+            that you can determine the best target in your own application.
+            </summary>
+            <remarks><strong>Required parameters:</strong>
+            <list type="table">
+                <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term>Tenant</term>
+                <description>The contact center in whose environment the statistic is to be calculated.</description>
+                </item>
+                <item>
+                <term>Targets</term>
+                <description>A list of eligible routing targets.</description>
+                </item>
+                <item>
+                <term>Statistic</term>
+                <description>The statistic to be calculated.</description>
+                </item>
+            </list>
+            <strong>Related Events:</strong>
+            <list type="table">
+                <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionAck" /></term>
+                <description>Indicates that the request executed successfully; provides information about the results of its execution.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionError" /></term>
+                <description>Indicates that the request was not executed successfully.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionInProgress" /></term>
+                <description>Indicates that URS has accepted the request and started to execute it.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError" /></term>
+                <description>Indicates that the request was unknown to URS, or that some parameters were missing or invalid.</description>
+                </item>
+            </list>
+            </remarks>
+            <example>
+            <code>
+            RequestGetStatistic requestGetStatistic = 
+            	RequestGetStatistic.Create();
+            requestGetStatistic.Tenant = "TheTenant";
+            requestGetStatistic.Targets = "TheTargetList";
+            requestGetStatistic.Statistic = "StatAgentsBusy";
+            
+            IMessage response = protocol.Request(requestGetStatistic);
+            </code>
+            </example>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic.Create">
+            <summary>
+             Creates message "RequestGetStatistic" with no parameters set.
+            </summary>
+            <returns>RequestGetStatistic instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic.Create(System.String,System.String,System.String)">
+            <summary>
+             Creates message "RequestGetStatistic" with all parameters set.
+            </summary>
+            <param name="tenant">The contact center in whose environment a request is to be executed.</param>
+            <param name="targets">A list of eligible routing targets.</param>
+            <param name="statistic">The type of statistic to be associated with a request.</param>
+            <returns>RequestGetStatistic instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic.ReferenceId">
+            <summary>The reference ID that connects a response to a request.
+            If set to 0, it means that the ReferenceId should be assigned by ReferenceBuilder.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic.Tenant">
+            <summary>The contact center in whose environment a request is to be executed.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic.Targets">
+            <summary>A list of eligible routing targets.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic.Statistic">
+            <summary>The type of statistic to be associated with a request.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestCancelExecution">
+            <summary>
+            This request allows you to cancel a currently running
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy" />,
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget" />, or
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic" />.
+            </summary>
+            <remarks>
+            <para>It can be used, for example, if the client application decides that it does not need the requested resource.</para>
+            <strong>Required parameters:</strong>
+            <list type="table">
+                <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term>ExecutionId</term>
+                <description>The referenceId of the request you are cancelling.</description>
+                </item>
+            </list>
+            <strong>Related Events:</strong>
+            <list type="table">
+                <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionAck" /></term>
+                <description>Indicates that the request executed successfully; provides information about the results of its execution.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionError" /></term>
+                <description>Indicates that the request was not executed successfully.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionInProgress" /></term>
+                <description>Indicates that URS has accepted the request and started to execute it.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError" /></term>
+                <description>Indicates that the request was unknown to URS, or that some parameters were missing or invalid.</description>
+                </item>
+            </list>
+            </remarks>
+            <example>
+            <code>
+            RequestCancelExecution requestCancelExecution = 
+            	RequestCancelExecution.Create(referenceIdFromRequestToBeCancelled);
+            requestCancelExecution.ExecutionId = referenceIdFromRequestToBeCancelled;
+            
+            IMessage response = protocol.Request(requestCancelExecution);
+            </code>
+            </example>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestCancelExecution.Create">
+            <summary>
+             Creates message "RequestCancelExecution" with no parameters set.
+            </summary>
+            <returns>RequestCancelExecution instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestCancelExecution.Create(System.Int32)">
+            <summary>
+             Creates message "RequestCancelExecution" with all parameters set.
+            </summary>
+            <param name="executionId">Request reference to execute control command on.</param>
+            <returns>RequestCancelExecution instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestCancelExecution.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestCancelExecution.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestCancelExecution.ReferenceId">
+            <summary>The reference ID that connects a response to a request.
+            If set to 0, it means that the ReferenceId should be assigned by ReferenceBuilder.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestCancelExecution.ExecutionId">
+            <summary>The ReferenceId of the request that this request will be executed against.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestCancelExecution.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestCancelExecution.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestCancelExecution.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestQueryExecution">
+            <summary>
+            This request asks URS whether it is still working on or has already answered
+            the specified
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy" />,
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget" />, or
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic" />.
+            <para>The 8.0 release of URS does not support this feature.</para>
+            </summary>
+            <remarks><strong>Required parameters:</strong>
+            <list type="table">
+                <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term>ExecutionId</term>
+                <description>The referenceId of the request you are querying on.</description>
+                </item>
+            </list>
+            <strong>Related Events: Not Applicable</strong>
+            </remarks>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestQueryExecution.Create">
+            <summary>
+             Creates message "RequestQueryExecution" with no parameters set.
+            </summary>
+            <returns>RequestQueryExecution instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestQueryExecution.Create(System.Int32)">
+            <summary>
+             Creates message "RequestQueryExecution" with all parameters set.
+            </summary>
+            <param name="executionId">Request reference to execute control command on.</param>
+            <returns>RequestQueryExecution instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestQueryExecution.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestQueryExecution.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestQueryExecution.ReferenceId">
+            <summary>The reference ID that connects a response to a request.
+            If set to 0, it means that the ReferenceId should be assigned by ReferenceBuilder.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestQueryExecution.ExecutionId">
+            <summary>The ReferenceId of the request that this request will be executed against.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestQueryExecution.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestQueryExecution.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestQueryExecution.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError">
+            <summary>
+             Indicates that the request was unknown to URS, or that some parameters were missing or invalid.
+            </summary>
+            <remarks>
+            <strong>Related Requests: All</strong>
+            </remarks>
+            <example>Here is a sample of the console output for a typical EventError:
+            <code>
+            'EventError' (1) attributes:
+                            R_cdn_status [int] = 0 [Released]
+                            R_cdn [str] = ""
+                            R_ErrorCode [int] = 4 [NotAvailable]
+                            R_tserver [str] = ""
+                            R_refID [int] = 1
+                            R_time [str] = ""
+                            R_path [str] = "&lt;Path>"
+            </code>
+            </example>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.Create">
+            <summary>
+             Creates message "EventError" with no parameters set.
+            </summary>
+            <returns>EventError instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.Create(System.Int32,System.String,System.String,System.String,System.String,Genesyslab.Platform.Routing.Protocols.RoutingServer.RoutingPointStatus,Genesyslab.Platform.Routing.Protocols.RoutingServer.ErrorCode,System.String,System.String,Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "EventError" with all parameters set.
+            </summary>
+            <param name="clientId"></param>
+            <param name="tServer">The T-Server to be used by the strategy associated with this request.</param>
+            <param name="routingPoint"></param>
+            <param name="path"></param>
+            <param name="timestamp"></param>
+            <param name="routingPointStatus"></param>
+            <param name="errorCode"></param>
+            <param name="errorMessage"></param>
+            <param name="message"></param>
+            <param name="context">Provides information about the associated interaction, using a format similar to TEvent.</param>
+            <param name="result"></param>
+            <returns>EventError instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.ReferenceId">
+            <summary>The reference ID that connects a response to a request.
+            If set to 0, it means that the ReferenceId should be assigned by ReferenceBuilder.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.ClientId">
+            <summary>
+             Property "ClientId".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.TServer">
+            <summary>The T-Server to be used by the strategy associated with this request.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.RoutingPoint">
+            <summary>The routing point that is to be loaded or released.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.Path">
+            <summary>The path to the routing strategy that is to be loaded.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.Timestamp">
+            <summary>
+             Property "Timestamp".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.RoutingPointStatus">
+            <summary>
+             Property "RoutingPointStatus".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.ErrorCode">
+            <summary>
+             Property "ErrorCode".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.ErrorMessage">
+            <summary>
+             Property "ErrorMessage".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.Message">
+            <summary>
+             Property "Message".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.Context">
+            <summary>Provides information about the associated interaction, using a format similar to TEvent.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.Result">
+            <summary>
+             Property "Result".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventError.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo">
+            <summary>
+            This event contains information about URS's handling of the specified
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestLoadStrategy" />,
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestNotify" />, or
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestReleaseStrategy" />.
+            It can contain the loading status of any single routing point.
+            </summary>
+            <remarks>
+            <strong>Related Requests:</strong>
+            <list type="table">
+            <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestLoadStrategy" /></term>
+                <description>Allows you to load a compiled strategy or schedule in URS, provide a name for it, and optionally associate the strategy  with a routing point.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestNotify" /></term>
+                <description>Asks for the current loading status of all routing points that were loaded by means of the specified RequestLoadStrategy.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestReleaseStrategy" /></term>
+                <description>Disassociates a routing point from a strategy that was previously loaded with RequestLoadStrategy.</description>
+                </item>
+            </list>
+            </remarks>
+            <example>Here is a sample of the console output for a typical EventInfo:
+            <code>
+            'EventInfo' (2) attributes:
+                            R_Message [str] = "ATTENTION: Strategy has been loaded from ooo-file."
+                            R_cdn_status [int] = 1 [Loaded]
+                            R_cdn [str] = "RP_sip1"
+                            R_ErrorCode [int] = 0 [NoError]
+                            R_tserver [str] = "TServerSip1"
+                            R_refID [int] = 1
+                            R_time [str] = "06/30/2010 10:00:29"
+                            R_path [str] = "&lt;Path>"
+            </code>
+            </example>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.Create">
+            <summary>
+             Creates message "EventInfo" with no parameters set.
+            </summary>
+            <returns>EventInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.Create(System.Int32,System.String,System.String,System.String,System.String,System.String,Genesyslab.Platform.Routing.Protocols.RoutingServer.RoutingPointStatus,Genesyslab.Platform.Routing.Protocols.RoutingServer.ErrorCode,System.String,Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "EventInfo" with all parameters set.
+            </summary>
+            <param name="clientId"></param>
+            <param name="tServer">The T-Server to be used by the strategy associated with this request.</param>
+            <param name="routingPoint"></param>
+            <param name="path"></param>
+            <param name="timestamp"></param>
+            <param name="message"></param>
+            <param name="routingPointStatus"></param>
+            <param name="errorCode"></param>
+            <param name="errorMessage"></param>
+            <param name="context">Provides information about the associated interaction, using a format similar to TEvent.</param>
+            <param name="result"></param>
+            <returns>EventInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.ReferenceId">
+            <summary>The reference ID that connects a response to a request.
+            If set to 0, it means that the ReferenceId should be assigned by ReferenceBuilder.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.ClientId">
+            <summary>
+             Property "ClientId".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.TServer">
+            <summary>The T-Server to be used by the strategy associated with this request.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.RoutingPoint">
+            <summary>The routing point that is to be loaded or released.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.Path">
+            <summary>The path to the routing strategy that is to be loaded.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.Timestamp">
+            <summary>
+             Property "Timestamp".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.Message">
+            <summary>
+             Property "Message".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.RoutingPointStatus">
+            <summary>
+             Property "RoutingPointStatus".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.ErrorCode">
+            <summary>
+             Property "ErrorCode".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.ErrorMessage">
+            <summary>
+             Property "ErrorMessage".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.Context">
+            <summary>Provides information about the associated interaction, using a format similar to TEvent.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.Result">
+            <summary>
+             Property "Result".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventInfo.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventOpenOK">
+            <summary>
+             Positive response to RequestRegisterClient (internal initial registration request).
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventOpenOK.Create">
+            <summary>
+             Creates message "EventOpenOK" with no parameters set.
+            </summary>
+            <returns>EventOpenOK instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventOpenOK.Create(System.Int32,Genesyslab.Platform.Routing.Protocols.RoutingServer.ErrorCode)">
+            <summary>
+             Creates message "EventOpenOK" with all parameters set.
+            </summary>
+            <param name="clientId"></param>
+            <param name="errorCode"></param>
+            <returns>EventOpenOK instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventOpenOK.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventOpenOK.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventOpenOK.ReferenceId">
+            <summary>The reference ID that connects a response to a request.
+            If set to 0, it means that the ReferenceId should be assigned by ReferenceBuilder.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventOpenOK.ClientId">
+            <summary>
+             Property "ClientId".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventOpenOK.ErrorCode">
+            <summary>
+             Property "ErrorCode".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventOpenOK.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventOpenOK.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventOpenOK.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionInProgress">
+            <summary>
+            Indicates that URS has accepted the specified 
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy" />,
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget" />, or
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic" />
+            and started to execute it.
+            </summary>
+            <remarks>
+            <strong>Related Requests:</strong>
+            <list type="table">
+            <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy" /></term>
+                <description>Asks URS to execute the specified routing strategy.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget" /></term>
+                <description>Asks URS to select the most suitable target from a set of eligible targets, such as agent groups.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic" /></term>
+                <description>Asks URS to provide the statistics values for the specified list of targets.</description>
+                </item>
+            </list>
+            </remarks>
+            <example>Here is a sample of the console output for a typical EventExecutionInProgress:
+            <code>
+            'EventExecutionInProgress' ('199')
+            message attributes:
+            R_refID [int]   = 2
+            </code>
+            </example>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionInProgress.Create">
+            <summary>
+             Creates message "EventExecutionInProgress" with no parameters set.
+            </summary>
+            <returns>EventExecutionInProgress instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionInProgress.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionInProgress.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionInProgress.ReferenceId">
+            <summary>The reference ID that connects a response to a request.
+            If set to 0, it means that the ReferenceId should be assigned by ReferenceBuilder.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionInProgress.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionInProgress.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionInProgress.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionAck">
+            <summary>
+            Indicates that the specified
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy" />,
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget" />, or
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic" />
+            executed successfully; provides information about the results of its execution.
+            </summary>
+            <remarks>
+            <strong>Related Requests:</strong>
+            <list type="table">
+            <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy" /></term>
+                <description>Asks URS to execute the specified routing strategy.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget" /></term>
+                <description>Asks URS to select the most suitable target from a set of eligible targets, such as agent groups.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic" /></term>
+                <description>Asks URS to provide the statistics values for the specified list of targets.</description>
+                </item>
+            </list>
+            </remarks>
+            <example>Here is a sample of the console output for a typical EventExecutionAck:
+            <code>
+            'EventExecutionAck' ('200')
+            message attributes:
+            R_result [bstr] = KVList: 
+                                            'DN' [str] = "701"
+                                            'CUSTOMER_ID' [str] = "TenantForTest"
+                                            'TARGET' [str] = "701_sip@StatServer1.A"
+                                            'SWITCH' [str] = "SipSwitch"
+                                            'NVQ' [int] = 1
+                                            'PLACE' [str] = "701"
+                                            'AGENT' [str] = "701_sip"
+                                            'ACCESS' [str] = "701"
+                                            'VQ' [str] = "1234"
+            Context         = ComplexClass(OperationContext):
+                            UserData [bstr] = KVList: 
+                                                            'ServiceObjective' [str] = ""
+                                                            'ServiceType' [str] = "default"
+                                                            'CBR-Interaction_cost' [str] = ""
+                                                            'RTargetTypeSelected' [str] = "0"
+                                                            'CBR-IT-path_DBIDs' [str] = ""
+                                                            'RVQDBID' [str] = ""
+                                                            'RTargetPlaceSelected' [str] = "701"
+                                                            'RTargetAgentSelected' [str] = "701_sip"
+                                                            'CBR-actual_volume' [str] = ""
+                                                            'RStrategyName' [str] = "##GetTarget"
+                                                            'RRequestedSkillCombination' [str] = ""
+                                                            'RTargetRuleSelected' [str] = ""
+                                                            'RStrategyDBID' [str] = ""
+                                                            'RRequestedSkills' [bstr] = KVList: 
+            
+                                                            'CustomerSegment' [str] = "default"
+                                                            'RTargetObjSelDBID' [str] = "984"
+                                                            'RTargetObjectSelected' [str] = "701_sip"
+                                                            'RTenant' [str] = "TenantForTest"
+                                                            'RVQID' [str] = ""
+                                                            'CBR-contract_DBIDs' [str] = ""
+            R_refID [int]   = 0
+            </code>
+            </example>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionAck.Create">
+            <summary>
+             Creates message "EventExecutionAck" with no parameters set.
+            </summary>
+            <returns>EventExecutionAck instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionAck.Create(Genesyslab.Platform.Commons.Collections.KeyValueCollection,Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext,System.Int32)">
+            <summary>
+             Creates message "EventExecutionAck" with all parameters set.
+            </summary>
+            <param name="result"></param>
+            <param name="context">Provides information about the associated interaction, using a format similar to TEvent.</param>
+            <param name="executionId">Request reference to execute control command on.</param>
+            <returns>EventExecutionAck instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionAck.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionAck.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionAck.ReferenceId">
+            <summary>The reference ID that connects a response to a request.
+            If set to 0, it means that the ReferenceId should be assigned by ReferenceBuilder.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionAck.Result">
+            <summary>
+             Property "Result".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionAck.Context">
+            <summary>Provides information about the associated interaction, using a format similar to TEvent.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionAck.ExecutionId">
+            <summary>The ReferenceId of the request that this request will be executed against.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionAck.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionAck.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionAck.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionError">
+            <summary>
+            Indicates that the specified
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy" />,
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget" />, or
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic" />
+            was not executed successfully.
+            </summary>
+            <remarks>
+            <strong>Related Requests:</strong>
+            <list type="table">
+            <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestExecuteStrategy" /></term>
+                <description>Asks URS to execute the specified routing strategy.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestFindTarget" /></term>
+                <description>Asks URS to select the most suitable target from a set of eligible targets, such as agent groups.</description>
+                </item>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestGetStatistic" /></term>
+                <description>Asks URS to provide the statistics values for the specified list of targets.</description>
+                </item>
+            </list>
+            </remarks>
+            <example>Here is a sample of the console output for a typical EventExecutionError:
+            <code>
+            'EventExecutionError' ('201')
+            message attributes:
+            R_result [bstr] = KVList: 
+                                            'Reason' [str] = "Rejected"
+            Context         = ComplexClass(OperationContext):
+                            UserData [bstr] = KVList: 
+                                                            'PegRejected' [int] = 1
+            R_refID [int]   = 2
+            </code>
+            </example>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionError.Create">
+            <summary>
+             Creates message "EventExecutionError" with no parameters set.
+            </summary>
+            <returns>EventExecutionError instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionError.Create(Genesyslab.Platform.Commons.Collections.KeyValueCollection,Genesyslab.Platform.Routing.Protocols.RoutingServer.OperationContext,System.Int32)">
+            <summary>
+             Creates message "EventExecutionError" with all parameters set.
+            </summary>
+            <param name="result"></param>
+            <param name="context">Provides information about the associated interaction, using a format similar to TEvent.</param>
+            <param name="executionId">Request reference to execute control command on.</param>
+            <returns>EventExecutionError instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionError.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionError.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionError.ReferenceId">
+            <summary>The reference ID that connects a response to a request.
+            If set to 0, it means that the ReferenceId should be assigned by ReferenceBuilder.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionError.Result">
+            <summary>
+             Property "Result".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionError.Context">
+            <summary>Provides information about the associated interaction, using a format similar to TEvent.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionError.ExecutionId">
+            <summary>The ReferenceId of the request that this request will be executed against.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionError.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionError.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventExecutionError.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventDebug">
+            <summary>
+            This event, which provides an asynchronous response to the deprecated
+            <see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestDebug" />
+            message, contains the current debugging content of the specified session.
+            </summary>
+            <remarks>
+            <strong>Related Requests:</strong>
+            <list type="table">
+            <listheader>
+                <term>Name</term>
+                <description>Description</description>
+                </listheader>
+                <item>
+                <term><see cref="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.Requests.RequestDebug" /></term>
+                <description>This deprecated request can be used for debugging SCXML strategies.</description>
+                </item>
+            </list>
+            </remarks>
+            <example>Here is a sample of the console output for a typical EventDebug:
+            <code>
+            'EventDebug' (1001) attributes:
+                  R_command [str] = "{"name":"error","id":1,"data":{"error":"fail to create session instance"}}"
+            </code>
+            </example>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventDebug.Create">
+            <summary>
+             Creates message "EventDebug" with no parameters set.
+            </summary>
+            <returns>EventDebug instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventDebug.Create(System.String)">
+            <summary>
+             Creates message "EventDebug" with all parameters set.
+            </summary>
+            <param name="debugMessage">A debugging message of your choice.</param>
+            <returns>EventDebug instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventDebug.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventDebug.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventDebug.ReferenceId">
+            <summary>The reference ID that connects a response to a request.
+            If set to 0, it means that the ReferenceId should be assigned by ReferenceBuilder.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventDebug.DebugMessage">
+            <summary>A debugging message of your choice.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventDebug.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventDebug.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.RoutingServer.Events.EventDebug.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.ClientType">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.ClientType.Generic">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.ClientType.Ide">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.ErrorCode">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.ErrorCode.NoError">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.ErrorCode.SyntaxError">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.ErrorCode.NotOwner">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.ErrorCode.NotUser">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.ErrorCode.NotAvailable">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.ErrorCode.IOError">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.ErrorCode.MaxClients">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.ErrorCode.Rejected">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.ErrorCode.DefaultRouting">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.ErrorCode.NoCall">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.CallType">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.CallType.Unknown">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.CallType.Internal">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.CallType.Inbound">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.CallType.Outbound">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.CallType.Consult">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.RoutingPointStatus">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.RoutingPointStatus.Released">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.RoutingPointStatus.Loaded">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.StatisticUsage">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.StatisticUsage.Any">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.StatisticUsage.Min">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.RoutingServer.StatisticUsage.Max">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.RoutingServerProtocolFactory">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.RoutingServer.RoutingServerInternalProtocolFactory">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.TwoDirMap">
+            <summary>
+            Summary description for TwoDirMap.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.CustomServer.CustomServerInternalProtocolFactory">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.CustomServer.CustomServerProtocolFactory">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestRegisterClient">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestRegisterClient.Create">
+            <summary>
+             Creates message "RequestRegisterClient" with no parameters set.
+            </summary>
+            <returns>RequestRegisterClient instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestRegisterClient.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestRegisterClient.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestRegisterClient.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestRegisterClient.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestRegisterClient.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestUnregisterClient">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestUnregisterClient.Create">
+            <summary>
+             Creates message "RequestUnregisterClient" with no parameters set.
+            </summary>
+            <returns>RequestUnregisterClient instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestUnregisterClient.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestUnregisterClient.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestUnregisterClient.ReferenceId">
+            <summary>
+             Property "ReferenceId".
+             Attribute description: Reference id to connect response to request. If set to 0, it means that ReferenceId should be assighed by ReferenceBuilder.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestUnregisterClient.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestUnregisterClient.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestUnregisterClient.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestExecuteProcedure">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestExecuteProcedure.Create">
+            <summary>
+             Creates message "RequestExecuteProcedure" with no parameters set.
+            </summary>
+            <returns>RequestExecuteProcedure instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestExecuteProcedure.Create(System.String)">
+            <summary>
+             Creates message "RequestExecuteProcedure" with all parameters set.
+            </summary>
+            <param name="message"></param>
+            <returns>RequestExecuteProcedure instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestExecuteProcedure.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestExecuteProcedure.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestExecuteProcedure.ReferenceId">
+            <summary>
+             Property "ReferenceId".
+             Attribute description: Reference id to connect response to request. If set to 0, it means that ReferenceId should be assighed by ReferenceBuilder.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestExecuteProcedure.Message">
+            <summary>
+             Property "Message".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestExecuteProcedure.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestExecuteProcedure.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Requests.RequestExecuteProcedure.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventError">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventError.Create">
+            <summary>
+             Creates message "EventError" with no parameters set.
+            </summary>
+            <returns>EventError instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventError.Create(System.Int32,Genesyslab.Platform.Routing.Protocols.CustomServer.ErrorCode)">
+            <summary>
+             Creates message "EventError" with all parameters set.
+            </summary>
+            <param name="clientNumber"></param>
+            <param name="errorCode"></param>
+            <returns>EventError instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventError.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventError.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventError.ReferenceId">
+            <summary>
+             Property "ReferenceId".
+             Attribute description: Reference id to connect response to request. If set to 0, it means that ReferenceId should be assighed by ReferenceBuilder.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventError.ClientNumber">
+            <summary>
+             Property "ClientNumber".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventError.ErrorCode">
+            <summary>
+             Property "ErrorCode".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventError.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventError.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventError.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventInfo">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventInfo.Create">
+            <summary>
+             Creates message "EventInfo" with no parameters set.
+            </summary>
+            <returns>EventInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventInfo.Create(System.Int32,System.String,Genesyslab.Platform.Routing.Protocols.CustomServer.ErrorCode)">
+            <summary>
+             Creates message "EventInfo" with all parameters set.
+            </summary>
+            <param name="clientNumber"></param>
+            <param name="message"></param>
+            <param name="errorCode"></param>
+            <returns>EventInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventInfo.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventInfo.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventInfo.ReferenceId">
+            <summary>
+             Property "ReferenceId".
+             Attribute description: Reference id to connect response to request. If set to 0, it means that ReferenceId should be assighed by ReferenceBuilder.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventInfo.ClientNumber">
+            <summary>
+             Property "ClientNumber".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventInfo.Message">
+            <summary>
+             Property "Message".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventInfo.ErrorCode">
+            <summary>
+             Property "ErrorCode".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventInfo.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventInfo.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventInfo.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventDeleted">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventDeleted.Create">
+            <summary>
+             Creates message "EventDeleted" with no parameters set.
+            </summary>
+            <returns>EventDeleted instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventDeleted.Create(Genesyslab.Platform.Routing.Protocols.CustomServer.ErrorCode)">
+            <summary>
+             Creates message "EventDeleted" with all parameters set.
+            </summary>
+            <param name="errorCode"></param>
+            <returns>EventDeleted instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventDeleted.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventDeleted.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventDeleted.ReferenceId">
+            <summary>
+             Property "ReferenceId".
+             Attribute description: Reference id to connect response to request. If set to 0, it means that ReferenceId should be assighed by ReferenceBuilder.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventDeleted.ErrorCode">
+            <summary>
+             Property "ErrorCode".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventDeleted.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventDeleted.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventDeleted.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventOpenOk">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventOpenOk.Create">
+            <summary>
+             Creates message "EventOpenOk" with no parameters set.
+            </summary>
+            <returns>EventOpenOk instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventOpenOk.Create(System.Int32,Genesyslab.Platform.Routing.Protocols.CustomServer.ErrorCode)">
+            <summary>
+             Creates message "EventOpenOk" with all parameters set.
+            </summary>
+            <param name="clientNumber"></param>
+            <param name="errorCode"></param>
+            <returns>EventOpenOk instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventOpenOk.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventOpenOk.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventOpenOk.ReferenceId">
+            <summary>
+             Property "ReferenceId".
+             Attribute description: Reference id to connect response to request. If set to 0, it means that ReferenceId should be assighed by ReferenceBuilder.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventOpenOk.ClientNumber">
+            <summary>
+             Property "ClientNumber".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventOpenOk.ErrorCode">
+            <summary>
+             Property "ErrorCode".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventOpenOk.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventOpenOk.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Routing.Protocols.CustomServer.Events.EventOpenOk.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.CustomServer.ErrorCode">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.CustomServer.ErrorCode.NoError">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.CustomServer.ErrorCode.SyntaxError">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.CustomServer.ErrorCode.NotOwner">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.CustomServer.ErrorCode.NotUser">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.CustomServer.ErrorCode.NotAvailable">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.CustomServer.ErrorCode.IOError">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Routing.Protocols.CustomServer.Status">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.CustomServer.Status.Info">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Routing.Protocols.CustomServer.Status.NoMore">
+            <summary>
+             
+            </summary>
+        </member>
+    </members>
+</doc>

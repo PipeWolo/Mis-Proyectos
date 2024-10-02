@@ -1,0 +1,410 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genesyslab.Platform.Commons</name>
+    </assembly>
+    <members>
+        <member name="T:Genesyslab.Platform.Commons.Logging.AbstractLogEnabled">
+            <summary>
+            The Utility class to allow construction of easy components
+            that will perform logging.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Logging.ILogEnabled">
+            <summary>
+            Components that need to log can implement this interface
+            to be provided Loggers.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.ILogEnabled.EnableLogging(Genesyslab.Platform.Commons.Logging.ILogger)">
+            <summary>
+            Provide component with a logger.
+            </summary>
+            <param name="logger"> the logger. Must not be null.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.AbstractLogEnabled.EnableLogging(Genesyslab.Platform.Commons.Logging.ILogger)">
+            <summary>
+            The Method sets the component logger.
+            </summary>
+            <param name="logger">The ILogger instance.</param>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Logging.AbstractLogEnabled.Logger">
+            <summary>
+            Gets the ILogger instance.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Util.UnixTimeConverter">
+            <summary>
+            Convert unix time to DateTime, and vise versa. Note that converter treat DateTime value as UTC time.
+            If you have some DateTime value as local time, you need to convert it to UTC time
+            using DateTime.ToUniversalTime() method before calling FromDateTimeToUnixTime method.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Util.UnixTimeConverter.FromUnixTimeToDateTime(System.Int64,System.Int64)">
+            <summary>
+            Convert unix time to DateTime UTC.
+            </summary>
+            <param name="seconds">number of seconds elapsed since midnight (00:00:00), January 1, 1970, coordinated universal time (UTC)</param>
+            <param name="usecs">microseconds component</param>
+            <returns>The result DateTime is UTC.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Util.UnixTimeConverter.FromDateTimeToUnixTime(System.DateTime,System.Int64@,System.Int64@)">
+            <summary>
+            Convert UTC DateTime to unix time
+            </summary>
+            <param name="dateTime">[in]DateTime value in UTC format.</param>
+            <param name="seconds">[out]number of seconds elapsed since midnight (00:00:00), January 1, 1970, coordinated universal time (UTC)</param>
+            <param name="usecs">[out]microseconds component</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Util.UnixTimeConverter.FromDateTimeToUnixTime(System.TimeSpan,System.Int64@,System.Int64@)">
+            <summary>
+            Convert TimeSpan value to unix time.
+            </summary>
+            <param name="timeSpan">[in]TimeSpan value in UTC format.</param>
+            <param name="seconds">[out]number of seconds elapsed since midnight (00:00:00), January 1, 1970, coordinated universal time (UTC)</param>
+            <param name="usecs">[out]microseconds component</param>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Logging.ILogger">
+            <summary>
+            This is a facade for the different logging subsystems.
+            It offers a simplified interface that follows IOC patterns
+            and a simplified priority/level/severity abstraction. 
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.ILogger.Debug(System.Object)">
+            <summary>
+            Logs a debug message.
+            </summary>
+            <param name="message">The Message</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.ILogger.Debug(System.Object,System.Exception)">
+            <summary>
+            Logs a debug message. 
+            </summary>
+            <param name="message">The Message</param>
+            <param name="exception">The Exception</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.ILogger.DebugFormat(System.String,System.Object[])">
+            <summary>
+            Logs a debug message.
+            </summary>
+            <param name="format">Message format</param>
+            <param name="args">Array of objects to write using format</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.ILogger.Info(System.Object)">
+            <summary>
+            Logs an info message.
+            </summary>
+            <param name="message">The Message</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.ILogger.Info(System.Object,System.Exception)">
+            <summary>
+            Logs an info message. 
+            </summary>
+            <param name="message">The Message</param>
+            <param name="exception">The Exception</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.ILogger.InfoFormat(System.String,System.Object[])">
+            <summary>
+            Logs an info message.
+            </summary>
+            <param name="format">Message format</param>
+            <param name="args">Array of objects to write using format</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.ILogger.Warn(System.Object)">
+            <summary>
+            Logs a warn message.
+            </summary>
+            <param name="message">The Message</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.ILogger.Warn(System.Object,System.Exception)">
+            <summary>
+            Logs a warn message. 
+            </summary>
+            <param name="message">The Message</param>
+            <param name="exception">The Exception</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.ILogger.WarnFormat(System.String,System.Object[])">
+            <summary>
+            Logs a warn message.
+            </summary>
+            <param name="format">Message format</param>
+            <param name="args">Array of objects to write using format</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.ILogger.Error(System.Object)">
+            <summary>
+            Logs an error message.
+            </summary>
+            <param name="message">The Message</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.ILogger.Error(System.Object,System.Exception)">
+            <summary>
+            Logs an error message. 
+            </summary>
+            <param name="message">The Message</param>
+            <param name="exception">The Exception</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.ILogger.ErrorFormat(System.String,System.Object[])">
+            <summary>
+            Logs an error message.
+            </summary>
+            <param name="format">Message format</param>
+            <param name="args">Array of objects to write using format</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.ILogger.FatalError(System.Object)">
+            <summary>
+            Logs a fatal error message.
+            </summary>
+            <param name="message">The Message</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.ILogger.FatalError(System.Object,System.Exception)">
+            <summary>
+            Logs a fatal error message.
+            </summary>
+            <param name="message">The Message</param>
+            <param name="exception">The Exception</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.ILogger.FatalErrorFormat(System.String,System.Object[])">
+            <summary>
+            Logs a fatal error message.
+            </summary>
+            <param name="format">Message format</param>
+            <param name="args">Array of objects to write using format</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.ILogger.CreateChildLogger(System.String)">
+            <summary>
+            Create a new child logger.
+            The name of the child logger is [current-loggers-name].[passed-in-name]
+            </summary>
+            <param name="name">The Subname of this logger.</param>
+            <returns>The New ILogger instance.</returns> 
+            <exception cref="T:System.ArgumentException">If the name has an empty element name.</exception>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Logging.ILogger.IsDebugEnabled">
+            <summary>
+            Determines if messages of priority "debug" will be logged.
+            </summary>
+            <value>True if "debug" messages will be logged.</value> 
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Logging.ILogger.IsInfoEnabled">
+            <summary>
+            Determines if messages of priority "info" will be logged.
+            </summary>
+            <value>True if "info" messages will be logged.</value>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Logging.ILogger.IsWarnEnabled">
+            <summary>
+            Determines if messages of priority "warn" will be logged.
+            </summary>
+            <value>True if "warn" messages will be logged.</value>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Logging.ILogger.IsErrorEnabled">
+            <summary>
+            Determines if messages of priority "error" will be logged.
+            </summary>
+            <value>True if "error" messages will be logged.</value>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Logging.ILogger.IsFatalErrorEnabled">
+            <summary>
+            Determines if messages of priority "fatalError" will be logged.
+            </summary>
+            <value>True if "fatalError" messages will be logged.</value>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Logging.NullLogger">
+            <summary>
+            The Null Logger class.  This is useful for implementations where you need
+            to provide a logger to a utility class, but do not want any output from it.
+            It also helps when you have a utility that does not have a logger to supply.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.NullLogger.#ctor">
+            <summary>
+            Creates a new <c>NullLogger</c>.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.NullLogger.Debug(System.Object)">
+            <summary>
+            No-op.
+            </summary>
+            <param name="message">Ignored</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.NullLogger.Debug(System.Object,System.Exception)">
+            <summary>
+            No-op.
+            </summary>
+            <param name="message">Ignored</param>
+            <param name="exception">Ignored</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.NullLogger.DebugFormat(System.String,System.Object[])">
+            <summary>
+            No-op.
+            </summary>
+            <param name="format">Ignored</param>
+            <param name="args">Ignored</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.NullLogger.Info(System.Object)">
+            <summary>
+            No-op.
+            </summary>
+            <param name="message">Ignored</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.NullLogger.Info(System.Object,System.Exception)">
+            <summary>
+            No-op.
+            </summary>
+            <param name="message">Ignored</param>
+            <param name="exception">Ignored</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.NullLogger.InfoFormat(System.String,System.Object[])">
+            <summary>
+            No-op.
+            </summary>
+            <param name="format">Ignored</param>
+            <param name="args">Ignored</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.NullLogger.Warn(System.Object)">
+            <summary>
+            No-op.
+            </summary>
+            <param name="message">Ignored</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.NullLogger.Warn(System.Object,System.Exception)">
+            <summary>
+            No-op.
+            </summary>
+            <param name="message">Ignored</param>
+            <param name="exception">Ignored</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.NullLogger.WarnFormat(System.String,System.Object[])">
+            <summary>
+            No-op.
+            </summary>
+            <param name="format">Ignored</param>
+            <param name="args">Ignored</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.NullLogger.Error(System.Object)">
+            <summary>
+            No-op.
+            </summary>
+            <param name="message">Ignored</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.NullLogger.Error(System.Object,System.Exception)">
+            <summary>
+            No-op.
+            </summary>
+            <param name="message">Ignored</param>
+            <param name="exception">Ignored</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.NullLogger.ErrorFormat(System.String,System.Object[])">
+            <summary>
+            No-op.
+            </summary>
+            <param name="format">Ignored</param>
+            <param name="args">Ignored</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.NullLogger.FatalError(System.Object)">
+            <summary>
+            No-op.
+            </summary>
+            <param name="message">Ignored</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.NullLogger.FatalError(System.Object,System.Exception)">
+            <summary>
+            No-op.
+            </summary>
+            <param name="message">Ignored</param>
+            <param name="exception">Ignored</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.NullLogger.FatalErrorFormat(System.String,System.Object[])">
+            <summary>
+            No-op.
+            </summary>
+            <param name="format">Ignored</param>
+            <param name="args">Ignored</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Logging.NullLogger.CreateChildLogger(System.String)">
+            <summary>
+            Returns this <c>NullLogger</c>.
+            </summary>
+            <param name="name">Ignored</param>
+            <returns>This ILogger instance.</returns> 
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Logging.NullLogger.IsDebugEnabled">
+            <summary>
+            No-op.
+            </summary>
+            <value>false</value> 
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Logging.NullLogger.IsInfoEnabled">
+            <summary>
+            No-op.
+            </summary>
+            <value>false</value> 
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Logging.NullLogger.IsWarnEnabled">
+            <summary>
+            No-op.
+            </summary>
+            <value>false</value> 
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Logging.NullLogger.IsErrorEnabled">
+            <summary>
+            No-op.
+            </summary>
+            <value>false</value> 
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Logging.NullLogger.IsFatalErrorEnabled">
+            <summary>
+            No-op.
+            </summary>
+            <value>false</value> 
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.PlatformException">
+            <summary>
+            Summary description for PlatformException.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.PlatformException.#ctor">
+            <summary>
+            Initializes new empty PlatformException instance.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.PlatformException.#ctor(System.String)">
+            <summary>
+            Initializes new PlatformException instance with given message.
+            </summary>
+            <param name="message">Exception message string</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.PlatformException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes new PlatformException instance with given message, and InnerException specified.
+            </summary>
+            <param name="message">Exception message string</param>
+            <param name="innerException">Inner exception.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.PlatformException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Deserializes PlatformException instance.
+            </summary>
+            <param name="info">Holds all the data needed to deserialize an object.</param>
+            <param name="context">Describes the source of a given serialized stream.</param>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Threading.IAsyncInvoker">
+            <exclude/>
+            <summary>
+            IAsyncInvoker interface.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Threading.DefaultInvoker">
+            <exclude/>
+            <summary>
+            Default implementation of IAsyncInvoker
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Threading.SingleThreadInvoker">
+            <summary>
+            Summary description for SingleThreadInvoker.
+            </summary>
+        </member>
+    </members>
+</doc>

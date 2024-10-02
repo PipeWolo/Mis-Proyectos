@@ -1,0 +1,1574 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genesyslab.Platform.Commons.Protocols</name>
+    </assembly>
+    <members>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.Internal.IAttributeTypeCodec">
+            Codec that uses only one message attribute.
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.Internal.ICustomTypeCodec">
+            <summary>
+            Codec for custom-type objects, that participate in some protocol.
+            Classes declared in <code>CodecClass</code> attribute of
+            <code>TypeMap</code> tag in protocol description file have to implement
+            interface.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.Internal.IPrintable">
+            <summary>
+            Summary description for IPrintable.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.IPrintable.GetLogType">
+             Return type signature for attribute record written to log.
+             Usually this will be one of the following string: int, str, long, bstr
+             Use {@link com.genesyslab.platform.commons.protocol.runtime.codec.LogTypes} class to return standart values.
+            
+             @return type signature
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.IPrintable.AppendLogValue(System.Text.StringBuilder,System.Object,System.Int32,System.Boolean,System.Boolean)">
+             Append value of the custom-type object to the buffer.
+            
+             @param buf buffer to append data
+             @param customTypeObject value of custom-type object
+             @param truncate whether long value should be truncated
+             @param hide whether value should be hidden
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.ICustomTypeCodec.SetProtocolData(System.Object)">
+            <summary>
+            Set additional protocol specific data for this codec.
+            For some complex cases codecs may need that data. The data is
+            provided through ProtocolFactory which receives it in constructor.
+            <p>It is highly recommended to implement the protocolData object
+            as set of interfaces that in turn provide access to codec specific
+            data. Do not use protocolData as an object for a single codec,
+            since it will be impossible to extend such object.
+            <br/>Wrong: <code>CodecData data = (CodecData) protocolData;</code>
+            <br/>Right: <code>CodecData data =
+            ((CodecDataHolder) protocolData).getCodecData();</code></p>
+            </summary>
+            <param name="protocolData"> protocol specific data</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.ICustomTypeCodec.SetMessage(Genesyslab.Platform.Commons.Protocols.IMessage)">
+             Set message this codec works on. For some complex cases codecs
+             may need it. The message has been provided by MessageConverter before
+             encode/decode method is called.
+            
+             @param message protocol specific data
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.ICustomTypeCodec.EncodeForConnection(System.Object,System.String,Genesyslab.Platform.Commons.Connection.IMessageTransport,System.Object)">
+             Serialize custom-type object to the form, that can be accepted
+             by connection.
+            
+             @param customTypeObject object to serialize
+             @param id attribute id
+             @return new/same transport state
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.ICustomTypeCodec.EncodeToXml(System.Object,System.Xml.XmlElement@)">
+            <summary>
+            Serialize custom-type object to xml. Usually this method
+            will add text value to the <tt>attributeElement</tt> in case of
+            simple object or tree of elements for complex object.
+            By contract the result accepts xml in appropriate position,
+            so codec can just transform its representation to the Result.
+            </summary>
+            <param name="customTypeObject"> object to serialize</param>
+            <param name="attributeElement"> xml attribute to store the data in</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.ICustomTypeCodec.DecodeFromXml(System.Xml.XPath.XPathNavigator,Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo)">
+             Deserialize custom-type object from xml representation.
+             Usually this method will read text value of the xml node in case of
+             simple object or parse tree of elements for complex object.
+             By the contract the source given is positioned at the node of
+             the object. For DOMSource (as example) it is created around the node.
+            
+             @param attributeElement xml attribute to restore the data from
+             @return custom-type object value
+             @throws com.genesyslab.platform.commons.protocol.runtime.codec.CodecException if there is problems with xml data
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.IAttributeTypeCodec.DecodeFromConnection(System.Object,Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo)">
+             Deserialize custom-type object from connection.
+            
+             @param value custom type object on connection side
+             @return Custom-type object on protocol side
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.Internal.ICustomPackager">
+            CustomPackager is codec that violates the contract one object per
+            message attribute. Violating such contart leads to absence of
+            services from ProtocolMessagePackager and such codec should handle
+            all attributes on its own. Than it has to put gathered data to
+            Message.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.IXDocumentCodec.EncodeToXDocument(System.Object,System.Xml.Linq.XElement@)">
+            <summary>
+            Serialize custom-type object to xml. Usually this method
+            will add text value to the <tt>attributeElement</tt> in case of
+            simple object or tree of elements for complex object.
+            By contract the result accepts xml in appropriate position,
+            so codec can just transform its representation to the Result.
+            </summary>
+            <param name="customTypeObject"> object to serialize</param>
+            <param name="attributeElement"> xml element to store the data in</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.IXDocumentCodec.DecodeFromXDocument(System.Xml.Linq.XElement,Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo)">
+             Deserialize custom-type object from xml representation.
+             Usually this method will read text value of the xml node in case of
+             simple object or parse tree of elements for complex object.
+             By the contract the source given is positioned at the node of
+             the object. For DOMSource (as example) it is created around the node.
+            
+             @param attributeElement xml attribute to restore the data from
+             @return custom-type object value
+             @throws com.genesyslab.platform.commons.protocol.runtime.codec.CodecException if there is problems with xml data
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IPrinterStorage">
+            <summary>
+            KeyValueCodec will expect this interface implemented by protocolData
+            object. If protocolData does not implement the interface, than
+            default printing will be used for logging TKVLists in messages.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.Internal.KeyValueCodec">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.License.ILicensePermission">
+            <exclude/>
+            <summary>
+            Request for some licensed operation.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.License.ILicenseRestriction">
+            <exclude/>
+            <summary>
+            Restriction of some feature.
+            Restrictio should allow any "unknown" permissions, i.e. if something is not
+            restricted it permited.  
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.License.LicenseRestrictionCollection">
+            <exclude/>
+            <summary>
+            Summary description for LicenseRestrictionCollection.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.License.RestrictionManager">
+            <exclude/>
+            <summary>
+            Summary description for RestrictionManager.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.License.SendMessagePermission">
+            <exclude/>
+            <summary>
+            Summary description for SendMessagePermission.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.AbstractChannel">
+            <exclude/>
+            <summary>
+            Summary description for AbstractChannel.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IChannel">
+            <exclude/>
+            <summary>
+            Declaration of main interface for all synchronous channels.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IAsyncChannel">
+            <exclude/>
+            <summary>
+            Asynchronous channel interface.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IAsyncChannel.BeginOpen">
+            <summary>
+            Starts asynchronous channel opening.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IAsyncChannel.BeginClose">
+            <summary>
+            Starts asynchronous channel closing.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.IAsyncChannel.State">
+            <summary>
+            Gets current channel state.
+            </summary>
+        </member>
+        <member name="E:Genesyslab.Platform.Commons.Protocols.IAsyncChannel.Opened">
+            <summary>
+            Fired, when channel is opened
+            </summary>
+        </member>
+        <member name="E:Genesyslab.Platform.Commons.Protocols.IAsyncChannel.Closed">
+            <summary>
+            Fired, when channel is closed.
+            </summary>
+        </member>
+        <member name="E:Genesyslab.Platform.Commons.Protocols.IAsyncChannel.Error">
+            <summary>
+            An error has occurred.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IChannel.Open">
+            <summary>
+            Opens channel synchronously.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IChannel.Close">
+            <summary>
+            Closes channel synchronously.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IChannel.Open(System.TimeSpan)">
+            <summary>
+            Opens channel synchronously with given timeout.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IChannel.Close(System.TimeSpan)">
+            <summary>
+            Closes channel synchronously with given timeout.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.IChannel.Timeout">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IEndpointSupport">
+            <summary>
+            Summary description for IEndpointSupport.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IConfigurationSupport">
+            <summary>
+            Summary description for IConfigurationSupport.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.AbstractChannel.SetConnectionInvoker(Genesyslab.Platform.Commons.Threading.IAsyncInvoker)">
+            <summary>
+             Set AsyncInvoker to be used by underlying connection layer.
+             please be sure you have a good uderstanding of ways the connection layer
+             works before you use this method.
+            </summary>
+            <param name="connectionInvoker">invoker for connection layer</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.AbstractChannel.FireOpened">
+            <exclude/>
+        </member>
+        <member name="E:Genesyslab.Platform.Commons.Protocols.AbstractChannel.Error">
+            <summary>
+            A connection error has occurred.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.AbstractChannel.Invoker">
+            <exclude/>
+            <summary>
+            Sets AsyncInvoker
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.AbstractChannel.Configuration">
+            <summary>
+            Use this property to set the connection configuration.
+            </summary>
+            
+            <remarks>Here is a sample of how to turn on and configure ADDP:<br/><br/>
+            
+            <code>[C#]
+            TServerProtocol tserverProtocol 
+            	= new TServerProtocol(new EndpointDescription(serverUri));
+            tserverProtocol.Configuration = new PropertyConfiguration();
+            tserverProtocol.Configuration.SetOption("protocol", "ADDP");
+            tserverProtocol.Configuration.SetOption("addp-timeout", "10.0"); 
+            tserverProtocol.Configuration.SetOption("addp-remote-timeout", "15.5");
+            </code><br/>
+            
+            In this case, you instantiate your <c>TServerProtocol</c> object in the 
+            first statement and create a new <c>Configuration</c> property in the 
+            second. Then you turn on ADDP in the third statement.<br/><br/>
+            
+            The fourth and fifth statements set ADDP timeout parameters to the 
+            specified number of floating-point seconds.<br/><br/>
+            </remarks>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.AbstractContextImpl">
+            <summary>
+            Default abstract implementation of <see cref="T:Genesyslab.Platform.Commons.Connection.Configuration.ConnectionContext"/> interface.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.AbstractQueueReceiver">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IReceiver">
+            <exclude/>
+            <summary>
+            Summary description for Receiver.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IReceiver.ClearInput">
+            Clears input of the receiver. Please note, that there is no
+            strict guaranties that input will be empty after this method
+            has returned, the messages could be delivered by another
+            thread.
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.IReceiver.InputSize">
+             Gets/sets the amount of messages this Receiver can hold before
+             start to "forget stale messages"
+            
+             @return maximum count of messages stored in receiver
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.AbstractQueueReceiver.EnqueTimeout">
+            <summary>
+            Gets/sets EnqueTimeout in miliseconds.
+            Using timeout can slow down the processing of messages from server. Using this property is
+            advanced topic, use it only if you know what kind of effect it can cause to the internals
+            of connection layer. It will be usually used in advanced scenarios with ConnectionInvoker.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.AbstractReferenceBuilder">
+            <exclude/>
+            <summary>
+            Summary description for AbstractReferenceBuilder.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IReferenceBuilder">
+            <exclude/>
+            <summary>
+            interface IReferenceBuider declares main interface for all reference builders implementations.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IReferenceBuilder.RetrieveReference(Genesyslab.Platform.Commons.Protocols.IMessage)">
+            <summary>
+            Retrives Reference from Message.
+            </summary>
+            <param name="message">Message instance.</param>
+            <returns>Message reference.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IReferenceBuilder.CreateReference">
+            <summary>
+            Creates new reference for message.
+            </summary>
+            <returns>New reference.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IReferenceBuilder.UpdateReference(Genesyslab.Platform.Commons.Protocols.IMessage,System.Object)">
+            <summary>
+            Sets given reference to given message.
+            </summary>
+            <param name="message">Message for which given reference should be set.</param>
+            <param name="reference">Reference to set.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IReferenceBuilder.UpdateReference(Genesyslab.Platform.Commons.Protocols.IMessage)">
+            <summary>
+            Sets new reference to given message.
+            </summary>
+            <param name="message">Message for which new reference should be set.</param>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.AsyncRequestResult">
+            <summary>
+            Summary description for AsyncRequestResult.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.#ctor(System.Type,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the AttributeInfo class with specified Type, Name, and Id. Property is not hidden, and it is not complex. 
+            </summary>
+            <param name="type">Type of property.</param>
+            <param name="name">Name of property.</param>
+            <param name="id">Property Id</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.#ctor(System.Type,System.String,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the AttributeInfo class with specified Type, Name, Id, and Hidden. Property is not complex. 
+            </summary>
+            <param name="type">Type of property.</param>
+            <param name="name">Name of property.</param>
+            <param name="id">Property Id</param>
+            <param name="hidden">Means that value may be hidden in log. See Message.ToString for details.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.#ctor(System.Type,System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the AttributeInfo class with specified Type, Name, Id, Hidden, IsComplex, and IsPublic. Property is not complex. 
+            </summary>
+            <param name="type">Type of property.</param>
+            <param name="name">Name of property.</param>
+            <param name="id">Property Id</param>
+            <param name="hidden">Means that value may be hidden in log. See Message.ToString for details.</param>
+            <param name="isPublic">Means that value is hidden for user, and that is not serializable in xml.</param>
+            <param name="isComplex">True, if property is complex.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the AttributeInfo class with specified Type. Property is complex (shall be derived from ComplexClass). It can not be Hidden.
+            </summary>
+            <param name="type">Type of complex property. Shall be derived from IComplexClass.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.#ctor(System.Type,System.String)">
+            <summary>
+            Initializes a new instance of the AttributeInfo class with specified Type and id. Property is complex (shall be derived from IComplexClass). It can not be Hidden.
+            </summary>
+            <param name="type">Type of complex property. Shall be derived from ComplexClass.</param>
+            <param name="id">id of property.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.#ctor(System.Type,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the AttributeInfo class with specified Type, name, id, Hidden, and IsComplex.
+            </summary>
+            <param name="type">Type of complex property. Shall be derived from ComplexClass.</param>
+            <param name="name">Name of property.</param>
+            <param name="id">id of property.</param>
+            <param name="hidden">Means that value may be hidden in log. See Message.ToString for details.</param>
+            <param name="isComplex">True, if property is complex.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.#ctor(System.Type,System.String,System.String,Genesyslab.Platform.Commons.Protocols.Internal.ICustomTypeCodec)">
+            <summary>
+            Initializes a new instance of the AttributeInfo class with specified Type, Name, Id, and ICodec derived class instance. It can not be Hidden.
+            </summary>
+            <param name="type">Type of property.</param>
+            <param name="name">Name of property.</param>
+            <param name="id">Property Id</param>
+            <param name="codec">Instance of custom class that implements ICodec interface.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.#ctor(System.Type,System.String,System.String,Genesyslab.Platform.Commons.Protocols.Internal.ICustomTypeCodec,System.Boolean)">
+            <summary>
+            Initializes a new instance of the AttributeInfo class with specified Type, Name, Id, and ICodec derived class instance. It can not be Hidden.
+            </summary>
+            <param name="type">Type of property.</param>
+            <param name="name">Name of property.</param>
+            <param name="id">Property Id</param>
+            <param name="codec">Instance of custom class that implements ICodec interface.</param>
+            <param name="isHidden">Means that value may be hidden in log. See Message.ToString for details.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.FormatSimpleType(System.Object,System.Boolean,Genesyslab.Platform.Commons.Protocols.Internal.IDataSupport)">
+            <summary>
+            Helper functions that makes standard string representation of all simple type values.
+            </summary>
+            <param name="val">Simple type value.</param>
+            <param name="truncate">true, if string representation may be truncated.</param>
+            <param name="data">For message properties should be set to Message; otherwise, null.</param>
+            <returns>String representation of val.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.TypeNameForLog(System.String)">
+            <summary>
+            Converts standard types names into log defined string representations for types.
+            </summary>
+            <param name="sType">String representation of standard type.</param>
+            <returns>Log defined string representation for given type</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.TypeNameForLog(System.Type)">
+            <summary>
+            Converts standard types names into log defined string representations for types.
+            </summary>
+            <param name="sType">Standard type.</param>
+            <returns>Log defined string representation for given type</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.Id">
+            <summary>
+            Gets Id of property.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.LogType">
+            <summary>
+            Gets string representaion of property type for Logging system.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.FullTypeName">
+            <summary>
+            Gets string representaion of property full type.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.Type">
+            <summary>
+            Gets Type of property.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.Name">
+            <summary>
+            Gets name of property.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.IsComplex">
+            <summary>
+            Gets true, if property is derived from ComplexClass class.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.HasCodec">
+            <summary>
+            Gets true, if property has ICodec specified.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.Codec">
+            <summary>
+            Gets ICodec specified for property, or null if it is not specified.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.IsHidden">
+            <summary>
+            Gets true, if property value may be hidden in Logging system.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.Internal.AttributeInfo.IsPublic">
+            <summary>
+            Gets false, if property value is hidden for user, and it is not serializable in xml.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.Internal.IDataSupport">
+            <exclude/>
+            <summary>
+            The main interface for all Messages and ComplexClasses
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.IDataSupport.GetEnumDescription(System.Type,System.Int32)">
+            <summary>
+            Returns description of given value of protocol defined enum
+            </summary>
+            <param name="enumType">Type of protocol defined enum.</param>
+            <param name="val">The enum value, for which description should be returned.</param>
+            <returns>Returns description of given value of protocol defined enum, if exists.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.Internal.IDataSupport.Properties">
+            <summary>
+            Properties container
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.Internal.IDataSupport.AttrsInfo">
+            <summary>
+            Attributes information
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.ChannelEventArgs">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.ChannelState">
+            <summary>
+            ChannelState enum defines all possible channel states.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Protocols.ChannelState.Opening">
+            <summary>
+            Channel opening is in progress.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Protocols.ChannelState.Opened">
+            <summary>
+            Channel is opened.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Protocols.ChannelState.Closing">
+            <summary>
+            Channel closing is in progress.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Protocols.ChannelState.Closed">
+            <summary>
+            Channel is closed.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.SyncResource">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.ClientChannel">
+            <summary>
+            <c>ClientChannel</c> is the parent class of all of the 
+            <c>Protocol</c> classes used for client applications in 
+            the Platform SDK, such as <c>TServerProtocol</c> and <c>ConfServerProtocol</c>.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.DuplexChannel">
+            <summary>
+            <c>DuplexChannel</c> allows for two-way communication between 
+            a Platform SDK application and a server. It is the parent class of 
+            <see cref="T:Genesyslab.Platform.Commons.Protocols.ClientChannel"/>.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IInputChannel">
+            <exclude/>
+            <summary>
+            IInputChannel interface defines methods for input channels.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IMessageReceiver.Receive">
+            <summary>
+            Receives data from channel. Timeout is not specified, so implementor should specify additional property or method, if needed. Otherwise means synchronous receiving.
+            </summary>
+            <returns>object received.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IMessageReceiver.Receive(System.TimeSpan)">
+            <summary>
+            Receives data from channel during specified timeout. If no data received, returns null.
+            </summary>
+            <param name="timeout">Timeout interval as TimeSpan object.</param>
+            <returns>Received data, or null.</returns>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IOutputChannel">
+            <exclude/>
+            <summary>
+            IOutputChannel interface defines methods for output channels.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IOutputChannel.Send(Genesyslab.Platform.Commons.Protocols.IMessage)">
+            <summary>
+            Sends given data to channel.
+            </summary>
+            <param name="message">Message to be sent.</param>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IProtocolDescriptionSupport">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IReceiverManagement">
+            <summary>
+            Summary description for IReceiverSupport.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Protocols.DuplexChannel.InfiniteTimeout">
+            <exclude/>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Protocols.DuplexChannel.EmptyTimeout">
+            <exclude/>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Protocols.DuplexChannel.DefaultTimeout">
+            <exclude/>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Protocols.DuplexChannel.closedEventArgs">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.#ctor(Genesyslab.Platform.Commons.Protocols.IMessageFactory,Genesyslab.Platform.Commons.Protocols.Endpoint)">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.#ctor(Genesyslab.Platform.Commons.Protocols.IMessageFactory,Genesyslab.Platform.Commons.Protocols.Endpoint,System.TimeSpan)">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.Receive">
+            <summary>
+            This synchronous method blocks until it receives a message from the server. It can be
+            used after the <c>Send</c> method to wait for a response. It can also be 
+            used on its own, in which case it will wait for the next event
+            from the server that is directed at the issuing application.
+            </summary>
+            <remarks>
+            Here is a sample of how to use the <c>Send</c> and <c>Receive</c>methods:<br/><br/>
+            
+            <code>[C#]
+            interactionServerProtocol.Send(requestAgentLogin);
+            IMessage response = interactionServerProtocol.Receive();
+            </code><br/>
+            
+            You can also use <c>Receive</c> on its own, like this:<br/><br/>
+            
+            <code>[C#]
+            IMessage unsolicitedEvent = interactionServerProtocol.Receive();
+            </code>
+            
+            </remarks>
+            <returns>A message from the server</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.Receive(System.TimeSpan)">
+            <summary>
+            This synchronous method blocks until it receives a message from the server
+            or until it reaches the length of the designated timeout. See <see cref="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.Receive"/>.
+            </summary>
+            <param name="tsTimeout">The desired timeout value</param>
+            <returns>A message from the server</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.Send(Genesyslab.Platform.Commons.Protocols.IMessage)">
+            <summary>
+            Send the specified	request to the server. To receive a response from the 
+            server, you must use the <see cref="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.Receive"/> method. This response will 
+            be asynchronous. You can also use the <see cref="M:Genesyslab.Platform.Commons.Protocols.ClientChannel.Request(Genesyslab.Platform.Commons.Protocols.IMessage)"/> 
+            method instead of <c>Send</c> and <c>Receive</c>.
+            </summary>
+            <remarks>
+            Here is a sample of how to use the <c>Send</c> and <c>Receive</c>methods:<br/><br/>
+            
+            <code>[C#]
+            interactionServerProtocol.Send(requestAgentLogin);
+            IMessage response = interactionServerProtocol.Receive();
+            </code>
+            </remarks>
+            <param name="message">The request to be sent to the server</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.DoSend(Genesyslab.Platform.Commons.Protocols.IMessage)">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.GetDefaultRestriction">
+            <summary>
+            Returns default restriction for protocol. By default returns
+            empty restricion, so that all operation are allowed.
+            </summary>
+            <returns>licensing restriction</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.Open">
+            <summary>
+            Open the connection to the server. For synchronous use.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.Open(System.TimeSpan)">
+            <summary>
+            Open the connection to the server. For synchronous use with given timeout.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.Close">
+            <summary>
+            Close the connection to the server. For synchronous use.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.Close(System.TimeSpan)">
+            <summary>
+            Close the connection to the server. For synchronous use with given timeout.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.InitiateOpen">
+            <summary>
+            Begin to open a connection. For asynchronous use.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.BeginClose">
+            <summary>
+            Begin to close a connection. For asynchronous use.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.DoClose(System.Exception)">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.OnOpened">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.OnClosed">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.UnlockOpen">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.UnlockClose">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.OnSend(Genesyslab.Platform.Commons.Protocols.IMessage)">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.OnReceived(System.Object)">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.SetState(Genesyslab.Platform.Commons.Protocols.ChannelState)">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.OnEnableLogging(Genesyslab.Platform.Commons.Logging.ILogger)">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.ClearInput">
+            <exclude/>
+            <summary>
+            Clears the event queue.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.ThrowTimeout(System.String)">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.SetReceiver(Genesyslab.Platform.Commons.Protocols.IMessageReceiverSupport)">
+            <exclude/>
+            <summary>
+            Create a receiver for this channel. A receiver is a special queue that
+            can receive events coming to the application from one or more of the 
+            servers that the application is connected to. The queue is under the 
+            control of the application, as opposed to the default queues, which are
+            under the control of the individual servers.
+            </summary>
+            <remarks>
+            Please note that some channel parameters related to the receiver &#8212; 
+            such as <c>inputSize</c>, for example &#8212; can be changed by this call.
+            </remarks>
+            <param name="receiver">The new receiver</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.ResetReceiver">
+            <exclude/>
+            <summary>
+            Reset the receiver for this channel to the default, which is under 
+            direct control of the server. See <see cref="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.SetReceiver(Genesyslab.Platform.Commons.Protocols.IMessageReceiverSupport)"/>.
+            </summary>
+            <remarks>
+            Please note that some channel parameters related to the receiver — 
+            such as <c>inputSize</c>, for example — can be changed by this call.
+            </remarks>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.Dispose">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.SetConnectionInvoker(Genesyslab.Platform.Commons.Threading.IAsyncInvoker)">
+            <summary>
+             Connection can use invoker (if it's set) to perform some operations
+             asynchronously. One such operation is message parsing.
+             So it's resonable to use the invoker if you know that it can take long
+             to parse the message. <br/><strong>Warning:</strong>
+             On the other hand improper usage of the connection
+             invoker can result in problems that are hard to reproduce and debug.
+             For instance it seems a good idea to set some kind of thread pool
+             as invoker for some busy connections, but you can break the order
+             of message arrival by doing so. So be extremely careful and make sure
+             you know exactly what you're doing using this feature.
+            </summary>
+            <param name="connectionInvoker">async invoker for connection</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.DoSetConnectionInvoker(Genesyslab.Platform.Commons.Threading.IAsyncInvoker)">
+            <summary>
+             Set connection invoker without checks for the state of channel.
+            </summary>
+            <param name="connectionInvoker">async invoker for connection</param>
+            <see cref="M:Genesyslab.Platform.Commons.Protocols.DuplexChannel.SetConnectionInvoker(Genesyslab.Platform.Commons.Threading.IAsyncInvoker)"/> 
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.DuplexChannel.InputSize">
+            <exclude/>
+            <summary>
+            Gets or sets input queue capacity. Min is 4, max is 1024. Default: 16.
+            </summary>
+            <remarks>
+            Your application can set up a queue to receive 
+            </remarks>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.DuplexChannel.MessageFactory">
+            <exclude/>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.DuplexChannel.ProtocolData">
+            <exclude/>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.DuplexChannel.Interceptor">
+            <exclude/>
+            <summary>
+            Return interceptor of the connection behind this channel.
+            You can use that interceptor to reconfigure it or to issue special
+            command on it. One example of such interceptor is ADDP.
+            Note, that by default connection has no interceptor, so this method
+            can return null. Interceptors are created using
+            {@link ConnectionConfiguration} class and {@link #setConfiguration(
+            com.genesyslab.platform.commons.connection.ConnectionConfiguration)}
+            method.
+            
+            @return interceptor for this channel or null if there is no interceptor
+                 configured.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IProtocol">
+            <summary>
+            Summary description for IProtocol.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IRequestChannel">
+            <exclude/>
+            <summary>
+            IRequestChannel interface defines method(s) for channel that support synchronous sending data and receiving back response.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IRequestChannel.Request(Genesyslab.Platform.Commons.Protocols.IMessage)">
+            <summary>
+            Sends message to channel, and try to receive response. Timeout is indefinite, so it's up to implementor.
+            </summary>
+            <param name="message">Message data to be sent.</param>
+            <returns>Response data.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IRequestChannel.Request(Genesyslab.Platform.Commons.Protocols.IMessage,System.TimeSpan)">
+            <summary>
+            Sends message to channel, and try to receive response in specified timeout period.
+            </summary>
+            <param name="message">Message data to be sent.</param>
+            <param name="timeout">Timeout interval as TimeSpan object.</param>
+            <returns>Response data, or null, if no response received during timeout.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IRequestChannel.BeginRequest(Genesyslab.Platform.Commons.Protocols.IMessage,System.AsyncCallback,System.Object)">
+            <summary>
+            Sends message to channel asynchronously. Timeout is indefinite, so it's up to implementor.
+            </summary>
+            <param name="message">Message data to be sent.</param>
+            <param name="asyncCallback">References the callback method to be called when the asynchronous operation is completed.</param>
+            <param name="state">A user-defined object containing information about the request operation. This object is passed to the callback delegate when the operation is complete</param>
+            <returns>Status of an asynchronous operation.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IRequestChannel.EndRequest(System.IAsyncResult)">
+            <summary>
+            Asynchronously receive response from server. EndRequest completes a call to BeginRequest.
+            </summary>
+            <param name="asyncResult">An IAsyncResult stores state information for this asynchronous operation as well as any user defined data.</param>
+            <returns>Response data, or null, if no response received during timeout.</returns>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IInterceptorSupport">
+            <exclude/>
+            <summary>
+            Summary description for IInterceptorSupport.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.ClientChannel.#ctor(Genesyslab.Platform.Commons.Protocols.IMessageFactory,Genesyslab.Platform.Commons.Protocols.Endpoint,Genesyslab.Platform.Commons.Protocols.IReferenceBuilder)">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.ClientChannel.Request(Genesyslab.Platform.Commons.Protocols.IMessage)">
+            <summary>
+            This synchronous method sends the specified request to the server, and waits for a response
+            from the server for the length of the <c>Timeout</c> value.
+            </summary>
+            <remarks>
+            The time to wait for a response is configured during channel creation or by 
+            setting the <c>Timeout</c> property. This method only waits for messages with 
+            a reference ID, so if the message doesn't support referencing then a null value
+            is returned immediately.<br/>
+            <br/>
+            Because this method will not return events for a request that does not include 
+            the <c>ReferenceId</c> attribute, it is better to use the <c>Send()</c> 
+            method for those requests.
+            </remarks>
+            <example>
+            <code>[C#]
+            IMessage response =
+            	interactionServerProtocol.Request(requestAgentLogin);
+            </code>
+            </example>
+            <param name="message">The request to be sent to the server</param>
+            <returns>The server's response</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.ClientChannel.Request(Genesyslab.Platform.Commons.Protocols.IMessage,System.TimeSpan)">
+            <summary>
+            This synchronous method sends the specified request to the server,
+            and waits for a response
+            from the server for the length of the specified timeout value. See
+            <see cref="M:Genesyslab.Platform.Commons.Protocols.ClientChannel.Request(Genesyslab.Platform.Commons.Protocols.IMessage)"/>.
+            </summary>
+            <param name="message">The request to be sent to the server</param>
+            <param name="timeout">The desired timeout value</param>
+            <returns>The server's response</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.ClientChannel.DoRequest(Genesyslab.Platform.Commons.Protocols.IMessage,System.TimeSpan)">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.ClientChannel.OnSend(Genesyslab.Platform.Commons.Protocols.IMessage)">
+            <exclude/>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.ClientChannel.ReferenceBuilder">
+            <exclude/>
+            <summary>
+            Gets current IReferenceBuilder.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.ClientChannel.CopyResponse">
+            <exclude/>
+            <summary>
+            Gets or sets CopyResponse value. If true, the received message will be enqued always; othewise, it will be enqued only if this message is not response on user request. It is false by default.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.ClientChannel.RegistrationHandler">
+            <summary>
+            Sets/gets registration handler. If set to null, registration step will not be performed.
+            This property can have side effects if called after superclass' Open() and is not thread safe. 
+            Intended usage is in overriden Open() method like following:
+            </summary>
+            <example>
+            <code>[C#]
+            public override void Open(TimeSpan timeout)
+            {
+                RegistrationHandler = new MyHandler();
+                base.Open(timeout);
+            }
+            </code>
+            </example>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.ClientChannel.SimpleRegistrationHandler">
+            <exclude/>
+            <summary>
+            Request-response registration.
+            Registration message passed to constructor.
+            Override isResponseAccepted() to check the message is valid.
+            If message is not valid the channel will be closed and open() will
+            finnish with exception. If you need to specify exception message
+            throw the exception directly from isResponseAccepted().
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IRegistrationHandler">
+            <exclude/>
+            <summary>
+            Mostly any channel will register client's connection within
+            server by sending one or more registration requests. It can be
+            accomplished by implementing this interface.
+            The channel will call your <code>RegistrationHandler</code> when
+            connection is opened.
+            Channel will call <code>getRegistrationMessage()</code> first
+            and send this message to server. Then the channel will
+            wait for an answer from server and while
+            <code>isRegistrationComplete()</code> returns false
+            the process is repeated. So, in complex registration scenarios
+            your RegistrationHandler probably has to be "stateful" and
+            handle order of messages supplied to channel.
+            Usually there is only one registration message, so you can use
+            SimpleRegistrationHandler to perform such simple registration.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IRegistrationHandler.GetRegistrationMessage">
+            <summary>
+            Returns instance of registration message.
+            </summary>
+            <returns>registration message</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IRegistrationHandler.HandleResponse(Genesyslab.Platform.Commons.Protocols.IMessage)">
+            <summary>
+            Implementation of this method should handle received response, 
+            that is received after sending registration message.
+            </summary>
+            <param name="response">Response on registration message</param>
+            <exception cref="T:Genesyslab.Platform.Commons.Protocols.RegistrationException">If any problem occured during registration.</exception>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.IRegistrationHandler.IsRegistrationComplete">
+            <summary>
+            true, if registration process is complete
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.ClientChannel.SimpleRegistrationHandler.IsResponseAccepted(Genesyslab.Platform.Commons.Protocols.IMessage)">
+            <summary>
+            Check if message is valid response for registration message.
+            To indicate success just return true from the method.
+            To trigger general (unknown) failure return false, to
+            provide reason (and stack trace) throw exception.
+            </summary>
+            <param name="response">response to registration message</param>
+            <returns>true - if message is accepted</returns>
+            <exception cref="T:Genesyslab.Platform.Commons.Protocols.ProtocolException">if the message is unacceptable.</exception>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IComplexClass">
+            <exclude/>
+            <summary>
+            The main interface for all complex classes.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IComplexClass.Contains(System.String)">
+            <summary>
+            Determines if specified property is set
+            </summary>
+            <param name="name">Property name</param>
+            <returns>true, if specified property is set</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IComplexClass.ToString">
+            <summary>
+            Default ToString method.
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IComplexClass.ToString(System.Boolean,System.Boolean)">
+            <summary>
+            Specific ToString method, required for Logging system.
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.IComplexClass.Name">
+            <summary>
+            Gets the name of ComplexClass.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.IComplexClass.Item(System.String)">
+            <summary>
+            Gets or sets ComplexClass properties.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.ConvertMessageException">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.ProtocolException">
+            <summary>
+            Summary description for ProtocolException.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.ConvertMessageException.#ctor(System.String)">
+            <summary>
+            Initializes new ProtocolException instance with given message.
+            </summary>
+            <param name="messageText">Exception message string</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.ConvertMessageException.#ctor(System.String,Genesyslab.Platform.Commons.Protocols.IMessage,Genesyslab.Platform.Commons.Connection.ConnectionMessage)">
+            <summary>
+            Initializes new ProtocolException instance with given message.
+            </summary>
+            <param name="messageText">Exception message string</param>
+            <param name="msg">Message that was parsed with exception</param>
+            <param name="con">ConnectionMessage that was parsed with exception</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.ConvertMessageException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes new ProtocolException instance with given message.
+            </summary>
+            <param name="message">Exception message string</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.ConvertMessageException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.ConvertMessageException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <exclude/>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Protocols.TimeoutConstants.InfiniteTimeout">
+            <exclude/>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Protocols.TimeoutConstants.EmptyTimeout">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.Endpoint">
+             <summary>
+             You can use an <c>Endpoint</c> to describe a server that 
+             your application will be communicating with, by giving information 
+             such as the server name; its host and port; or its URI.</summary>
+             
+             <remarks>Here is an example of how you might use <c>Endpoint</c>
+             to instantiate a new <c>TServerProtocol</c> object:
+            
+            	<code lang="C#">TServerProtocol tServerProtocol = 
+            	new TServerProtocol(
+            	new Endpoint(
+            	tServerName,
+            	tServerUri));</code>
+            
+             </remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Genesyslab.Platform.Commons.Protocols.Endpoint.#ctor(System.Uri)" -->
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Endpoint.GetConfiguration">
+             Creates configuration object from query string of the Endpoint.
+             This method will return null if Endpoint wasn't craeted with
+             URI.
+            
+             @return configuration object or null
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.GeneralContextImpl">
+            <summary>
+            Context for protocols that doesn't have assosiated server context
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.ClosedEventArgs">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.ErrorArgs">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.ICodecSupport">
+            <summary>
+            Summary description for ICodecSupport.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IMessageFactory">
+            <exclude/>
+            <summary>
+            IMessageFactory interface. Necessary for each Protocol.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IMessageFactory.GetMessageName(System.Int32)">
+            <summary>
+            Gets Message name by id
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IMessageFactory.CreateMessage(System.Int32)">
+            <summary>
+            Creates Message instance by given Id.
+            </summary>
+            <param name="id">Id of Message to be created.</param>
+            <returns>Message instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IMessageFactory.CreateMessage(System.Int32,System.String)">
+            <summary>
+            Creates <code>Message</code> by id.
+            NOTE: Classes that implement this interface are usually created
+            automatically by generator. Do not implement this interface
+            unless you know what you're doing.
+            </summary>
+            <param name="id">id of the message</param>
+            <param name="name">name of the message</param>
+            <returns> <code>Message</code> subclass for the specified id.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.IMessageFactory.ProtocolVersion">
+            <summary>
+            Gets version of xml protocol file
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IntReferenceBuilder">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IRequestContext">
+            <exclude/>
+            <summary>
+            IRequestContext interface used for responding on requests.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IRequestContext.Respond(Genesyslab.Platform.Commons.Protocols.IMessage)">
+            <summary>
+            Responds with given message data.
+            </summary>
+            <param name="message">Message data to be responded.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IRequestContext.Transmit(Genesyslab.Platform.Commons.Protocols.IMessage)">
+            <summary>
+            Send the message to all channels EXCEPT the channel
+            that received the request.
+            </summary>
+            <param name="message">Message to send</param>
+            <exception cref="T:Genesyslab.Platform.Commons.Protocols.ProtocolException">ProtocolException if sending is failed</exception>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.IRequestContext.RequestMessage">
+            <summary>
+            Message that was requested.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IResponseChannel">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IMessage">
+            <summary>
+            This interface is used for all <c>Event</c> classes. When events 
+            are received from a server, your application will use this interface to process them.
+            </summary>
+            <remarks>
+            Here is a sample of how you can solicit and receive an event from a server:
+            
+            <code>[C#]
+            interactionServerProtocol.Send(requestAgentLogin);
+            IMessage respondingEvent = interactionServerProtocol.Receive();
+            </code><br/>
+            
+            In this case, the <c>Receive()</c> method blocks until it receives a response from 
+            the server.
+            
+            You can combine the Send() and Receive() methods into a single method call by using the 
+            Request() method, like this:
+            
+            <code>[C#]
+            IMessage response =
+            	interactionServerProtocol.Request(requestAgentLogin);
+            </code><br/>
+            
+            You can also receive an unsolicited event:
+            
+            <code>[C#]
+            IMessage unsolicitedEvent = interactionServerProtocol.Receive(); 
+            </code><br/>
+            
+            As shown in the above code samples, the reponse to your request will come in the form of 
+            an IMessage. This is the interface implemented by all events in the Platform SDK. Some 
+            requests will be answered by an event that is specific to the request, while others will 
+            receive a more generic response of <c>EventAck</c>, which simply acknowledges that your request 
+            was successful. If a request fails, the server will send an <c>EventError</c>. 
+            
+            A successful <c>RequestAgentLogin</c>, for example, will receive an <c>EventAck</c>, while an unsuccessful 
+            one will receive an <c>EventError</c>. You can use a switch statement to test which response you 
+            received, as outlined here:
+            
+            <code>[C#]
+            switch(respondingEvent.Id)
+            {
+            	case EventAck.MessageId:
+            	// The request succeeded, carry out appropriate processing...
+            	case EventError.MessageId:
+            	// The request failed, carry out appropriate processing...
+            ...
+            }
+            </code><br/>
+            </remarks>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IMessage.Contains(System.String)">
+            <summary>
+            Determines if specified property is set
+            </summary>
+            <param name="name">Property name</param>
+            <returns>true, if specified property is set</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IMessage.ToString">
+            <summary>
+            Default ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IMessage.ToString(System.Boolean,System.Boolean)">
+            <exclude/>
+            <summary>
+            Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.IMessage.Name">
+            <summary>
+            Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.IMessage.Id">
+            <summary>
+            Gets Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.IMessage.Item(System.String)">
+            <summary>
+            Gets or sets the values of message properties. Please do not use 'set' accessor because of performance impact.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.IMessage.Endpoint">
+            <summary>
+            Indicates server URI from which current message has been received.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.IMessage.ProtocolId">
+            <summary>
+            Id of the protocol supported by PlatformSDK to which this message belongs.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.EmptyMessage">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.MessageCorrelator">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.MessageCorrelator.MessageEntry">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.MessageParser">
+            <summary>
+            This class can be used for manual extracting IMessage object from byte[].
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.MessageParser.#ctor(Genesyslab.Platform.Commons.Protocols.IMessageFactory)">
+            <summary>
+            Constructs MessageParser object.
+            </summary>
+            <param name="factory">IMessageFactory implementation which will be used to generate IMessage instances.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.MessageParser.Parse(System.Byte[])">
+            <summary>
+            This method will try to extract IMessage object from the given byte array beginning from 0 position. 
+            In some cases the Length of the packed message (4 bytes) can be included in byte array. 
+            Note that all Parse methods do not expect Length or any other data in the buffer. 
+            In this case please use Parse with 2 arguments, and specify correct starting position (4 in 
+            this example).
+            Thread-safe.
+            </summary>
+            <param name="buf">byte array (packed message)</param>
+            <returns>Instance of extracted IMessage</returns>
+            <throws>InvalidPacketException</throws>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.MessageParser.Parse(System.Byte[],System.Int32)">
+            <summary>
+            This method will try to extract IMessage object from the given byte array, 
+            beginning from specified position. In some cases the Length of the packed message (4 bytes) 
+            can be included in byte array. Note that all Parse methods do not expect Length or 
+            any other data in the buffer. Specify 4 as starting position in this case.
+            Thread-safe.
+            </summary>
+            <param name="buf">byte array (packed message)</param>
+            <param name="pos">start position</param>
+            <returns>Instance of extracted IMessage</returns>
+            <throws>InvalidPacketException</throws>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IUpdatableDescription">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IUpdatableProtocolId">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IRequestReceiver.ReceiveRequest">
+             Receive request from the client. Depending on
+             implementation this method will or won't block
+             for some or infinite time.
+            
+             @return Message from the channel or null if the channel is "empty"
+             @throws InterruptedException if thread is interrupted during this method
+                  execution
+             @throws IllegalStateException if channel is not in appropriate state
+                  to call the method
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.IRequestReceiver.ReceiveRequest(System.TimeSpan)">
+             Receive request from the client. Depending on
+             timeout value this method will or won't block
+             for some time. See
+             {@link Channel Channel}
+             description for timeout values meaning.
+            
+             @param timeout timeout to waitResponse for message
+             @return Message from the channel or null if the channel is "empty"
+             @throws InterruptedException if thread is interrupted during this method
+                  execution
+             @throws IllegalStateException if channel is not in appropriate state
+                  to call the method
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.Internal.QueueSupport">
+            <exclude/>
+            <summary>
+            Summary description for QueueSupport.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.QueueSupport.RemoveOldest(System.Object)">
+            <summary>
+             Tries to put object to queue. If the queue is full the oldest object will be extracted until
+             put operation is successful.
+            </summary>
+            <param name="obj">Object to put to queue</param>
+            <returns>The last (usually single) removed object</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.QueueSupport.GrowQueue(System.Object)">
+            <summary>
+             Doubles the queue size and put the object to the grown queue.
+            </summary>
+            <param name="obj">Object to put to queue</param>
+        </member>
+        <member name="E:Genesyslab.Platform.Commons.Protocols.Internal.QueueSupport.QueueOverflow">
+            <summary>
+             This event allow user of the <see cref="T:Genesyslab.Platform.Commons.Protocols.Internal.QueueSupport"/> class to react on queue overflow.
+             QueueSupport itself do its best to call this handler as rare as possible.
+             User can use methods of queue support to resolve the overflow or ignore the overflow.
+             If the handler is not set the oldest object in queue will be discarded (lost). This behavior
+             is same as calling QueueSupport.RemoveOldest(Object) method.
+             Another method to resolve the overflow is QueueSupport.GrowQueue(Object).
+             Registering the handler and not calling the mentioned methods will lead to incoming object
+             to be ignored.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Protocols.Internal.QueueSupport.QueueOverflowEventArgs.Object">
+            <summary>
+            Object that doesn't fit into the queue because of overflow
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.IReferenceable">
+            <exclude/>
+            <summary>
+            Messages that participate in "conversations" (need to connect responses
+            with requests) should implement this interface to support ReferenceBuilders
+            of their protocols.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.RequestContext">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.NewChannelEventArgs">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.ServerChannel">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.ServerChannel.SendToChannelsExcept(Genesyslab.Platform.Commons.Protocols.IMessage,Genesyslab.Platform.Commons.Protocols.IOutputChannel)">
+             Send message to all channels except the one.
+            
+             @param message Message to send
+             @param except channel to miss from sending
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.ServerChannel.ModifyNewChannel(Genesyslab.Platform.Commons.Protocols.DuplexChannel)">
+             This method modify the new channel to support server mode
+             of operation suggested by ServerChannel. It sets special
+             ReceiverImplementation on the channel. If you want to handle
+             requests other way (e.g. thread per channel) you have to override
+             this method.
+            
+             @param channel incoming (accepted) channel
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.ServerChannel.SendToChannelsExcept(System.Collections.ICollection,Genesyslab.Platform.Commons.Protocols.IMessage,Genesyslab.Platform.Commons.Protocols.IOutputChannel)">
+             Send message to all channels in the collection except the one.
+            
+             @param message Message to send
+             @param except channel to miss from sending
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.ServerChannel.Configure(Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration)">
+             Set Configuration for all new channels. Please note, that clien channels
+             that were created before calling this method are not affected
+             by this call. Also note, that configuration can be modified to
+             be passive (in case of ADDP it wan't send init request, but waits for
+             remote side), so ConnectionConfiguration object returned from
+             {@link #getConfiguration() getConfiguration() method} can be different
+            
+             @param config connection configuration object
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.Internal.ServerReceiver">
+            <exclude/>
+            <summary>
+            Summary description for ServerReceiver.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.Internal.NullValues">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.Internal.ToStringHelper">
+            <exclude/>
+            <summary>
+            ToStringHelper class contains implementation of all necessary functions needed for ToString method of all Message, and ComplexClass derived classes.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.ToStringHelper.ToString(Genesyslab.Platform.Commons.Protocols.IComplexClass,System.Boolean,System.Boolean)">
+            <summary>
+            Implementation of ToString method for all ComplexClass derived classes.
+            </summary>
+            <param name="cc"></param>
+            <param name="hide"></param>
+            <param name="truncate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.Internal.ToStringHelper.ToString(Genesyslab.Platform.Commons.Protocols.IMessage,System.Boolean,System.Boolean)">
+            <summary>
+            Implementation of ToString method for all Message derived classes.
+            </summary>
+            <param name="mess"></param>
+            <param name="hide"></param>
+            <param name="truncate"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.XmlMessageSerializer">
+            <exclude/>
+            <summary>
+            XmlMessageSerializer class. Serializes/Desirializes Message to custom xml.
+            Serialized Messages can be validated with http://schemas.genesyslab.com/Messages/2005/ schema.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Protocols.XmlMessageSerializer.xmlns">
+            <summary>
+            Default namespace for validation with xsd schema
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.XmlMessageSerializer.#ctor(Genesyslab.Platform.Commons.Protocols.IMessageFactory)">
+            <summary>
+            Default constructor initializes a new instance of the XmlMessageSerializer class with IMessageFactory specified.
+            </summary>
+            <param name="factory"></param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.XmlMessageSerializer.Serialize(Genesyslab.Platform.Commons.Protocols.IMessage)">
+            <summary>
+            Serializes instance of Message derived class into XML.
+            </summary>
+            <param name="message">Message derived class instance.</param>
+            <returns>XmlDocument that represent serialized Message.</returns>
+            <exception cref="T:System.InvalidCastException">If given obj does not implement IDataSupport interface, or if some message property is not found in the set of Attributes defined for given Message type.</exception>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.XmlMessageSerializer.Deserialize(System.String)">
+            <summary>
+            Deserializes given string representation of XML into according Message derived class instance.
+            </summary>
+            <param name="xml">String representation of XML.</param>
+            <returns>Message derived class instance.</returns>
+            <exception cref="T:System.InvalidCastException">In case of invalid XML, or if Message Id is not corresponded to Message Name, or if some property written in XML is not described in Protocol.</exception>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.XmlMessageSerializer.Deserialize(System.Xml.XPath.IXPathNavigable)">
+            <summary>
+            Deserializes given XmlDocument document into according Message derived class instance.
+            </summary>
+            <param name="xml">IXPathNavigable interface of loaded XML document.</param>
+            <returns>Message derived class instance.</returns>
+            <exception cref="T:System.InvalidCastException">In case of invalid XML, or if Message Id is not corresponded to Message Name, or if some property written in XML is not described in Protocol.</exception>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.XmlMessageSerializer.Validate(System.String,System.Collections.IList,System.String@)">
+            <summary>
+            Validates given XML file with XML schema 
+            </summary>
+            <param name="file">Path to XML file, with any Message serialized.</param>
+            <param name="schemas">XML Schema, needed for validation.</param>
+            <param name="result">Reference to string, where verbal result of validation will be written.</param>
+            <returns>Returns true, if given XML file is valid; otherwise, false.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Protocols.XmlMessageSerializer.Validate(System.Xml.XmlDocument,System.Collections.IList,System.String@)">
+            <summary>
+            Validates given XML Document with XML schema 
+            </summary>
+            <param name="xml">XmlDocument instance, with any Message serialized.</param>
+            <param name="schemas">XML Schema, needed for validation.</param>
+            <param name="result">Reference to string, where verbal result of validation will be written.</param>
+            <returns>Returns true, if given XML file is valid; otherwise, false.</returns>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Protocols.XMLValidator">
+            XMLValidator helper class
+        </member>
+    </members>
+</doc>

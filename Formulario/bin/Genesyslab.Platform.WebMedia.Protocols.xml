@@ -1,0 +1,3571 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genesyslab.Platform.WebMedia.Protocols</name>
+    </assembly>
+    <members>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChatProtocol.AutoRegister">
+            <summary>
+            Defines if registration should be performed during Open Procedure
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.BasicChatEventList">
+            <summary>
+            Summary description for BasicChatEventList.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.BasicChatEventListCodec">
+            <summary>
+            Summary description for BasicChatEventListCodec.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Description">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Description.Create">
+            <summary>
+             Creates message "Description" with no parameters set.
+            </summary>
+            <returns>Description instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Description.Create(System.String)">
+            <summary>
+             Creates message "Description" with all parameters set.
+            </summary>
+            <param name="text"></param>
+            <returns>Description instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Description.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Description.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Description.Text">
+            <summary>Any arbitrary text. For example, when used with the <c>NoticeText</c> class this 
+            could contain a URL if the <c>NoticeType</c> is set to <c>PushURL</c> or be empty for <c>TypingStarted</c> notifications.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Description.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Description.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Reason">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Reason.Create">
+            <summary>
+             Creates message "Reason" with no parameters set.
+            </summary>
+            <returns>Reason instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Reason.Create(System.Int32,System.String)">
+            <summary>
+             Creates message "Reason" with all parameters set.
+            </summary>
+            <param name="code"></param>
+            <param name="text"></param>
+            <returns>Reason instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Reason.Create(System.Int32)">
+            <summary>
+             Creates message "Reason" with required set.
+            </summary>
+            <param name="code"></param>
+             <returns>Reason instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Reason.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Reason.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Reason.Code">
+            <summary>The error code in an error Description.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Reason.Text">
+            <summary>Any arbitrary text. For example, when used with the <c>NoticeText</c> class this 
+            could contain a URL if the <c>NoticeType</c> is set to <c>PushURL</c> or be empty for <c>TypingStarted</c> notifications.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Reason.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Reason.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText.Create">
+            <summary>
+             Creates message "MessageText" with no parameters set.
+            </summary>
+            <returns>MessageText instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText.Create(System.String,Genesyslab.Platform.WebMedia.Protocols.BasicChat.TreatAs,System.String)">
+            <summary>
+             Creates message "MessageText" with all parameters set.
+            </summary>
+            <param name="messageType"></param>
+            <param name="treatAs"></param>
+            <param name="text"></param>
+            <returns>MessageText instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText.Create(System.String)">
+            <summary>
+             Creates message "MessageText" with required set.
+            </summary>
+            <param name="text"></param>
+             <returns>MessageText instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText.MessageType">
+            <summary>Defines the message type for each <c>MessageText</c> object.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText.TreatAs">
+            <summary>???</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText.Text">
+            <summary>Any arbitrary text. For example, when used with the <c>NoticeText</c> class this 
+            could contain a URL if the <c>NoticeType</c> is set to <c>PushURL</c> or be empty for <c>TypingStarted</c> notifications.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeText">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeText.Create">
+            <summary>
+             Creates message "NoticeText" with no parameters set.
+            </summary>
+            <returns>NoticeText instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeText.Create(Genesyslab.Platform.WebMedia.Protocols.NoticeType,System.String)">
+            <summary>
+             Creates message "NoticeText" with all parameters set.
+            </summary>
+            <param name="noticeType"></param>
+            <param name="text"></param>
+            <returns>NoticeText instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeText.Create(System.String)">
+            <summary>
+             Creates message "NoticeText" with required set.
+            </summary>
+            <param name="text"></param>
+             <returns>NoticeText instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeText.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeText.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeText.NoticeType">
+            <summary>Type of notification (for example: typing, push URL, or custom notification). 
+            Must be specified with a value other than <c>None</c>.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeText.Text">
+            <summary>Any arbitrary text. For example, when used with the <c>NoticeText</c> class this 
+            could contain a URL if the <c>NoticeType</c> is set to <c>PushURL</c> or be empty for <c>TypingStarted</c> notifications.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeText.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeText.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ChatTranscript">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ChatTranscript.Create">
+            <summary>
+             Creates message "ChatTranscript" with no parameters set.
+            </summary>
+            <returns>ChatTranscript instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ChatTranscript.Create(System.String,System.String,Genesyslab.Platform.WebMedia.Protocols.BasicChat.BasicChatEventList)">
+            <summary>
+             Creates message "ChatTranscript" with all parameters set.
+            </summary>
+            <param name="startAt"></param>
+            <param name="sessionId"></param>
+            <param name="chatEventList"></param>
+            <returns>ChatTranscript instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ChatTranscript.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ChatTranscript.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ChatTranscript.StartAt">
+            <summary>Starting time for a <c>ChatTranscript</c> object.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ChatTranscript.SessionId">
+            <summary>The unique session ID for chat sessions.
+            This property must be specified when a party joins (or is released from) an existing chat session.
+            Leave this property empty when creating a new chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ChatTranscript.ChatEventList">
+            <summary>Chat event list returned with an <c>EventSessionInfo</c> event.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ChatTranscript.NewPartyEntry">
+            <summary>A custom-type handler used with the <c>ChatTranscript</c> class. 
+            This property provides user information about a new party that enters a chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ChatTranscript.PartyLeftEntry">
+            <summary>A custom-type handler used with the <c>ChatTranscript</c> class. 
+            This property provides user information about a new party that leaves a chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ChatTranscript.MessageEntry">
+            <summary>A custom-type handler used with the <c>ChatTranscript</c> class. 
+            This property provides information about messages entered during a chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ChatTranscript.ReenterEntry">
+            <summary>A custom-type handler used with the <c>ChatTranscript</c> class. 
+            This property provides user information about a party that re-enters a chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ChatTranscript.NoticeEntry">
+            <summary>
+             Property "NoticeEntry".
+             Attribute description: 
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ChatTranscript.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ChatTranscript.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserInfo">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserInfo.Create">
+            <summary>
+             Creates message "UserInfo" with no parameters set.
+            </summary>
+            <returns>UserInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserInfo.Create(System.String,System.String,Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserType,Genesyslab.Platform.WebMedia.Protocols.BasicChat.ProtocolType,System.Int32)">
+            <summary>
+             Creates message "UserInfo" with all parameters set.
+            </summary>
+            <param name="personId"></param>
+            <param name="userNickname"></param>
+            <param name="userType"></param>
+            <param name="protocolType"></param>
+            <param name="timeZoneOffset"></param>
+            <returns>UserInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserInfo.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserInfo.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserInfo.PersonId">
+            <summary>The person ID used when a new chat session is registered, or when a party is added to the session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserInfo.UserNickname">
+            <summary>The user name attached to the chat party/user across all chat sessions.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserInfo.UserType">
+            <summary>The type of user that is attached to this chat interaction. 
+            Accepted values are: <c>Client</c>, <c>Agent</c>, <c>Supervisor</c>, and <c>External</c>.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserInfo.ProtocolType">
+            <summary>The protocol type for this chat session. 
+            Accepted values are: <c>Basic</c>, <c>Flex</c>, or <c>Esp</c>.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserInfo.TimeZoneOffset">
+            <summary>Integer indicating the timezone offset for a chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserInfo.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserInfo.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NewPartyInfo">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NewPartyInfo.Create">
+            <summary>
+             Creates message "NewPartyInfo" with no parameters set.
+            </summary>
+            <returns>NewPartyInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NewPartyInfo.Create(System.String,System.Int32,Genesyslab.Platform.WebMedia.Protocols.BasicChat.Visibility,Genesyslab.Platform.Commons.Collections.KeyValueCollection,Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserInfo,Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText)">
+            <summary>
+             Creates message "NewPartyInfo" with all parameters set.
+            </summary>
+            <param name="userId"></param>
+            <param name="timeShift"></param>
+            <param name="visibility"></param>
+            <param name="userData"></param>
+            <param name="userInfo">
+             </param>
+            <param name="messageText">
+             </param>
+            <returns>NewPartyInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NewPartyInfo.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NewPartyInfo.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NewPartyInfo.UserId">
+            <summary>The user ID uniquely identifies chat party/user across all chat sessions.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NewPartyInfo.TimeShift">
+            <summary>Number of seconds elapsed from the moment when chat session started.</summary> 
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NewPartyInfo.Visibility">
+             <summary>This value determines the visibility of this event for other 
+             participants of chat session. Accepted values are: <c>All</c> (visible for all participants), 
+             <c>Int</c> (visible only for agents and supervisors), <c>Vip</c> (visible only for supervisors).</summary>
+            
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NewPartyInfo.UserData">
+            <summary>Pointer to the user data attached to the interaction.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NewPartyInfo.UserInfo">
+            <summary>
+             Property "UserInfo".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NewPartyInfo.MessageText">
+            <summary>
+             Property "MessageText".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NewPartyInfo.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NewPartyInfo.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.PartyLeftInfo">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.PartyLeftInfo.Create">
+            <summary>
+             Creates message "PartyLeftInfo" with no parameters set.
+            </summary>
+            <returns>PartyLeftInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.PartyLeftInfo.Create(System.String,System.Int32,Genesyslab.Platform.WebMedia.Protocols.BasicChat.Visibility,System.String,Genesyslab.Platform.WebMedia.Protocols.BasicChat.Reason,Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText)">
+            <summary>
+             Creates message "PartyLeftInfo" with all parameters set.
+            </summary>
+            <param name="userId"></param>
+            <param name="timeShift"></param>
+            <param name="visibility"></param>
+            <param name="askerId"></param>
+            <param name="reason">
+             </param>
+            <param name="messageText">
+             </param>
+            <returns>PartyLeftInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.PartyLeftInfo.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.PartyLeftInfo.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.PartyLeftInfo.UserId">
+            <summary>The user ID uniquely identifies chat party/user across all chat sessions.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.PartyLeftInfo.TimeShift">
+            <summary>Number of seconds elapsed from the moment when chat session started.</summary> 
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.PartyLeftInfo.Visibility">
+             <summary>This value determines the visibility of this event for other 
+             participants of chat session. Accepted values are: <c>All</c> (visible for all participants), 
+             <c>Int</c> (visible only for agents and supervisors), <c>Vip</c> (visible only for supervisors).</summary>
+            
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.PartyLeftInfo.AskerId">
+            <summary>String value that indicates who requested that a party leave the chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.PartyLeftInfo.Reason">
+            <summary>
+             Property "Reason".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.PartyLeftInfo.MessageText">
+            <summary>
+             Property "MessageText".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.PartyLeftInfo.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.PartyLeftInfo.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ReenterInfo">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ReenterInfo.Create">
+            <summary>
+             Creates message "ReenterInfo" with no parameters set.
+            </summary>
+            <returns>ReenterInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ReenterInfo.Create(System.String,System.Int32,Genesyslab.Platform.WebMedia.Protocols.BasicChat.Visibility,Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserStatus,Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserStatus,Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText)">
+            <summary>
+             Creates message "ReenterInfo" with all parameters set.
+            </summary>
+            <param name="userId"></param>
+            <param name="timeShift"></param>
+            <param name="visibility"></param>
+            <param name="agents"></param>
+            <param name="clients"></param>
+            <param name="messageText">
+             </param>
+            <returns>ReenterInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ReenterInfo.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ReenterInfo.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ReenterInfo.UserId">
+            <summary>The user ID uniquely identifies chat party/user across all chat sessions.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ReenterInfo.TimeShift">
+            <summary>Number of seconds elapsed from the moment when chat session started.</summary> 
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ReenterInfo.Visibility">
+             <summary>This value determines the visibility of this event for other 
+             participants of chat session. Accepted values are: <c>All</c> (visible for all participants), 
+             <c>Int</c> (visible only for agents and supervisors), <c>Vip</c> (visible only for supervisors).</summary>
+            
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ReenterInfo.Agents">
+            <summary>Specifies the agent user status when a party re-enters the chat session. 
+            Accepted values are: <c>On</c>, <c>Off</c>, and <c>Keep</c>.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ReenterInfo.Clients">
+            <summary>Specifies client user status.  Used when a party re-enters the chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ReenterInfo.MessageText">
+            <summary>
+             Property "MessageText".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ReenterInfo.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ReenterInfo.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageInfo">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageInfo.Create">
+            <summary>
+             Creates message "MessageInfo" with no parameters set.
+            </summary>
+            <returns>MessageInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageInfo.Create(System.String,System.Int32,Genesyslab.Platform.WebMedia.Protocols.BasicChat.Visibility,Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText)">
+            <summary>
+             Creates message "MessageInfo" with all parameters set.
+            </summary>
+            <param name="userId"></param>
+            <param name="timeShift"></param>
+            <param name="visibility"></param>
+            <param name="messageText">
+             </param>
+            <returns>MessageInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageInfo.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageInfo.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageInfo.UserId">
+            <summary>The user ID uniquely identifies chat party/user across all chat sessions.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageInfo.TimeShift">
+            <summary>Number of seconds elapsed from the moment when chat session started.</summary> 
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageInfo.Visibility">
+             <summary>This value determines the visibility of this event for other 
+             participants of chat session. Accepted values are: <c>All</c> (visible for all participants), 
+             <c>Int</c> (visible only for agents and supervisors), <c>Vip</c> (visible only for supervisors).</summary>
+            
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageInfo.MessageText">
+            <summary>
+             Property "MessageText".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageInfo.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageInfo.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeInfo">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeInfo.Create">
+            <summary>
+             Creates message "NoticeInfo" with no parameters set.
+            </summary>
+            <returns>NoticeInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeInfo.Create(System.String,System.Int32,Genesyslab.Platform.WebMedia.Protocols.BasicChat.Visibility,Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeText,Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "NoticeInfo" with all parameters set.
+            </summary>
+            <param name="userId"></param>
+            <param name="timeShift"></param>
+            <param name="visibility"></param>
+            <param name="noticeText">
+             </param>
+            <param name="messageText">
+             </param>
+            <param name="userData"></param>
+            <returns>NoticeInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeInfo.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeInfo.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeInfo.UserId">
+            <summary>The user ID uniquely identifies chat party/user across all chat sessions.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeInfo.TimeShift">
+            <summary>Number of seconds elapsed from the moment when chat session started.</summary> 
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeInfo.Visibility">
+             <summary>This value determines the visibility of this event for other 
+             participants of chat session. Accepted values are: <c>All</c> (visible for all participants), 
+             <c>Int</c> (visible only for agents and supervisors), <c>Vip</c> (visible only for supervisors).</summary>
+            
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeInfo.NoticeText">
+            <summary>
+             Property "NoticeText".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeInfo.MessageText">
+            <summary>
+             Property "MessageText".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeInfo.UserData">
+            <summary>Pointer to the user data attached to the interaction.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeInfo.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeInfo.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestRegister">
+            <summary>
+            Issues a request to register with Chat Server.
+            To register with Chat Server, you need to set correct values for <c>UserType</c>.
+            Other parameters are optional, including <c>PersonId</c>, <c>TimeZoneOffset</c>, 
+            <c>UserData</c>, and <c>UserNickname</c>.</summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestRegister.Create">
+            <summary>
+             Creates message "RequestRegister" with no parameters set.
+            </summary>
+            <returns>RequestRegister instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestRegister.Create(System.String,Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserType,System.String,System.Int32,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "RequestRegister" with all parameters set.
+            </summary>
+            <param name="userNickname"></param>
+            <param name="userType"></param>
+            <param name="personId"></param>
+            <param name="timeZoneOffset"></param>
+            <param name="userData"></param>
+            <returns>RequestRegister instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestRegister.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestRegister.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestRegister.ReferenceId">
+            <summary>The unique reference ID for any requests or events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestRegister.UserNickname">
+            <summary>The user name attached to the chat party/user across all chat sessions.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestRegister.UserType">
+            <summary>The type of user that is attached to this chat interaction. 
+            Accepted values are: <c>Client</c>, <c>Agent</c>, <c>Supervisor</c>, and <c>External</c>.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestRegister.PersonId">
+            <summary>The person ID used when a new chat session is registered, or when a party is added to the session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestRegister.TimeZoneOffset">
+            <summary>Integer indicating the timezone offset for a chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestRegister.UserData">
+            <summary>Pointer to the user data attached to the interaction.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestRegister.ClientVersion">
+            <summary> </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestRegister.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestRegister.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestRegister.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestJoin">
+            <summary>
+            Issues a request to create or join a chat session.
+            To connect to an existing session you have to set the correct
+            values for <c>SessionID</c> and <c>Visibility</c>.<br/>
+            To create a new session, <c>SessionID</c> should be null and you must specify
+            values for <c>QueueKey</c>, <c>Subject</c>, and <c>Visibility</c>.</summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestJoin.Create">
+            <summary>
+             Creates message "RequestJoin" with no parameters set.
+            </summary>
+            <returns>RequestJoin instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestJoin.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestJoin.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestJoin.ReferenceId">
+            <summary>The unique reference ID for any requests or events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestJoin.SessionId">
+            <summary>The unique session ID for chat sessions.
+            This property must be specified when a party joins (or is released from) an existing chat session.
+            Leave this property empty when creating a new chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestJoin.Visibility">
+             <summary>This value determines the visibility of this event for other 
+             participants of chat session. Accepted values are: <c>All</c> (visible for all participants), 
+             <c>Int</c> (visible only for agents and supervisors), <c>Vip</c> (visible only for supervisors).</summary>
+            
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestJoin.QueueKey">
+            <summary>This string specifies which ChatServer endpoint is chosen (with the endpoint 
+            specifying the Interaction Server queue where this chat interaction is submitted).</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestJoin.Subject">
+            <summary>The chat subject line that is attached to this interaction.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestJoin.MessageText">
+            <summary>
+             Property "MessageText".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestJoin.UserData">
+            <summary>Pointer to the user data attached to the interaction.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestJoin.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestJoin.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestJoin.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestReleaseParty">
+            <summary>
+            Issues a request to release one party from the chat session.
+            To create a <c>RequestReleaseParty</c> request, you need to set correct values for
+            <c>AfterAction</c>, <c>SessionID</c>, and <c>UserId</c>.</summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestReleaseParty.Create">
+            <summary>
+             Creates message "RequestReleaseParty" with no parameters set.
+            </summary>
+            <returns>RequestReleaseParty instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestReleaseParty.Create(System.String,System.String,Genesyslab.Platform.WebMedia.Protocols.BasicChat.Action,Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText)">
+            <summary>
+             Creates message "RequestReleaseParty" with all parameters set.
+            </summary>
+            <param name="sessionId"></param>
+            <param name="userId"></param>
+            <param name="afterAction"></param>
+            <param name="messageText">
+             </param>
+            <returns>RequestReleaseParty instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestReleaseParty.Create(System.String)">
+            <summary>
+             Creates message "RequestReleaseParty" with required set.
+            </summary>
+            <param name="sessionId"></param>
+             <returns>RequestReleaseParty instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestReleaseParty.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestReleaseParty.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestReleaseParty.ReferenceId">
+            <summary>The unique reference ID for any requests or events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestReleaseParty.SessionId">
+            <summary>The unique session ID for chat sessions.
+            This property must be specified when a party joins (or is released from) an existing chat session.
+            Leave this property empty when creating a new chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestReleaseParty.UserId">
+            <summary>The user ID uniquely identifies chat party/user across all chat sessions.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestReleaseParty.AfterAction">
+            <summary>Specifies the action to take after a <c>RequestReleaseParty</c> request. Accepted values are: <c>KeepAlive</c>, <c>CloseIfNoAgents</c>, and <c>ForceClose</c>.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestReleaseParty.MessageText">
+            <summary>
+             Property "MessageText".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestReleaseParty.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestReleaseParty.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestReleaseParty.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestMessage">
+            <summary>
+            Issues a request to add a message to the specified chat session.
+            To create a <c>RequestMessage</c> request, you need to set correct values for
+            <c>SessionID</c>, <c>Visibility</c>, and the message text.</summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestMessage.Create">
+            <summary>
+             Creates message "RequestMessage" with no parameters set.
+            </summary>
+            <returns>RequestMessage instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestMessage.Create(System.String,Genesyslab.Platform.WebMedia.Protocols.BasicChat.Visibility,Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText)">
+            <summary>
+             Creates message "RequestMessage" with all parameters set.
+            </summary>
+            <param name="sessionId"></param>
+            <param name="visibility"></param>
+            <param name="messageText">
+             </param>
+            <returns>RequestMessage instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestMessage.Create(System.String,Genesyslab.Platform.WebMedia.Protocols.BasicChat.Visibility)">
+            <summary>
+             Creates message "RequestMessage" with required set.
+            </summary>
+            <param name="sessionId"></param>
+            <param name="visibility"></param>
+             <returns>RequestMessage instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestMessage.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestMessage.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestMessage.ReferenceId">
+            <summary>The unique reference ID for any requests or events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestMessage.SessionId">
+            <summary>The unique session ID for chat sessions.
+            This property must be specified when a party joins (or is released from) an existing chat session.
+            Leave this property empty when creating a new chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestMessage.Visibility">
+             <summary>This value determines the visibility of this event for other 
+             participants of chat session. Accepted values are: <c>All</c> (visible for all participants), 
+             <c>Int</c> (visible only for agents and supervisors), <c>Vip</c> (visible only for supervisors).</summary>
+            
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestMessage.MessageText">
+            <summary>
+             Property "MessageText".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestMessage.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestMessage.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestMessage.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestNotify" -->
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestNotify.Create">
+            <summary>
+             Creates message "RequestNotify" with no parameters set.
+            </summary>
+            <returns>RequestNotify instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestNotify.Create(System.String,Genesyslab.Platform.WebMedia.Protocols.BasicChat.Visibility,Genesyslab.Platform.WebMedia.Protocols.BasicChat.NoticeText,Genesyslab.Platform.WebMedia.Protocols.BasicChat.MessageText,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "RequestNotify" with all parameters set.
+            </summary>
+            <param name="sessionId"></param>
+            <param name="visibility"></param>
+            <param name="noticeText">
+             </param>
+            <param name="messageText">
+             </param>
+            <param name="userData"></param>
+            <returns>RequestNotify instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestNotify.Create(System.String,Genesyslab.Platform.WebMedia.Protocols.BasicChat.Visibility)">
+            <summary>
+             Creates message "RequestNotify" with required set.
+            </summary>
+            <param name="sessionId"></param>
+            <param name="visibility"></param>
+             <returns>RequestNotify instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestNotify.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestNotify.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestNotify.ReferenceId">
+            <summary>The unique reference ID for any requests or events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestNotify.SessionId">
+            <summary>The unique session ID for chat sessions.
+            This property must be specified when a party joins (or is released from) an existing chat session.
+            Leave this property empty when creating a new chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestNotify.Visibility">
+             <summary>This value determines the visibility of this event for other 
+             participants of chat session. Accepted values are: <c>All</c> (visible for all participants), 
+             <c>Int</c> (visible only for agents and supervisors), <c>Vip</c> (visible only for supervisors).</summary>
+            
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestNotify.NoticeText">
+            <summary>
+             Property "NoticeText".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestNotify.MessageText">
+            <summary>
+             Property "MessageText".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestNotify.UserData">
+            <summary>Pointer to the user data attached to the interaction.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestNotify.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestNotify.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Requests.RequestNotify.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventRegistered">
+            <summary>
+            This event indicates that the <c>RequestRegister</c> request was processed successfully.
+            This event includes the <c>UserId</c> of the registered user, as well as the <c>OccurredAt</c> string.</summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventRegistered.Create">
+            <summary>
+             Creates message "EventRegistered" with no parameters set.
+            </summary>
+            <returns>EventRegistered instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventRegistered.Create(System.String,System.String)">
+            <summary>
+             Creates message "EventRegistered" with all parameters set.
+            </summary>
+            <param name="occurredAt"></param>
+            <param name="userId"></param>
+            <returns>EventRegistered instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventRegistered.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventRegistered.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventRegistered.ReferenceId">
+            <summary>The unique reference ID for any requests or events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventRegistered.OccurredAt">
+            <summary>Indicates when an event occurred.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventRegistered.UserId">
+            <summary>The user ID uniquely identifies chat party/user across all chat sessions.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventRegistered.ServerVersion">
+            <summary>The release number of Chat Server.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventRegistered.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventRegistered.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventRegistered.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventSessionInfo">
+            <summary>
+            This event provides transcript information about a chat session.
+            An <c>EventSessionInfo</c> event provides a <c>ChatTranscript</c>
+            object for a particular chat session, along with <c>SessionStatus</c> 
+            and <c>OccurredAt</c> details describing when the session information was
+            returned and the current status of that chat session.</summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventSessionInfo.Create">
+            <summary>
+             Creates message "EventSessionInfo" with no parameters set.
+            </summary>
+            <returns>EventSessionInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventSessionInfo.Create(Genesyslab.Platform.WebMedia.Protocols.BasicChat.SessionStatus,System.String,Genesyslab.Platform.WebMedia.Protocols.BasicChat.ChatTranscript)">
+            <summary>
+             Creates message "EventSessionInfo" with all parameters set.
+            </summary>
+            <param name="sessionStatus"></param>
+            <param name="occurredAt"></param>
+            <param name="chatTranscript">
+             </param>
+            <returns>EventSessionInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventSessionInfo.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventSessionInfo.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventSessionInfo.ReferenceId">
+            <summary>The unique reference ID for any requests or events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventSessionInfo.SessionStatus">
+            <summary>Specifies the current status of a chat session.
+            Accepted values are: <c>Alive</c> and <c>Over</c>.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventSessionInfo.OccurredAt">
+            <summary>Indicates when an event occurred.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventSessionInfo.ServerVersion">
+            <summary>The release number of Chat Server.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventSessionInfo.ChatTranscript">
+            <summary>
+             Property "ChatTranscript".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventSessionInfo.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventSessionInfo.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventSessionInfo.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventError">
+            <summary>
+            This event is a reply to an unsuccessful request.
+            An <c>EventError</c> event includes a description of the error, 
+            together with <c>ErrorId</c> and <c>OccurredAt</c> strings.</summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventError.Create">
+            <summary>
+             Creates message "EventError" with no parameters set.
+            </summary>
+            <returns>EventError instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventError.Create(System.String,System.String,Genesyslab.Platform.WebMedia.Protocols.BasicChat.Description)">
+            <summary>
+             Creates message "EventError" with all parameters set.
+            </summary>
+            <param name="occurredAt"></param>
+            <param name="errorId"></param>
+            <param name="description">
+             </param>
+            <returns>EventError instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventError.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventError.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventError.ReferenceId">
+            <summary>The unique reference ID for any requests or events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventError.OccurredAt">
+            <summary>Indicates when an event occurred.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventError.ErrorId">
+            <summary>The error ID returned in an <c>EventError</c> event.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventError.ServerVersion">
+            <summary>The release number of Chat Server.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventError.Description">
+            <summary>
+             Property "Description".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventError.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventError.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Events.EventError.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Action">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Action.KeepAlive">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Action.CloseIfNoAgents">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Action.ForceClose">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserType">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserType.Client">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserType.Agent">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserType.Supervisor">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserType.External">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ProtocolType">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ProtocolType.Basic">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ProtocolType.Flex">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.ProtocolType.Esp">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserStatus">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserStatus.On">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserStatus.Off">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.UserStatus.Keep">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.SessionStatus">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.SessionStatus.Alive">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.SessionStatus.Over">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Visibility">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Visibility.All">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Visibility.Int">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.Visibility.Vip">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.TreatAs">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.TreatAs.NORMAL">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.BasicChat.TreatAs.SYSTEM">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.BasicChatProtocolFactory">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.BasicChat.BasicChatInternalProtocolFactory">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Callback.MediaTypeEnumCodec">
+            <summary>
+            Summary description for MediaTypeEnumCodec.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Callback.SearchResult">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.SearchResult.Create">
+            <summary>
+             Creates message "SearchResult" with no parameters set.
+            </summary>
+            <returns>SearchResult instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.SearchResult.Create(System.String,System.String,Genesyslab.Platform.WebMedia.Protocols.Callback.MediaType,System.Boolean,System.String,System.String,System.String,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "SearchResult" with all parameters set.
+            </summary>
+            <param name="requestId"></param>
+            <param name="contact"></param>
+            <param name="mediaType"></param>
+            <param name="done"></param>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <param name="status"></param>
+            <param name="userData"></param>
+            <returns>SearchResult instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.SearchResult.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.SearchResult.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.SearchResult.RequestId">
+            <summary>This string identifies a particular request. When a related 
+            event is received, it will include the <c>RequestId</c> that you set.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.SearchResult.Contact">
+            <summary>A string providing contact information for a callback object.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.SearchResult.MediaType">
+            <summary>Specifies the media type for a callback object. 
+            Accepted values are: <c>Voice</c> or <c>VoiceOverIP</c>.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.SearchResult.Done">
+            <summary>A boolean value, indicating whether the callback 
+            item has been marked as done.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.SearchResult.StartTime">
+            <summary>A string that indicates the callback start time.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.SearchResult.EndTime">
+            <summary>A string that indicates the callback end time.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.SearchResult.Status">
+            <summary>This string describes the current status of a callback request.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.SearchResult.UserData">
+            <summary>A key value collection that contains user data.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.SearchResult.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.SearchResult.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCallback">
+            <summary>
+            This class represents a callback request packet. 
+            In response to the callback request, Callback Server 
+            can send an <c>EventAck</c> (acknowledgement) packet or an 
+            <c>EventError</c> packet. This response packet contains the 
+            same reference identifier as the request packet.</summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCallback.Create">
+            <summary>
+             Creates message "RequestCallback" with no parameters set.
+            </summary>
+            <returns>RequestCallback instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCallback.Create(System.String,Genesyslab.Platform.WebMedia.Protocols.Callback.MediaType,System.Boolean,System.String,System.String,System.String,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "RequestCallback" with all parameters set.
+            </summary>
+            <param name="contact"></param>
+            <param name="mediaType"></param>
+            <param name="done"></param>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <param name="status"></param>
+            <param name="userData"></param>
+            <returns>RequestCallback instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCallback.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCallback.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCallback.ReferenceId">
+            <summary>An integer that provides a unique identifier 
+            for each request or event message.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCallback.Contact">
+            <summary>A string providing contact information for a callback object.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCallback.MediaType">
+            <summary>Specifies the media type for a callback object. 
+            Accepted values are: <c>Voice</c> or <c>VoiceOverIP</c>.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCallback.Done">
+            <summary>A boolean value, indicating whether the callback 
+            item has been marked as done.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCallback.StartTime">
+            <summary>A string that indicates the callback start time.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCallback.EndTime">
+            <summary>A string that indicates the callback end time.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCallback.Status">
+            <summary>This string describes the current status of a callback request.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCallback.UserData">
+            <summary>A key value collection that contains user data.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCallback.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCallback.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCallback.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCancel">
+            <summary>
+            The <c>RequestCancel</c> class encodes and decodes packets
+            containing requests to cancel a callback request. 
+            In response to the cancellation request, Callback Server can send an
+            acknowledgement packet <c>EventAck</c> or an error packet
+            <c>EventError</c>. This response packet contains the same
+            reference identifier as the request packet.</summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCancel.Create">
+            <summary>
+             Creates message "RequestCancel" with no parameters set.
+            </summary>
+            <returns>RequestCancel instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCancel.Create(System.String,System.String,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "RequestCancel" with all parameters set.
+            </summary>
+            <param name="requestId"></param>
+            <param name="contact"></param>
+            <param name="userData"></param>
+            <returns>RequestCancel instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCancel.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCancel.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCancel.ReferenceId">
+            <summary>An integer that provides a unique identifier 
+            for each request or event message.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCancel.RequestId">
+            <summary>This string identifies a particular request. When a related 
+            event is received, it will include the <c>RequestId</c> that you set.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCancel.Contact">
+            <summary>A string providing contact information for a callback object.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCancel.UserData">
+            <summary>A key value collection that contains user data.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCancel.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCancel.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestCancel.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestSearch">
+            <summary>
+            This class represents a callback search request. 
+            In response to the search
+            request, Callback Server can send an <c>EventSearchResult</c> packet or an
+            <c>EventError</c> packet. This response packet contains the same reference
+            identifier as the request packet.</summary>
+            
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestSearch.Create">
+            <summary>
+             Creates message "RequestSearch" with no parameters set.
+            </summary>
+            <returns>RequestSearch instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestSearch.Create(System.String,Genesyslab.Platform.WebMedia.Protocols.Callback.MediaType,System.Boolean,System.String,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "RequestSearch" with all parameters set.
+            </summary>
+            <param name="contact"></param>
+            <param name="mediaType"></param>
+            <param name="done"></param>
+            <param name="status"></param>
+            <param name="userData"></param>
+            <returns>RequestSearch instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestSearch.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestSearch.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestSearch.ReferenceId">
+            <summary>An integer that provides a unique identifier 
+            for each request or event message.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestSearch.Contact">
+            <summary>A string providing contact information for a callback object.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestSearch.MediaType">
+            <summary>Specifies the media type for a callback object. 
+            Accepted values are: <c>Voice</c> or <c>VoiceOverIP</c>.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestSearch.Done">
+            <summary>A boolean value, indicating whether the callback 
+            item has been marked as done.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestSearch.Status">
+            <summary>This string describes the current status of a callback request.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestSearch.UserData">
+            <summary>A key value collection that contains user data.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestSearch.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestSearch.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestSearch.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetInfo">
+            <summary>
+            This class constructs requests for callback information from a Callback Server.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetInfo.Create">
+            <summary>
+             Creates message "RequestGetInfo" with no parameters set.
+            </summary>
+            <returns>RequestGetInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetInfo.Create(System.String,System.String)">
+            <summary>
+             Creates message "RequestGetInfo" with all parameters set.
+            </summary>
+            <param name="requestId"></param>
+            <param name="contact"></param>
+            <returns>RequestGetInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetInfo.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetInfo.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetInfo.ReferenceId">
+            <summary>An integer that provides a unique identifier 
+            for each request or event message.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetInfo.RequestId">
+            <summary>This string identifies a particular request. When a related 
+            event is received, it will include the <c>RequestId</c> that you set.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetInfo.Contact">
+            <summary>A string providing contact information for a callback object.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetInfo.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetInfo.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetInfo.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetStatistics">
+            <summary>
+            This class represents a statistics request packet. In response to the
+            statistics request, Callback Server can send a packet containing
+            <c>EventStatInfo</c> or an <c>EventError</c> packet. This response packet contains the same
+            reference identifier as the request packet.</summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetStatistics.Create">
+            <summary>
+             Creates message "RequestGetStatistics" with no parameters set.
+            </summary>
+            <returns>RequestGetStatistics instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetStatistics.Create(System.String,System.String,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "RequestGetStatistics" with all parameters set.
+            </summary>
+            <param name="requestId"></param>
+            <param name="contact"></param>
+            <param name="userData"></param>
+            <returns>RequestGetStatistics instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetStatistics.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetStatistics.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetStatistics.ReferenceId">
+            <summary>An integer that provides a unique identifier 
+            for each request or event message.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetStatistics.RequestId">
+            <summary>This string identifies a particular request. When a related 
+            event is received, it will include the <c>RequestId</c> that you set.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetStatistics.Contact">
+            <summary>A string providing contact information for a callback object.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetStatistics.UserData">
+            <summary>A key value collection that contains user data.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetStatistics.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetStatistics.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Requests.RequestGetStatistics.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventRedirect">
+            <summary>
+            This class redirects a packet to another Callback Server.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventRedirect.Create">
+            <summary>
+             Creates message "EventRedirect" with no parameters set.
+            </summary>
+            <returns>EventRedirect instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventRedirect.Create(System.String,System.Int32)">
+            <summary>
+             Creates message "EventRedirect" with all parameters set.
+            </summary>
+            <param name="host"></param>
+            <param name="port"></param>
+            <returns>EventRedirect instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventRedirect.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventRedirect.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventRedirect.ReferenceId">
+            <summary>An integer that provides a unique identifier 
+            for each request or event message.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventRedirect.Host">
+            <summary>This string contains the hostname used in an 
+            <c>EventRedirect</c> message.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventRedirect.Port">
+            <summary>An integer value that indicates which port to 
+            use in an <code>EventRedirect</code> message.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventRedirect.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventRedirect.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventRedirect.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventInfo">
+            <summary>
+            Creates a callback &quot;request for information&quot; packet. Sent in response 
+            to a <c>RequestGetInfo</c> request.</summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventInfo.Create">
+            <summary>
+             Creates message "EventInfo" with no parameters set.
+            </summary>
+            <returns>EventInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventInfo.Create(System.String,System.String,Genesyslab.Platform.WebMedia.Protocols.Callback.MediaType,System.Boolean,System.String,System.String,System.String,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "EventInfo" with all parameters set.
+            </summary>
+            <param name="requestId"></param>
+            <param name="contact"></param>
+            <param name="mediaType"></param>
+            <param name="done"></param>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <param name="status"></param>
+            <param name="userData"></param>
+            <returns>EventInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventInfo.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventInfo.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventInfo.ReferenceId">
+            <summary>An integer that provides a unique identifier 
+            for each request or event message.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventInfo.RequestId">
+            <summary>This string identifies a particular request. When a related 
+            event is received, it will include the <c>RequestId</c> that you set.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventInfo.Contact">
+            <summary>A string providing contact information for a callback object.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventInfo.MediaType">
+            <summary>Specifies the media type for a callback object. 
+            Accepted values are: <c>Voice</c> or <c>VoiceOverIP</c>.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventInfo.Done">
+            <summary>A boolean value, indicating whether the callback 
+            item has been marked as done.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventInfo.StartTime">
+            <summary>A string that indicates the callback start time.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventInfo.EndTime">
+            <summary>A string that indicates the callback end time.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventInfo.Status">
+            <summary>This string describes the current status of a callback request.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventInfo.UserData">
+            <summary>A key value collection that contains user data.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventInfo.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventInfo.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventInfo.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventStatInfo">
+            <summary>
+            This class represents a packet containing statistical information.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventStatInfo.Create">
+            <summary>
+             Creates message "EventStatInfo" with no parameters set.
+            </summary>
+            <returns>EventStatInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventStatInfo.Create(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+             Creates message "EventStatInfo" with all parameters set.
+            </summary>
+            <param name="requestId"></param>
+            <param name="contact"></param>
+            <param name="requestStatus"></param>
+            <param name="queueSize"></param>
+            <param name="queueEstimatedWaitingTime"></param>
+            <param name="requestPositionInQueue"></param>
+            <param name="requestEstimatedWaitingTime"></param>
+            <returns>EventStatInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventStatInfo.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventStatInfo.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventStatInfo.ReferenceId">
+            <summary>An integer that provides a unique identifier 
+            for each request or event message.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventStatInfo.RequestId">
+            <summary>This string identifies a particular request. When a related 
+            event is received, it will include the <c>RequestId</c> that you set.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventStatInfo.Contact">
+            <summary>A string providing contact information for a callback object.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventStatInfo.RequestStatus">
+            <summary>This string is returned with an <c>EventStatInfo</c> event, 
+            and indicates the status of a callback request.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventStatInfo.QueueSize">
+            <summary>This integer value indicates the current size of the 
+            interaction queue where a callback request is located in. Returned 
+            as part of the <c>EventStatInfo</c> event.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventStatInfo.QueueEstimatedWaitingTime">
+            <summary>This integer value is an estimate of how long it 
+            will take before a callback request is ready to be processed in 
+            an interaction queue. Returned as part of the <c>EventStatInfo</c> event.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventStatInfo.RequestPositionInQueue">
+            <summary>This property holds the queue position for 
+            a callback interaction request in a specified queue.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventStatInfo.RequestEstimatedWaitingTime">
+            <summary>This integer value is an estimate of the average time it takes to 
+            handle a callback request. Returned as part of the <c>EventStatInfo</c> event.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventStatInfo.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventStatInfo.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventStatInfo.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventAck">
+            <summary> 
+            The <c>EventAck</c> class encodes and decodes a callback packet
+            containing an acknowledgement.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventAck.Create">
+            <summary>
+             Creates message "EventAck" with no parameters set.
+            </summary>
+            <returns>EventAck instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventAck.Create(System.String)">
+            <summary>
+             Creates message "EventAck" with all parameters set.
+            </summary>
+            <param name="requestId"></param>
+            <returns>EventAck instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventAck.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventAck.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventAck.ReferenceId">
+            <summary>An integer that provides a unique identifier 
+            for each request or event message.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventAck.RequestId">
+            <summary>This string identifies a particular request. When a related 
+            event is received, it will include the <c>RequestId</c> that you set.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventAck.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventAck.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventAck.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventError">
+            <summary> 
+            The <c>EventError</c> class encodes and decodes a packet
+            containing a callback error.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventError.Create">
+            <summary>
+             Creates message "EventError" with no parameters set.
+            </summary>
+            <returns>EventError instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventError.Create(System.Int32,System.String)">
+            <summary>
+             Creates message "EventError" with all parameters set.
+            </summary>
+            <param name="errorCode"></param>
+            <param name="description"></param>
+            <returns>EventError instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventError.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventError.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventError.ReferenceId">
+            <summary>An integer that provides a unique identifier 
+            for each request or event message.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventError.ErrorCode">
+            <summary>The error code returned in an <c>EventError</c>.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventError.Description">
+            <summary>A description of the error.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventError.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventError.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventError.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventSearchResult">
+            <summary>
+            Creates a search results packet that can contain information on one or more
+            callback requests. 
+            The nested <c>SearchResult</c> class contains information
+            about the individual requests that met the search criteria.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventSearchResult.Create">
+            <summary>
+             Creates message "EventSearchResult" with no parameters set.
+            </summary>
+            <returns>EventSearchResult instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventSearchResult.Create(Genesyslab.Platform.WebMedia.Protocols.Callback.SearchResultList)">
+            <summary>
+             Creates message "EventSearchResult" with all parameters set.
+            </summary>
+            <param name="searchResultList"></param>
+            <returns>EventSearchResult instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventSearchResult.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventSearchResult.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventSearchResult.ReferenceId">
+            <summary>An integer that provides a unique identifier 
+            for each request or event message.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventSearchResult.SearchResultList">
+            <summary>Contains information about requests that match 
+            search criteria in the <c>EventSearchResult</c> event.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventSearchResult.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventSearchResult.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Callback.Events.EventSearchResult.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Callback.ProcessingStatus">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Callback.ProcessingStatus.Unknown">
+            <summary>
+             initial
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Callback.ProcessingStatus.Received">
+            <summary>
+             request received, processing started
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Callback.ProcessingStatus.Timer">
+            <summary>
+             timer initialised
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Callback.ProcessingStatus.Queued">
+            <summary>
+             submitted on VRP
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Callback.ProcessingStatus.Distributed">
+            <summary>
+             distributed by Router
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Callback.ProcessingStatus.SubmittedToAgent">
+            <summary>
+             submitted to Agent
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Callback.ProcessingStatus.RejectedByAgent">
+            <summary>
+             rejected by Agent
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Callback.ProcessingStatus.CanceledByAgent">
+            <summary>
+             canceled by Agent
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Callback.ProcessingStatus.ProcessedByAgent">
+            <summary>
+             processed by Agent
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Callback.ProcessingStatus.StatFinal">
+            <summary>
+             final state
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Callback.ProcessingStatus.NotQueued">
+            <summary>
+             preparation for queueing, callback request (vurtual call) creation
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Callback.ProcessingStatus.Error">
+            <summary>
+             error in processing
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Callback.ProcessingStatus.Replaced">
+            <summary>
+             request has been replaced with another one for the same phone #
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Callback.ProcessingStatus.AgentTransfer">
+            <summary>
+             not used, reserved for future
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Callback.ProcessingStatus.EndTimeExpired">
+            <summary>
+             clbk processing time expired
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Callback.MediaType">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Callback.MediaType.Voice">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Callback.MediaType.VoiceOverIp">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Callback.CallbackProtocolFactory">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Callback.CallbackInternalProtocolFactory">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.EmailProtocol">
+            <summary>
+            Summary description for EmailProtocol.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Email.AbstractList">
+            <summary>
+            Summary description for AbstractList.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Email.AttachmentCollection">
+            <summary>
+            Summary description for AttachmentCollection.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Email.MailPropertiesCodec">
+            <summary>
+            Summary description for UserDataCodec.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Email.Internal.CustomMarshalManager">
+            <summary>
+            Summary description for CustomMarshaling.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Email.EmailDialect">
+            <summary>
+            Summary description for EmailDialect.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Email.EmailPropertiesResolver">
+            <summary>
+            Summary description for EmailPropertiesResolver.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Email.Requests.RequestSubmit">
+            <summary>
+            Issues a request to submit a new e-mail interaction.  
+            To create a new RequestSubmit message, you need to set values for the 
+            <c>MediaType</c> and <c>UserData</c>.</summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Email.Requests.RequestSubmit.Create">
+            <summary>
+             Creates message "RequestSubmit" with no parameters set.
+            </summary>
+            <returns>RequestSubmit instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Email.Requests.RequestSubmit.Create(System.String,Genesyslab.Platform.WebMedia.Protocols.Email.Requests.EmailProperties)">
+            <summary>
+             Creates message "RequestSubmit" with all parameters set.
+            </summary>
+            <param name="mediaType"></param>
+            <param name="userData"></param>
+            <returns>RequestSubmit instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Email.Requests.RequestSubmit.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Email.Requests.RequestSubmit.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Email.Requests.RequestSubmit.ReferenceId">
+            <summary>An integer that provides a unique identifier 
+            for each request or event message.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Email.Requests.RequestSubmit.MediaType">
+            <summary>Specifies the media type for an e-mail object.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Email.Requests.RequestSubmit.UserData">
+            <summary>A key value collection that contains user data.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Email.Requests.RequestSubmit.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Email.Requests.RequestSubmit.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Email.Requests.RequestSubmit.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventAck">
+            <summary>
+            The <c>EventAck</c> class encodes and decodes an e-mail packet
+            containing an acknowledgement.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventAck.Create">
+            <summary>
+             Creates message "EventAck" with no parameters set.
+            </summary>
+            <returns>EventAck instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventAck.Create(System.String)">
+            <summary>
+             Creates message "EventAck" with all parameters set.
+            </summary>
+            <param name="requestId"></param>
+            <returns>EventAck instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventAck.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventAck.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventAck.ReferenceId">
+            <summary>An integer that provides a unique identifier 
+            for each request or event message.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventAck.RequestId">
+            <summary>This string identifies a particular request. When a related 
+            event is received, it will include the <c>RequestId</c> that you set.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventAck.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventAck.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventAck.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventError">
+            <summary>
+            The <c>EventError</c> class encodes and decodes a packet
+            containing an e-mail error.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventError.Create">
+            <summary>
+             Creates message "EventError" with no parameters set.
+            </summary>
+            <returns>EventError instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventError.Create(Genesyslab.Platform.WebMedia.Protocols.Email.Errors,System.String)">
+            <summary>
+             Creates message "EventError" with all parameters set.
+            </summary>
+            <param name="errorCode"></param>
+            <param name="description"></param>
+            <returns>EventError instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventError.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventError.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventError.ReferenceId">
+            <summary>An integer that provides a unique identifier 
+            for each request or event message.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventError.ErrorCode">
+            <summary>The error code returned in an <c>EventError</c>. Possible values are:<br/>
+            0 - Success: E-mail Server Java accepts the request.<br/>
+            1 - Timeout: No response from E-mail Server Java.<br/>
+            2 - ConnectionClosed: Connection to E-mail Server Java is lost or unestablished.<br/>
+            3 - OperationFailure: The request failed.<br/>
+            4 - InternalFailure: An internal error occurred.<br/>
+            5 - ConnectionFailure: Connection failure.</summary>
+            
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventError.Description">
+            <summary>A description of the error.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventError.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventError.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.Email.Events.EventError.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Email.Errors">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Email.Errors.Success">
+            <summary>
+             E-mail Server Java accepts the request.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Email.Errors.Timeout">
+            <summary>
+             No response from E-mail Server Java
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Email.Errors.ConnectionClosed">
+            <summary>
+             Lost or unestablished connection to E-mail Server Java
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Email.Errors.OperationFailure">
+            <summary>
+             Request failed.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Email.Errors.InternalFailure">
+            <summary>
+             Internal error.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.Email.Errors.ConnectionFailure">
+            <summary>
+             Connection failure
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Email.EmailProtocolFactory">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.Email.EmailInternalProtocolFactory">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.FlexChatProtocol">
+            <summary>
+            Channel opening can be performed in two ways depending on which channel parameters are set:
+            1) If UserId parameter is set, it means that user is already logged in. So channel will not send 
+            RequestLogin message to server during opening. SecureKey parameter should also be set in this case,
+            otherwise server may not respond.
+            2) If UserId is not set, it means that user is not logged in, so server should send RequestLogin message 
+            during channel opening. UserNickName parameter is desirable to be set in this case. During channel 
+            opening after sending RequestLogin channel will wait for server response. If all is ok channel will 
+            fill UserId and SecureKey properties automatically.
+            These UserId and SecureKey properties will be set in each user request (if they are not set manually) 
+            by channel automatically.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChatProtocol.Send(Genesyslab.Platform.Commons.Protocols.IMessage)">
+            <summary>
+            Send the specified request to the server. To receive a response from the
+            server, you must use the Genesyslab.Platform.Commons.Protocols.DuplexChannel.Receive()
+            method. This response will be asynchronous. You can also use the Genesyslab.Platform.Commons.Protocols.ClientChannel.Request(Genesyslab.Platform.Commons.Protocols.IMessage)
+            method instead of Send and Receive.
+            </summary>
+            <remarks>
+            Current UserId, and SecureKey (if set) will be automatically added to any message, except RequestLogin message.
+            </remarks>
+            <param name="message">The request to be sent to the server.</param>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChatProtocol.TimeZoneOffset">
+            <summary>
+            Optional.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChatProtocol.UserData">
+            <summary>
+            Optional, used for user identification in UCS (Universal Contact Server)
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChatProtocol.UserNickname">
+            <summary>
+            Optional, but very desirable for login during channel Open. It will be used for user display name.
+            This field will be ignored in case of setting UserId, and SecureKey.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChatProtocol.SecureKey">
+            <summary>
+            Optional, if set with UserId, channel will not send RequestLogin message during opening.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChatProtocol.UserId">
+            <summary>
+            Optional, if set with SecureKey, channel will not send RequestLogin message during opening.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChatProtocol.AutoRegister">
+            <summary>
+            Defines if registration should be performed during Open Procedure
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Description">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Description.Create">
+            <summary>
+             Creates message "Description" with no parameters set.
+            </summary>
+            <returns>Description instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Description.Create(System.String,System.String)">
+            <summary>
+             Creates message "Description" with all parameters set.
+            </summary>
+            <param name="errorId"></param>
+            <param name="text"></param>
+            <returns>Description instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Description.Create(System.String)">
+            <summary>
+             Creates message "Description" with required set.
+            </summary>
+            <param name="errorId"></param>
+             <returns>Description instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Description.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Description.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Description.ErrorId">
+            <summary>The error ID returned in an <c>EventError</c> event.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Description.Text">
+            <summary>If <c>NoticeType</c> is not equal to <c>None</c>, then this property contains the notification text. Otherwise, it holds the message text.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Description.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Description.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.FlexChat.MessageText">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.MessageText.Create">
+            <summary>
+             Creates message "MessageText" with no parameters set.
+            </summary>
+            <returns>MessageText instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.MessageText.Create(System.String,Genesyslab.Platform.WebMedia.Protocols.FlexChat.TreatAs,System.String)">
+            <summary>
+             Creates message "MessageText" with all parameters set.
+            </summary>
+            <param name="messageType"></param>
+            <param name="treatAs"></param>
+            <param name="text"></param>
+            <returns>MessageText instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.MessageText.Create(System.String)">
+            <summary>
+             Creates message "MessageText" with required set.
+            </summary>
+            <param name="text"></param>
+             <returns>MessageText instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.MessageText.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.MessageText.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.MessageText.MessageType">
+            <summary>Defines the message type for each <c>MessageText</c> object.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.MessageText.TreatAs">
+            <summary> </summary>
+            
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.MessageText.Text">
+            <summary>If <c>NoticeType</c> is not equal to <c>None</c>, then this property contains the notification text. Otherwise, it holds the message text.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.MessageText.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.MessageText.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.FlexChat.NoticeText">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.NoticeText.Create">
+            <summary>
+             Creates message "NoticeText" with no parameters set.
+            </summary>
+            <returns>NoticeText instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.NoticeText.Create(Genesyslab.Platform.WebMedia.Protocols.NoticeType,System.String)">
+            <summary>
+             Creates message "NoticeText" with all parameters set.
+            </summary>
+            <param name="noticeType"></param>
+            <param name="text"></param>
+            <returns>NoticeText instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.NoticeText.Create(System.String)">
+            <summary>
+             Creates message "NoticeText" with required set.
+            </summary>
+            <param name="text"></param>
+             <returns>NoticeText instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.NoticeText.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.NoticeText.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.NoticeText.NoticeType">
+            <summary>Type of notification, as defined by the <c>NoticeType</c> enumeration.</summary>
+            
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.NoticeText.Text">
+            <summary>If <c>NoticeType</c> is not equal to <c>None</c>, then this property contains the notification text. Otherwise, it holds the message text.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.NoticeText.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.NoticeText.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.FlexChat.FlexTranscript">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.FlexTranscript.Create">
+            <summary>
+             Creates message "FlexTranscript" with no parameters set.
+            </summary>
+            <returns>FlexTranscript instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.FlexTranscript.Create(System.String,System.String,System.Int32,Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventInfoList)">
+            <summary>
+             Creates message "FlexTranscript" with all parameters set.
+            </summary>
+            <param name="startAt"></param>
+            <param name="sessionId"></param>
+            <param name="lastPosition"></param>
+            <param name="eventInfoList"></param>
+            <returns>FlexTranscript instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.FlexTranscript.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.FlexTranscript.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.FlexTranscript.StartAt">
+            <summary>Starting time for a <c>FlexTranscript</c> object.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.FlexTranscript.SessionId">
+            <summary>The unique session ID for chat sessions.
+            This property must be specified when a party joins (or is released from) an existing chat session.
+            Leave this property empty when creating a new chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.FlexTranscript.LastPosition">
+            <summary>An integer that indicates the last position for a <c>FlexTranscript</c> object.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.FlexTranscript.EventInfoList">
+            <summary>A list of flexchat events returned with a <c>FlexTranscript</c> object.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.FlexTranscript.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.FlexTranscript.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventInfo">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventInfo.Create">
+            <summary>
+             Creates message "EventInfo" with no parameters set.
+            </summary>
+            <returns>EventInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventInfo.Create(System.Int32,Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventType,System.String,Genesyslab.Platform.WebMedia.Protocols.FlexChat.UserType,System.Int32,System.String,System.String,Genesyslab.Platform.WebMedia.Protocols.NoticeType)">
+            <summary>
+             Creates message "EventInfo" with all parameters set.
+            </summary>
+            <param name="partyId"></param>
+            <param name="eventType"></param>
+            <param name="userNickname"></param>
+            <param name="userType"></param>
+            <param name="timeOffset"></param>
+            <param name="messageType"></param>
+            <param name="text"></param>
+            <param name="noticeType"></param>
+            <returns>EventInfo instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventInfo.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventInfo.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventInfo.PartyId">
+            <summary>An integer that represents a unique ID number for each party in the session. This ID is unique only within this particular chat session, not across different chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventInfo.EventType">
+            <summary>The event type returned as part of an <c>EventInfo</c> object. Valid values are:<br/>
+            Connect<br/>
+            Message<br/>
+            Abandon<br/>
+            Notice</summary>
+            
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventInfo.UserNickname">
+            <summary>The nickname of the chat user in the chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventInfo.UserType">
+            <summary>The user type attached to the interaction. Valid values are:<br/>
+            Client<br/>
+            Agent<br/>
+            Supervisor<br/>
+            External</summary>
+            
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventInfo.TimeOffset">
+            <summary>Number of seconds elapsed from the moment when chat session started.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventInfo.MessageType">
+            <summary>Defines the message type for each <c>MessageText</c> object.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventInfo.Text">
+            <summary>If <c>NoticeType</c> is not equal to <c>None</c>, then this property contains the notification text. Otherwise, it holds the message text.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventInfo.NoticeType">
+            <summary>Type of notification, as defined by the <c>NoticeType</c> enumeration.</summary>
+            
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventInfo.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventInfo.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogin">
+            <summary>
+            Issues a login request to Interaction Server.
+            To register with Interaction Server, you need to set correct values for
+            <c>UserNickname</c>, <c>TimeZoneOffset</c>, and <c>UserData</c>.</summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogin.Create">
+            <summary>
+             Creates message "RequestLogin" with no parameters set.
+            </summary>
+            <returns>RequestLogin instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogin.Create(System.String,System.Int32,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "RequestLogin" with all parameters set.
+            </summary>
+            <param name="userNickname"></param>
+            <param name="timezoneOffset"></param>
+            <param name="userData"></param>
+            <returns>RequestLogin instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogin.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogin.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogin.ReferenceId">
+            <summary>The unique reference ID for any requests or events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogin.UserNickname">
+            <summary>The nickname of the chat user in the chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogin.TimezoneOffset">
+            <summary>Integer indicating the timezone offset for a chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogin.UserData">
+            <summary>Pointer to the user data that should be attached to the interaction.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogin.ClientVersion">
+            <summary> </summary>
+            
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogin.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogin.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogin.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestJoin">
+            <summary>
+            Issues a request to join a chat interaction.
+            To connect to an existing session you have to set the correct
+            values for <c>SessionID</c> and <c>UserId</c>.<br/>
+            To create a new session, <c>SessionID</c> should be null and you must specify
+            values for <c>UserId</c>, <c>SecureKey</c>, <c>Subject</c>, and <c>QueueKey</c>.</summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestJoin.Create">
+            <summary>
+             Creates message "RequestJoin" with no parameters set.
+            </summary>
+            <returns>RequestJoin instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestJoin.Create(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+             Creates message "RequestJoin" with all parameters set.
+            </summary>
+            <param name="userId"></param>
+            <param name="secureKey"></param>
+            <param name="sessionId"></param>
+            <param name="queueKey"></param>
+            <param name="subject"></param>
+            <returns>RequestJoin instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestJoin.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestJoin.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestJoin.ReferenceId">
+            <summary>The unique reference ID for any requests or events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestJoin.UserId">
+            <summary>The user ID uniquely identifies chat party/user across all chat sessions.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestJoin.SecureKey">
+            <summary> </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestJoin.SessionId">
+            <summary>The unique session ID for chat sessions.
+            This property must be specified when a party joins (or is released from) an existing chat session.
+            Leave this property empty when creating a new chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestJoin.QueueKey">
+            <summary>This string specifies which queue to join during a <c>RequestJoin</c> request.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestJoin.Subject">
+            <summary>The chat subject line that is attached to this interaction.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestJoin.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestJoin.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestJoin.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestRefresh">
+            <summary>
+            Issues a request to refresh the current flexchat session.
+            To refresh an existing session, you have to specify correct values for
+            <c>UserId</c>, <c>SecureKey</c>, and <c>FromPosition</c>.</summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestRefresh.Create">
+            <summary>
+             Creates message "RequestRefresh" with no parameters set.
+            </summary>
+            <returns>RequestRefresh instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestRefresh.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestRefresh.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestRefresh.ReferenceId">
+            <summary>The unique reference ID for any requests or events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestRefresh.UserId">
+            <summary>The user ID uniquely identifies chat party/user across all chat sessions.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestRefresh.SecureKey">
+            <summary> </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestRefresh.FromPosition">
+            <summary>An integer that indicates the current position in the transcript of a chat session. Used with refresh or logout requests.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestRefresh.NoticeText">
+            <summary>
+             Property "NoticeText".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestRefresh.MessageText">
+            <summary>
+             Property "MessageText".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestRefresh.UserData">
+            <summary>Pointer to the user data that should be attached to the interaction.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestRefresh.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestRefresh.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestRefresh.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogout">
+            <summary>
+            Issues a logout request to Interaction Server.
+            To logout from Interaction Server, you need to set correct values for
+            <c>UserId</c>, <c>SecureKey</c>, and <c>FromPosition</c>.</summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogout.Create">
+            <summary>
+             Creates message "RequestLogout" with no parameters set.
+            </summary>
+            <returns>RequestLogout instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogout.Create(System.String,System.String,System.Int32)">
+            <summary>
+             Creates message "RequestLogout" with all parameters set.
+            </summary>
+            <param name="userId"></param>
+            <param name="secureKey"></param>
+            <param name="fromPosition"></param>
+            <returns>RequestLogout instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogout.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogout.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogout.ReferenceId">
+            <summary>The unique reference ID for any requests or events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogout.UserId">
+            <summary>The user ID uniquely identifies chat party/user across all chat sessions.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogout.SecureKey">
+            <summary> </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogout.FromPosition">
+            <summary>An integer that indicates the current position in the transcript of a chat session. Used with refresh or logout requests.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogout.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogout.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Requests.RequestLogout.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Events.EventStatus">
+            <summary>
+            Provides information about the status of a request.
+            The <c>EventStatus</c> event provides details about when 
+            a request occurred, the result of that request, a <c>FlexTranscript</c> 
+            of session details, and an error description (if necessary).</summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Events.EventStatus.Create">
+            <summary>
+             Creates message "EventStatus" with no parameters set.
+            </summary>
+            <returns>EventStatus instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Events.EventStatus.Create(System.String,System.String,System.String,System.Int32,Genesyslab.Platform.WebMedia.Protocols.FlexChat.RequestResult,Genesyslab.Platform.WebMedia.Protocols.FlexChat.FlexTranscript,Genesyslab.Platform.WebMedia.Protocols.FlexChat.Description)">
+            <summary>
+             Creates message "EventStatus" with all parameters set.
+            </summary>
+            <param name="userId"></param>
+            <param name="secureKey"></param>
+            <param name="occurredAt"></param>
+            <param name="partyId"></param>
+            <param name="requestResult"></param>
+            <param name="flexTranscript">
+             </param>
+            <param name="description">
+             </param>
+            <returns>EventStatus instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Events.EventStatus.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Events.EventStatus.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Events.EventStatus.ReferenceId">
+            <summary>The unique reference ID for any requests or events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Events.EventStatus.UserId">
+            <summary>The user ID uniquely identifies chat party/user across all chat sessions.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Events.EventStatus.SecureKey">
+            <summary> </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Events.EventStatus.OccurredAt">
+            <summary>Indicates when an event occurred.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Events.EventStatus.PartyId">
+            <summary>An integer that represents a unique ID number for each party in the session. This ID is unique only within this particular chat session, not across different chat session.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Events.EventStatus.RequestResult">
+            <summary>An <c>EventStatus</c> property that indicates whether 
+            a request was processed correctly. Valid values are:<br/>
+            Success - The request was handled without any problems.<br/>
+            Error - An error occurred processing the request.</summary>
+            
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Events.EventStatus.ServerVersion">
+            <summary>The release number of Chat Server.</summary>
+            
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Events.EventStatus.FlexTranscript">
+            <summary>
+             Property "FlexTranscript".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Events.EventStatus.Description">
+            <summary>
+             Property "Description".
+             Attribute description: 
+             
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Events.EventStatus.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Events.EventStatus.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.FlexChat.Events.EventStatus.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.FlexChat.UserType">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.FlexChat.UserType.Client">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.FlexChat.UserType.Agent">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.FlexChat.UserType.Supervisor">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.FlexChat.UserType.External">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventType">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventType.Connect">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventType.Message">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventType.Abandon">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.FlexChat.EventType.Notice">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.FlexChat.RequestResult">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.FlexChat.RequestResult.Success">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.FlexChat.RequestResult.Error">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.FlexChat.TreatAs">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.FlexChat.TreatAs.NORMAL">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.FlexChat.TreatAs.SYSTEM">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.FlexChat.FlexChatProtocolFactory">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.FlexChat.FlexChatInternalProtocolFactory">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.NoticeType">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.NoticeType.None">
+            <summary>
+             default value – only for API purpose. With this value “noticeText” node must NOT be added at all.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.NoticeType.PushUrl">
+            <summary>
+             used for push URL
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.NoticeType.TypingStarted">
+            <summary>
+             indicates that chat party/user started typing
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.NoticeType.TypingStopped">
+            <summary>
+             indicates that chat party/user is not typing anymore
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.NoticeType.Custom">
+            <summary>
+             simply propagated without any special processing
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.NoticeType.UpdateUserData">
+            <summary>
+             System request: force ChatServer to update interaction userdata
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.NoticeType.SaveTranscript">
+            <summary>
+            System request: force ChatServer to save transcript in UCS
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.NoticeType.Reserved">
+            <summary>
+            reserved only for ChatServer use (like new interaction, params of session, etc)
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.TwoDirMap">
+            <summary>
+            Summary description for TwoDirMap.
+            </summary>
+        </member>
+    </members>
+</doc>

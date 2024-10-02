@@ -1,0 +1,44 @@
+﻿/* Deep Blue Admin Bootstrap Theme by PrepBootstrap - http://www.prepbootstrap.com */
+body {
+    margin-top: 0px;
+}
+
+#wrapper {
+    padding-left: 0;
+}
+
+#page-wrapper {
+    width: 100%;
+}
+
+#loading {
+    background: #FFFFFF url(images/ajax_loader_blue_48.gif) no-repeat center center;
+    height: 48px;
+    width: 48px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    margin: -25px 0 0 -25px;
+}
+
+#saving {
+    background: #FFFFFF url(images/ajax_loader_red_48.gif) no-repeat center center;
+    height: 48px;
+    width: 48px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    margin: -25px 0 0 -25px;
+    display: none;
+}
+
+#btnDiscar {
+    margin-top: 4px;
+}
+
+.text-area-observaciones {
+    width: 97%;
+    margin-left: 15px;
+}

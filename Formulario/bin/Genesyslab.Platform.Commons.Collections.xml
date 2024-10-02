@@ -1,0 +1,697 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genesyslab.Platform.Commons.Collections</name>
+    </assembly>
+    <members>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Filters.AbstractOutputFilter">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Filters.IKeyValueOutputFilter">
+            <summary>
+            Filter implementation is expected to be stateless, so it can be reused
+            by different "filter collections" <see cref="T:Genesyslab.Platform.Commons.Collections.Filters.KeyValueFilterSet"/>. The state
+            (if there is one) should be maintained by collection itself.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Filters.IKeyValueOutputFilter.Configure(System.Collections.IDictionary)">
+            <summary>
+            Configuration for filter.
+            </summary>
+            <param name="options">Collection with configuration data.</param>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Filters.CopyOutputFilter">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Filters.HideCharsFilter">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Filters.HideFirstOutputFilter">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Filters.HideLastOutputFilter">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Filters.HideOutputFilter">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Filters.PrefixPostfixFilter">
+            <summary>
+            PrefixPostfixFilter is a custom filter which can be used for adding prefix or/and postfix
+            to key or value for given key-value pair. By default prefix for key is "&lt;#", and 
+            postfix for value is "#&gt;", postfix for key, and prefix for value are empty strings.
+            </summary>
+            <example>
+            KeyValueCollection kvData = new KeyValueCollection();
+            KeyValueCollection kvPPfilter = new KeyValueCollection();
+            KeyValueCollection kvPPOptions = new KeyValueCollection();
+            kvPPfilter[KeyValuePrinter.CustomFilterType] = typeof(PrefixPostfixFilter).FullName;
+            kvPPOptions[PrefixPostfixFilter.KeyPrefixString] = "##";
+            kvPPOptions[PrefixPostfixFilter.ValuePostfixString] = "##";
+            kvPPOptions[PrefixPostfixFilter.KeyPostfixString] = "_";
+            kvPPOptions[PrefixPostfixFilter.ValuePrefixString] = "_";
+            kvPPfilter[KeyValuePrinter.CustomFilterOptions] = kvPPOptions;
+            kvData["test"] = kvPPfilter;
+            KeyValuePrinter.DefaultPrinter = new KeyValuePrinter(new KeyValueCollection(), kvData);
+            </example>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Filters.SkipOutputFilter">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Filters.TabIndenter">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Filters.IKeyValueIndenter">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Filters.KeyValueFilterSet">
+            <summary>
+            Set of the filters used by <c>KeyValuePrinter.</c>
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Filters.KeyValueFilterSet.#ctor(Genesyslab.Platform.Commons.Collections.KeyValueCollection,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+            Creates and intializes <c>KeyValueFilterSet</c> for <c>KeyValuePrinter</c>.
+            </summary>
+            <param name="options">General options for KeyValuePrinter (like default filter)</param>
+            <param name="data">mapping of keys in <c>KeyValueCollection</c> for output and name of filter to apply.</param>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Filters.KeyValuePrinterContext">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Filters.TruncateOutputFilter">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Filters.UnhideFirstOutputFilter">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Filters.UnhideLastOutputFilter">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.TypedHashmap`1.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Implementation of ISerializable.GetObjectData(...) method
+            </summary>
+            <param name="info">See <see cref="M:System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">ISerializable.GetObjectData</see> for more details.</param>
+            <param name="context">See <see cref="M:System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">ISerializable.GetObjectData</see> for more details.</param>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1">
+            <summary>
+            You can use a <c>KeyValueCollection</c> to map keys to values. 
+            It is similar to a <see cref="T:System.Collections.Hashtable"/>, 
+            except the keys can only be strings and the values can be of type 
+            <see cref="T:System.String">string</see>, <see cref="T:System.Int32">int</see>, 
+            <see cref="T:System.Byte">byte[]</see>, or 
+            <c>KeyValueCollection</c>.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.#ctor">
+            <summary>
+            Initializes a new instance of the KeyValueCollection class.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.#ctor(Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase{`0})">
+            <summary>
+            Copies the entries from the specified KeyValueCollection to a new KeyValueCollection with the same initial capacity as the number of entries copied.
+            </summary>
+            <param name="col">The KeyValueCollection to copy to the new KeyValueCollection instance.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.#ctor(System.Collections.IEqualityComparer)">
+            <summary>
+            Initializes a new instance of the KeyValueCollection class that is empty and uses the specified hash code provider and the specified comparer.
+            </summary>
+            <param name="comparer">The IEqualityComparer to use to determine whether two keys are equal.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.#ctor(Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase{`0},System.Collections.IEqualityComparer)">
+            <summary>
+            Copies the entries from the specified KeyValueCollection to a new KeyValueCollection with the same initial capacity as the number of entries copied,
+            but with specified IEqualityComparer.
+            </summary>
+            <param name="col">The KeyValueCollection to copy to the new KeyValueCollection instance.</param>
+            <param name="comparer">The IEqualityComparer to use to determine whether two keys are equal.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Deserializes KeyValueCollection instance.
+            </summary>
+            <param name="info">Holds all the data needed to deserialize an object.</param>
+            <param name="context">Describes the source of a given serialized stream.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.Add(System.String,System.Object)">
+            <summary>
+            Adds object element with the specified key into the KeyValueCollection
+            </summary>
+            <param name="key">The key of the element to add.</param>
+            <param name="value">Object instance to add.</param>
+            <exception cref="T:System.InvalidCastException">Type of given value is not supported</exception>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.Add(System.String,Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase{`0})">
+            <summary>
+            Adds KeyValueCollection element with the specified key into the KeyValueCollection
+            </summary>
+            <param name="key">The key of the element to add.</param>
+            <param name="value">KeyValueCollection instance to add.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.Add(System.String,System.Int32)">
+            <summary>
+            Adds int element with the specified key into the KeyValueCollection
+            </summary>
+            <param name="key">The key of the element to add.</param>
+            <param name="value">int value to add.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.Add(System.String,System.String)">
+            <summary>
+            Adds string element with the specified key into the KeyValueCollection
+            </summary>
+            <param name="key">The key of the element to add.</param>
+            <param name="value">String value to add.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.Add(System.String,System.Byte[])">
+            <summary>
+            Adds byte array element with the specified key into the KeyValueCollection
+            </summary>
+            <param name="key">The key of the element to add.</param>
+            <param name="value">byte array value to add.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.Add(System.Collections.IDictionary)">
+            <summary>
+            Copies the IDictionary (can be another KeyValueCollection) elements to a this 
+            KeyValueCollection instance at the end of list.
+            </summary>
+            <param name="col">KeyValueCollection elements to add.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.Get(System.String)">
+            <summary>
+            Gets the value associated with the specified key.
+            </summary>
+            <param name="key">The key of the element to get.</param>
+            <returns>Returns object associated with the specified key.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.ContainsKey(System.String)">
+            <summary>
+            Checks if collection contains specified key.
+            </summary>
+            <param name="key">The key of the element to check.</param>
+            <returns>Returns true if collection contains object with the specified key.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.GetAsInt(System.String)">
+            <summary>
+            Gets the int value associated with the specified key.
+            </summary>
+            <param name="key">The key of the element to get.</param>
+            <returns>Returns int value associated with the specified key.</returns>
+            <exception cref="T:System.InvalidCastException">When result value can not be casted to int.</exception>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.GetAsString(System.String)">
+            <summary>
+            Gets the string value associated with the specified key.
+            </summary>
+            <param name="key">The key of the element to get.</param>
+            <returns>Returns string value associated with the specified key.</returns>
+            <exception cref="T:System.InvalidCastException">When result value can not be casted to string.</exception>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.GetAsBinary(System.String)">
+            <summary>
+            Gets the byte array value associated with the specified key.
+            </summary>
+            <param name="key">The key of the element to get.</param>
+            <returns>Returns byte array value associated with the specified key.</returns>
+            <exception cref="T:System.InvalidCastException">When result value can not be casted to byte[].</exception>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.GetValues(System.String)">
+            <summary>
+            Gets the array of values that the keys of start from the specified string
+            </summary>
+            <param name="key">The string has to be the beginning of the keys. The values of the keys would contain the result.</param>
+            <returns>Returns the values that the keys of start from the specified string.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.HasKeys">
+            <summary>
+            Gets a value indicating whether the KeyValueCollection contains keys that are not a null reference.
+            </summary>
+            <returns>true if the KeyValueCollection contains keys that are not a null reference; otherwise, false.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.Remove(System.String)">
+            <summary>
+            Removes the entry with the specified key from the KeyValueCollection instance.
+            </summary>
+            <param name="key">The String key of the entry to remove.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.Set(System.String,System.Int32)">
+            <summary>
+            Sets the int value of an entry in the KeyValueCollection.
+            </summary>
+            <param name="key">The string key of the entry to add the new int value to.</param>
+            <param name="value">The integer that represents the new value to add to the specified entry.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.Set(System.String,Genesyslab.Platform.Commons.Collections.NullableInt)">
+            <summary>
+            Sets the int value of an entry in the KeyValueCollection.
+            </summary>
+            <param name="key">The string key of the entry to add the new int value to.</param>
+            <param name="value">The integer that represents the new value to add to the specified entry.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.Set(System.String,System.String)">
+            <summary>
+            Sets the string value of an entry in the KeyValueCollection.
+            </summary>
+            <param name="key">The string key of the entry to add the new string value to.</param>
+            <param name="value">The string that represents the new value to add to the specified entry.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.Set(System.String,System.Byte[])">
+            <summary>
+            Sets the byte array value of an entry in the KeyValueCollection.
+            </summary>
+            <param name="key">The string key of the entry to add the new byte array value to.</param>
+            <param name="value">The byte array that represents the new value to add to the specified entry.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.Set(System.String,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+            Sets the KeyValueCollection value of an entry in the KeyValueCollection.
+            </summary>
+            <param name="key">The string key of the entry to add the new KeyValueCollection value to.</param>
+            <param name="value">The KeyValueCollection that represents the new value to add to the specified entry.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.Set(System.String,System.Object)">
+            <summary>
+            Sets the value of an entry in the KeyValueCollection. The method can throw ArgumentException in case of unsupported type of value.
+            </summary>
+            <param name="key">The string key of the entry to add the new value to.</param>
+            <param name="value">The object that represents the new value to add to the specified entry.</param>
+            <exception cref="T:System.ArgumentNullException">If key or value is null.</exception>
+            <exception cref="T:System.ArgumentException">If type of the given value is not supported by KeyValueCollection. Supported types are int, string, byte[], and KeyValueCollection.</exception>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.Equals(System.Object)">
+            <summary>
+            Determines whether two Object instances are equal. See <see cref="M:System.Object.Equals(System.Object)">Object.Equals</see> for more details.
+            </summary>
+            <param name="obj">See <see cref="M:System.Object.Equals(System.Object)">Object.Equals</see> for details.</param>
+            <returns>See <see cref="M:System.Object.Equals(System.Object)">Object.Equals</see> for details.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type, suitable for use in hashing algorithms and data structures like a hash table. See <see cref="M:System.Object.GetHashCode">Object.GetHashCode</see> for more details.
+            </summary>
+            <returns>See <see cref="M:System.Object.GetHashCode">Object.GetHashCode</see> for details.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.AllKeys">
+            <summary>
+            Gets all the keys in the KeyValueCollection.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.AllValues">
+            <summary>
+            Gets all the values in the KeyValueCollection.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Collections.Internal.KeyValueCollectionBase`1.Item(System.String)">
+            <summary>
+            Gets or sets the value associated with the specified key.
+            </summary>
+            <param name="key">The key of the element to return.</param>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.KeyValueCollection">
+            <summary>
+            You can use a <c>KeyValueCollection</c> to map keys to values. 
+            It is similar to a <see cref="T:System.Collections.Hashtable"/>, 
+            except the keys can only be strings and the values can be of type 
+            <see cref="T:System.String">string</see>, <see cref="T:System.Int32">int</see>, 
+            <see cref="T:System.Byte">byte[]</see>, or <c>KeyValueCollection</c>.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollection.#ctor">
+            <summary>
+            Initializes a new instance of the KeyValueCollection class.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollection.#ctor(Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+            Copies the entries from the specified KeyValueCollection to a new KeyValueCollection with the same initial capacity as the number of entries copied.
+            </summary>
+            <param name="col">The KeyValueCollection to copy to the new KeyValueCollection instance.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollection.#ctor(System.Collections.IEqualityComparer)">
+            <summary>
+            Initializes a new instance of the KeyValueCollection class that is empty and uses the specified hash code provider and the specified comparer.
+            </summary>
+            <param name="comparer">The IEqualityComparer to use to determine whether two keys are equal.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollection.#ctor(Genesyslab.Platform.Commons.Collections.KeyValueCollection,System.Collections.IEqualityComparer)">
+            <summary>
+            Copies the entries from the specified KeyValueCollection to a new KeyValueCollection with the same initial capacity as the number of entries copied,
+            but with specified IEqualityComparer.
+            </summary>
+            <param name="col">The KeyValueCollection to copy to the new KeyValueCollection instance.</param>
+            <param name="comparer">The IEqualityComparer to use to determine whether two keys are equal.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollection.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Deserializes KeyValueCollection instance.
+            </summary>
+            <param name="info">Holds all the data needed to deserialize an object.</param>
+            <param name="context">Describes the source of a given serialized stream.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollection.GetAsKeyValueCollection(System.String)">
+            <summary>
+            Gets the KeyValueCollection value associated with the specified key.
+            </summary>
+            <param name="key">The key of the element to get.</param>
+            <returns>Returns KeyValueCollection value associated with the specified key.</returns>
+            <exception cref="T:System.InvalidCastException">When result value can not be casted to KeyValueCollection.</exception>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollection.Synchronized(Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+            Returns a collection wrapper that is synchronized (thread safe).
+            </summary>
+            <param name="col">The <c>KeyValueCollection</c> to synchronize.</param>
+            <returns>Returns a <c>KeyValueCollection</c> wrapper that is synchronized (thread safe).</returns>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.NotOrderedKeyValueCollection">
+            <summary>
+            You can use a <c>NotOrderedKeyValueCollection</c> to map keys to values. 
+            It is similar to a <see cref="T:System.Collections.Hashtable"/>, 
+            except the keys can only be strings and the values can be of type 
+            <see cref="T:System.String">string</see>, <see cref="T:System.Int32">int</see>, 
+            <see cref="T:System.Byte">byte[]</see>, or <c>NotOrderedKeyValueCollection</c>.
+            This collection is almost the same as <see cref="T:Genesyslab.Platform.Commons.Collections.KeyValueCollection">KeyValueCollection</see>
+            except that order of key-value pairs is not determined, thus, performance 
+            is slightly increased.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.NotOrderedKeyValueCollection.#ctor">
+            <summary>
+            Initializes a new instance of the NotOrderedKeyValueCollection class.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.NotOrderedKeyValueCollection.#ctor(Genesyslab.Platform.Commons.Collections.NotOrderedKeyValueCollection)">
+            <summary>
+            Copies the entries from the specified NotOrderedKeyValueCollection to a 
+            new NotOrderedKeyValueCollection.
+            </summary>
+            <param name="col">The NotOrderedKeyValueCollection to copy to the new NotOrderedKeyValueCollection instance.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.NotOrderedKeyValueCollection.#ctor(System.Collections.IEqualityComparer)">
+            <summary>
+            Initializes a new instance of the NotOrderedKeyValueCollection class that is empty and 
+            uses the specified key comparer.
+            </summary>
+            <param name="comparer">The IEqualityComparer to use to determine whether two keys are equal.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.NotOrderedKeyValueCollection.#ctor(Genesyslab.Platform.Commons.Collections.NotOrderedKeyValueCollection,System.Collections.IEqualityComparer)">
+            <summary>
+            Copies the entries from the specified NotOrderedKeyValueCollection to a new 
+            NotOrderedKeyValueCollection with specified IEqualityComparer.
+            </summary>
+            <param name="col">The NotOrderedKeyValueCollection to copy to the new NotOrderedKeyValueCollection instance.</param>
+            <param name="comparer">The IEqualityComparer to use to determine whether two keys are equal.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.NotOrderedKeyValueCollection.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Deserializes NotOrderedKeyValueCollection instance.
+            </summary>
+            <param name="info">Holds all the data needed to deserialize an object.</param>
+            <param name="context">Describes the source of a given serialized stream.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.NotOrderedKeyValueCollection.#ctor(Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+            Copies the entries from the specified ordered <c>KeyValueCollection</c> to a new 
+            NotOrderedKeyValueCollection with the same KeyComparer.
+            </summary>
+            <param name="orderedKv">The <c>KeyValueCollection</c> to copy to the new NotOrderedKeyValueCollection instance.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.NotOrderedKeyValueCollection.GetAsKeyValueCollection(System.String)">
+            <summary>
+            Gets the KeyValueCollection value associated with the specified key.
+            </summary>
+            <param name="key">The key of the element to get.</param>
+            <returns>Returns KeyValueCollection value associated with the specified key.</returns>
+            <exception cref="T:System.InvalidCastException">When result value can not be casted to KeyValueCollection.</exception>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.NotOrderedKeyValueCollection.Synchronized(Genesyslab.Platform.Commons.Collections.NotOrderedKeyValueCollection)">
+            <summary>
+            Returns a collection wrapper that is synchronized (thread safe).
+            </summary>
+            <param name="col">The <c>NotOrderedKeyValueCollection</c> to synchronize.</param>
+            <returns>Returns a <c>NotOrderedKeyValueCollection</c> wrapper that is synchronized (thread safe).</returns>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.INullable">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.BaseNullable`1">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.NullableEnum">
+            <summary>
+            Summary description for NullableEnum.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.NullableInt">
+            <summary>
+            Summary description for NullableInt.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.NullableBool">
+            <summary>
+            Summary description for NullableBool.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.NullableDateTime">
+            <summary>
+            Summary description for NullableDateTime.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.EnumTypeAttribute">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Processor.KeyValuePrinter">
+            <summary>
+            This class manage the output of key-value collection to logs. The output
+            is managed by filters. There is number of them, namely: copy, hide,
+            skip, truncate and custom-filter. Their usage is defined by two TKVLists.
+            First one is for general options (like default filter). 
+            Second is mapping of keys in <c>KeyValueCollection</c> for output and name 
+            of filter to apply.
+            Without any configuration default filter is "truncate".
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Collections.Processor.KeyValuePrinter.CustomFilterName">
+            <summary>
+            Key value for adding user defined custom filter to filter set. Value of this option should be
+            <c>KeyValueCollection</c> with <see cref="F:Genesyslab.Platform.Commons.Collections.Processor.KeyValuePrinter.CustomFilterType"/>, and <see cref="F:Genesyslab.Platform.Commons.Collections.Processor.KeyValuePrinter.CustomFilterOptions"/>
+            pairs.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Collections.Processor.KeyValuePrinter.CustomFilterType">
+            <summary>
+            Fully-qualified name of custom filter class type with public default constructor. 
+            PSDK will create it using <see cref="M:System.Activator.CreateInstance(System.Type,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)"/> method.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Collections.Processor.KeyValuePrinter.CustomFilterOptions">
+            <summary>
+            Custom filter options, which will be passed to <see cref="!:IKeyValueCustomFilter.Configure"/> method
+            of custom filter class.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.DataFormatException">
+            <summary>
+            This exception is thrown when data formatting problems are encountered
+            during deserialization of the lists. This probably means that the data has
+            the wrong format or that it has been corrupted.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Pair">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.KeyValueCollectionSerializer">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollectionSerializer.Deserialize(System.IO.BinaryReader)">
+            <summary>
+            Reads packed TKV list from <code>OutputStream</code> and unpacks it.
+            To create strings from bytes uses platform default encoding.
+            
+            <param name="ins">the stream to read list from</param>
+            <returns>the list</returns>
+            <throws>IOException if some IO problems occur</throws>
+            <throws>DataFormatException if stream is invalid</throws>
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollectionSerializer.Deserialize(System.IO.BinaryReader,System.String)">
+            <summary>
+            Reads packed TKV list from <code>OutputStream</code> and unpacks it.
+            To create strings from bytes uses supplied encoding. If encoding is
+            null than default platform encoding will be used.
+            
+            <param name="br">the stream to read list from</param>
+            <param name="strEncoding">the encoding for byte to string conversion</param>
+            <returns>the list</returns>
+            <throws>IOException if some IO problems occur</throws>
+            <throws>DataFormatException if stream is invalid</throws>
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollectionSerializer.Deserialize(System.IO.BinaryReader,System.Text.Encoding,System.Boolean)">
+            <summary>
+            Reads packed TKV list from <code>OutputStream</code> and unpacks it.
+            To create strings from bytes uses supplied encoding. If encoding is
+            null than default platform encoding will be used.
+            
+            <param name="br">the stream to read list from</param>
+            <param name="encoding">the encoding for byte to string conversion</param>
+            <param name="readLen">specifies if serialized list has length packed inside (leading 2 bytes)</param>
+            <returns>the list</returns>
+            <throws>IOException if some IO problems occur</throws>
+            <throws>DataFormatException if stream is invalid</throws>
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollectionSerializer.Deserialize(System.Byte[])">
+             <summary>
+            Unpacks TKV list from byte array. To create strings from bytes uses
+            supplied encoding. Default platform encoding will be used.
+            
+            <param name="bytes">bytes to unpack list from</param>
+            <returns>the list</returns>
+            <throws>DataFormatException if byte array is invalid</throws>
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollectionSerializer.Deserialize(System.Byte[],System.String)">
+            <summary>
+            Unpacks TKV list from byte array. To create strings from bytes uses
+            supplied encoding. If encoding is null than default platform
+            encoding will be used.
+            
+            <param name="bytes">bytes to unpack list from</param>
+            <param name="encoding">the encoding for byte to string conversion</param>
+            <returns>the list</returns>
+            <throws>DataFormatException if byte array is invalid</throws>
+            <throws>UnsupportedEncodingException if encoding is unsupported</throws>
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollectionSerializer.Deserialize(System.Byte[],System.Text.Encoding)">
+            <summary>
+            Unpacks TKV list from byte array. To create strings from bytes uses
+            supplied encoding. If encoding is null than default platform
+            encoding will be used.
+            
+            <param name="bytes">bytes to unpack list from</param>
+            <param name="encoding">the encoding for byte to string conversion</param>
+            <returns>the list</returns>
+            <throws>DataFormatException if byte array is invalid</throws>
+            <throws>UnsupportedEncodingException if encoding is unsupported</throws>
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollectionSerializer.Deserialize(System.Byte[],System.Boolean)">
+             <summary>
+            Unpacks TKV list from byte array. To create strings from bytes uses
+            supplied encoding. Default platform encoding will be used.
+            
+            <param name="bytes">bytes to unpack list from</param>
+             <param name="readLen">specifies if serialized list has length packed inside (leading 2 bytes)</param>
+            <returns>the list</returns>
+            <throws>DataFormatException if byte array is invalid</throws>
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollectionSerializer.Deserialize(System.Byte[],System.Int32,System.Int32,System.Boolean)">
+             <summary>
+            Unpacks TKV list from byte array. To create strings from bytes uses
+            supplied encoding. Default platform encoding will be used.
+            
+             <param name="bytes">bytes to unpack list from</param>
+             <param name="pos">byte offset into bytes</param>
+             <param name="len">number of bytes to deserialize</param>
+             <param name="readLen">specifies if serialized list has length packed inside (leading 2 bytes)</param>
+             <returns>the list</returns>
+             <throws>DataFormatException if byte array is invalid</throws>
+             </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollectionSerializer.Deserialize(System.Byte[],System.Int32,System.Int32,System.Boolean,System.Text.Encoding)">
+             <summary>
+            Unpacks TKV list from byte array. To create strings from bytes uses
+            supplied encoding. Default platform encoding will be used.
+            
+             <param name="bytes">bytes to unpack list from</param>
+             <param name="pos">byte offset into bytes</param>
+             <param name="len">number of bytes to deserialize</param>
+             <param name="readLen">specifies if serialized list has length packed inside (leading 2 bytes)</param>
+             <param name="encoding">the encoding for byte to string conversion</param>
+             <returns>the list</returns>
+             <throws>DataFormatException if byte array is invalid</throws>
+             </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollectionSerializer.Serialize(Genesyslab.Platform.Commons.Collections.KeyValueCollection,System.IO.BinaryWriter)">
+            <summary>
+            Packs the list and writes it to <code>OutputStream</code>.
+            This method will use default encoding to convert strings
+            to bytes
+            
+            <param name="list">List to serialize</param>
+            <param name="outStr">Stream to write the list to</param>
+            <throws>IOException if some IO problems occur</throws>
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollectionSerializer.Serialize(Genesyslab.Platform.Commons.Collections.KeyValueCollection,System.IO.BinaryWriter,System.String)">
+            <summary>
+            Packs the list and writes it to <code>OutputStream</code>. To convert
+            strings to bytes this method will use specified <code>encoding</code>.
+            If encoding is null than default platform encoding will be used.
+            Length of packed list will not be included in output stream.
+            
+            <param name="list">List to serialize</param>
+            <param name="outStr">Stream to write the list to</param>
+            <param name="encoding">Encoding to convert strings</param>
+            <throws>UnsupportedEncodingException if encoding is unsupported</throws>
+            <throws>IOException if some IO problems occur</throws>
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollectionSerializer.Serialize(Genesyslab.Platform.Commons.Collections.KeyValueCollection,System.IO.BinaryWriter,System.String,System.Boolean)">
+            <summary>
+            Packs the list and writes it to <code>OutputStream</code>. To convert
+            strings to bytes this method will use specified <code>encoding</code>.
+            If encoding is null than default platform encoding will be used.
+            
+            <param name="list">List to serialize</param>
+            <param name="outStr">Stream to write the list to</param>
+            <param name="encoding">Encoding to convert strings</param>
+            <param name="writeLength">Specifies if length of packed list should be included into output buffer (leading 2 bytes)</param>
+            <throws>UnsupportedEncodingException if encoding is unsupported</throws>
+            <throws>IOException if some IO problems occur</throws>
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollectionSerializer.GetBytes(Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+            Packs the list and returns it as byte array. This method will use
+            default encoding to convert strings to bytes.
+            Length of packed list will not be included in output array.
+            
+            <param name="list">List to serialize</param>
+            <returns>packed list</returns>
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollectionSerializer.GetBytes(Genesyslab.Platform.Commons.Collections.KeyValueCollection,System.Text.Encoding)">
+            <summary>
+            Packs the list and returns it as byte array. To convert strings
+            to bytes this method will use specified <code>encoding</code>.
+            If encoding is null than default platform encoding will be used.
+            Length of packed list will not be included in output array.
+             
+            <param name="list">List to serialize</param>
+            <param name="encoding">Encoding to convert strings</param>
+            <returns>packed list</returns>
+            <throws>UnsupportedEncodingException if wrong encoding is specified</throws>
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Collections.KeyValueCollectionSerializer.GetBytes(Genesyslab.Platform.Commons.Collections.KeyValueCollection,System.Text.Encoding,System.Boolean)">
+            <summary>
+            Packs the list and returns it as byte array. To convert strings
+            to bytes this method will use specified <code>encoding</code>.
+            If encoding is null than default platform encoding will be used.
+             
+            <param name="list">List to serialize</param>
+            <param name="encoding">Encoding to convert strings</param>
+            <param name="writeLength">Specifies if length of packed list should be included into output buffer (leading 2 bytes)</param>
+            <returns>packed list</returns>
+            <throws>UnsupportedEncodingException if wrong encoding is specified</throws>
+            </summary>
+        </member>
+    </members>
+</doc>

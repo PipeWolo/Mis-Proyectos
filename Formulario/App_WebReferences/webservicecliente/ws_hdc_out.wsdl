@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SeleccionaRegistros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idaplicacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="servidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="package" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="procedimiento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SeleccionaRegistrosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SeleccionaRegistrosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccionesRegistros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idaplicacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="instancia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="package" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="procedimiento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="filasafectadas" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccionesRegistrosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AccionesRegistrosResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="filasafectadas" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idAplicacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="table" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="column" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="where" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClobResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MultiInsertData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idservicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Columns" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MultiInsertDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MultiInsertDataResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneSegundosGenesys">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InfoGenesys" type="tns:GenesysInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GenesysInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Identificador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SegundosGenesys" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Error" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObtieneSegundosGenesysResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtieneSegundosGenesysResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="InfoGenesys" type="tns:GenesysInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Inserta_Registro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Record_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreLista" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Agente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Record_Type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Record_Status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Call_Result" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Dial_Sched_Time" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Resultado_Tipif" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Motivo_Tipif" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="STATUS" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Inserta_RegistroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="STATUS" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SeleccionaRegistrosSoapIn">
+    <wsdl:part name="parameters" element="tns:SeleccionaRegistros" />
+  </wsdl:message>
+  <wsdl:message name="SeleccionaRegistrosSoapOut">
+    <wsdl:part name="parameters" element="tns:SeleccionaRegistrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccionesRegistrosSoapIn">
+    <wsdl:part name="parameters" element="tns:AccionesRegistros" />
+  </wsdl:message>
+  <wsdl:message name="AccionesRegistrosSoapOut">
+    <wsdl:part name="parameters" element="tns:AccionesRegistrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClobSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClob" />
+  </wsdl:message>
+  <wsdl:message name="GetClobSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClobResponse" />
+  </wsdl:message>
+  <wsdl:message name="MultiInsertDataSoapIn">
+    <wsdl:part name="parameters" element="tns:MultiInsertData" />
+  </wsdl:message>
+  <wsdl:message name="MultiInsertDataSoapOut">
+    <wsdl:part name="parameters" element="tns:MultiInsertDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneSegundosGenesysSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtieneSegundosGenesys" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneSegundosGenesysSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtieneSegundosGenesysResponse" />
+  </wsdl:message>
+  <wsdl:message name="Inserta_RegistroSoapIn">
+    <wsdl:part name="parameters" element="tns:Inserta_Registro" />
+  </wsdl:message>
+  <wsdl:message name="Inserta_RegistroSoapOut">
+    <wsdl:part name="parameters" element="tns:Inserta_RegistroResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicioWebClienteSoap">
+    <wsdl:operation name="SeleccionaRegistros">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta y extrae registros desde base de datos</wsdl:documentation>
+      <wsdl:input message="tns:SeleccionaRegistrosSoapIn" />
+      <wsdl:output message="tns:SeleccionaRegistrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccionesRegistros">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserta, actualiza o elimina registros desde base de datos</wsdl:documentation>
+      <wsdl:input message="tns:AccionesRegistrosSoapIn" />
+      <wsdl:output message="tns:AccionesRegistrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClob">
+      <wsdl:input message="tns:GetClobSoapIn" />
+      <wsdl:output message="tns:GetClobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MultiInsertData">
+      <wsdl:input message="tns:MultiInsertDataSoapIn" />
+      <wsdl:output message="tns:MultiInsertDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneSegundosGenesys">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene los segundos genesys segun la fecha de programacion generada en registro lista</wsdl:documentation>
+      <wsdl:input message="tns:ObtieneSegundosGenesysSoapIn" />
+      <wsdl:output message="tns:ObtieneSegundosGenesysSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_Registro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualiza tipificacion en lista genesys</wsdl:documentation>
+      <wsdl:input message="tns:Inserta_RegistroSoapIn" />
+      <wsdl:output message="tns:Inserta_RegistroSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicioWebClienteSoap" type="tns:ServicioWebClienteSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SeleccionaRegistros">
+      <soap:operation soapAction="http://tempuri.org/SeleccionaRegistros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccionesRegistros">
+      <soap:operation soapAction="http://tempuri.org/AccionesRegistros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClob">
+      <soap:operation soapAction="http://tempuri.org/GetClob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultiInsertData">
+      <soap:operation soapAction="http://tempuri.org/MultiInsertData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneSegundosGenesys">
+      <soap:operation soapAction="http://tempuri.org/ObtieneSegundosGenesys" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_Registro">
+      <soap:operation soapAction="http://tempuri.org/Inserta_Registro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicioWebClienteSoap12" type="tns:ServicioWebClienteSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SeleccionaRegistros">
+      <soap12:operation soapAction="http://tempuri.org/SeleccionaRegistros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccionesRegistros">
+      <soap12:operation soapAction="http://tempuri.org/AccionesRegistros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClob">
+      <soap12:operation soapAction="http://tempuri.org/GetClob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultiInsertData">
+      <soap12:operation soapAction="http://tempuri.org/MultiInsertData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneSegundosGenesys">
+      <soap12:operation soapAction="http://tempuri.org/ObtieneSegundosGenesys" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_Registro">
+      <soap12:operation soapAction="http://tempuri.org/Inserta_Registro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioWebCliente">
+    <wsdl:port name="ServicioWebClienteSoap" binding="tns:ServicioWebClienteSoap">
+      <soap:address location="http://192.168.239.79/ws_hdc_out/ws_hdc_out.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicioWebClienteSoap12" binding="tns:ServicioWebClienteSoap12">
+      <soap12:address location="http://192.168.239.79/ws_hdc_out/ws_hdc_out.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

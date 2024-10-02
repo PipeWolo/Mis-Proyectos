@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genesyslab.Platform.ApplicationBlocks.WarmStandby</name>
+    </assembly>
+    <members>
+        <member name="T:Genesyslab.Platform.ApplicationBlocks.WarmStandby.IWarmStandbyConnectionFailureContext">
+             <summary>
+            
+             Connection failure context interface will be provided by WarmStandbyService
+             to custom WarmStandbyConnectionFailureHandler in case of connection failure.
+            
+             <see cref="T:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService"/>
+             </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.IWarmStandbyConnectionFailureContext.DoSwitchover">
+             <summary>
+             Request to change "active" and "standby" endpoints
+             of the WarmStandby service. After this operation <c>scheduleReconnect()</c>
+             should be called to schedule the connection reopen task.
+            
+             <see cref="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.IWarmStandbyConnectionFailureContext.ScheduleReconnect(System.Int32)"/>
+             </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.IWarmStandbyConnectionFailureContext.DoStandbyOff">
+            <summary>
+            Set service state to "off" and clear reconnect counters.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.IWarmStandbyConnectionFailureContext.ScheduleReconnect(System.Int32)">
+            <summary>
+            This method allows user to notify the WarmStandby service when
+            channel reopen action should be done after current failure event.
+            It will initiate beginOpen() procedure on the protocol connection
+            instance served by the current WarmStandbyService.
+            </summary>
+            <param name="millisecDelay">delay before reopen try</param>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.WarmStandby.IWarmStandbyConnectionFailureContext.ClosedEvent">
+            <summary>
+            Gets the reason of the connection failure.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.WarmStandby.IWarmStandbyConnectionFailureContext.Service">
+            <summary>
+            Gets the service instance where connection failure happened.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService">
+            <summary>
+            <c>WarmStandbyService</c> class realizes a redundancy configuration consisting of two servers: Primary and Backup, 
+            where the Primary server operates in active mode and the Backup server in standby mode. 
+            Only the Primary server accepts connections and message exchanges with the clients. 
+            In case of the Primary server failure, the Backup server switches to active mode assuming the role 
+            and behavior of the Primary server.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.#ctor(Genesyslab.Platform.Commons.Protocols.ClientChannel)">
+            <summary>
+            Creates a <c>WarmStandbyService</c> instance
+            </summary>
+            <param name="channel">Client Channel the WarmStandby is responsible for</param>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.Start">
+            <summary>
+            Activates the <c>WarmStandbyService</c>
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.Stop">
+            <summary>
+            Deactivates the <c>WarmStandbyService</c>
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.ApplyConfiguration(Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyConfiguration)">
+            <summary>
+            Sets <c>WarmStandbyService</c> Configuration
+            </summary>
+            <param name="conf">Configuration to be applied</param>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.ApplyConfiguration(Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyConfiguration,System.Boolean)">
+            <summary>
+            Sets <c>WarmStandbyService</c> Configuration
+            </summary>
+            <param name="conf">Warm Standby Configuration to apply</param>
+            <param name="reset">Indicates if the configuration needs to be reset</param>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.SetRegistrationFailureCallback(Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.RegistrationFailureCallback)">
+            <summary>
+            Sets user defined <see cref="T:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.RegistrationFailureCallback"/> procedure. 
+            Callback will be called in cases of RegistrationException.
+            </summary>
+            <param name="callback">RegistrationFailureCallback</param>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.SetConnectionFailureCallback(Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.ConnectionFailureCallback)">
+            <summary>
+            Sets user defined <see cref="T:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.ConnectionFailureCallback"/> procedure.
+            Callback will be called in cases of connection failure.
+            </summary>
+            <param name="callback">ConnectionFailureCallback</param>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.DoSwitchover">
+            <summary>
+            Switches over Active and Standby (servers) Urls
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.OnChannelOpened(System.Object,System.EventArgs)">
+            <summary>
+            Event Handler for the event triggered by the Client Channel when it gets into the Opened state
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.OnChannelClosed(System.Object,System.EventArgs)">
+            <summary>
+            Event Handler for event triggered when the Client Channel gets into the Closed state
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.ProcessConnectivityFailure(Genesyslab.Platform.Commons.Protocols.ClosedEventArgs)">
+            <summary>
+            This function contains implementation of processing of a ClientChannel's connectivity failure
+            </summary>
+            <param name="eventArgs">A holder of channel's <c>Closed</c> event information</param>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.RaiseStateChanged">
+            <summary>
+            This event is raised by <c>WarmStandbyService</c> upon its state change(s)
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.RaiseSwitchedOver">
+            <summary>
+            This event is raised by <c>WarmStandbyService</c> upon Configuration Switchover
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.Dispose(System.Boolean)">
+            <summary>
+            Disposes of the service. Implements the Basic Dispose Pattern.
+            </summary>
+            <param name="disposing">
+            <c>false</c> indicates that the method was invoked from the finalizer,
+            in this case reference objects should not be accessed.
+            </param>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.Dispose">
+            <summary>
+            Disposes of the service. Implements the Basic Dispose Pattern.
+            </summary>
+        </member>
+        <member name="E:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.StateChanged">
+            <summary>
+            The event <c>StateChanged</c> is raised upon <c>WarmStandbyService</c>'s state changes
+            </summary>
+        </member>
+        <member name="E:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.SwitchedOver">
+            <summary>
+            The event <c>SwitchedOver</c> is raised upon <c>WarmStandbyService</c>'s Configuration Switchover
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.Channel">
+            <summary>
+            Gets the Client Channel the <c>WarmStandbyService</c> is responsible for
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.Configuration">
+            <summary>
+            Gets <c>WarmStandbyService</c> Configuration
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.State">
+            <summary>
+            Gets the <c>WarmStandbyService</c> State
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.Attempt">
+            <summary>
+            Gets current reconnection attempt value
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.Switchover">
+            <summary>
+            Gets current count of switchovers
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.RegistrationFailureCallback">
+            <summary>
+            This call-back method is called in case of RegistrationException.
+            It means that target server is available, but for some reason
+            it does not allow the client connection. It may be caused by
+            wrong login credentials, or some other exception while client
+            registration procedure on opened connection.
+            Usually it means that there is no need to try reconnect.
+            
+            Custom code may use provided context to access WarmStandbyService instance,
+            to get WarmStandbyConfiguration, and the client protocol connection.
+            Also the context allows user to schedule next reconnect task,
+            switchover, or stop service.
+            <see cref="T:Genesyslab.Platform.Commons.Protocols.RegistrationException"/>
+            </summary>
+            <param name="context">failure context</param>
+            <returns>true if the failure event is handled, or
+            false if user wants to let the service to perform default
+            operation for the event (stop the WarmStandby service)
+            </returns>
+        </member>
+        <member name="T:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyService.ConnectionFailureCallback">
+            <summary>
+            This call-back method is called in case of connection failure
+            (except RegistrationException).
+            
+            Custom code may use provided context to access WarmStandbyService instance,
+            to get WarmStandbyConfiguration, and the client protocol connection.
+            Also the context allows user to schedule next reconnect task,
+            switchover, or stop service.
+            </summary>
+            <param name="context">failure context</param>
+            <returns>true if the failure event is handled, or
+            false if user wants to let the service to perform default
+            operation for the event
+            </returns>
+        </member>
+        <member name="T:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyConfiguration">
+            <summary>
+            The <c>WarmStandbyConfiguration</c> class contains redundancy configuration options, 
+            including:
+            two server URIs - one for the active URI, and a backup URI;
+            the number of reconnection attempts to be made;
+            timeout between the reconnection attempts (in milliseconds);
+            and the number of primary/backup switchovers allowed.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyConfiguration.MaxTimeout">
+            <summary>
+            Maximum timeout/delay between channel reopening attempts
+            (30 min in milliseconds)
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyConfiguration.#ctor(Genesyslab.Platform.Commons.Protocols.Endpoint,Genesyslab.Platform.Commons.Protocols.Endpoint,System.Int32,System.Int16)">
+            <summary>
+            Creates a <c>WarmStandbyConfiguration</c> instance.
+            </summary>
+            <param name="activeEp">Client Channel's active Endpoint.</param>
+            <param name="standbyEp">Client Channel's standby Endpoint.</param>
+            <param name="timeout">timeout between the reconnection attempts.</param>
+            <param name="attempts">number of reconnection attempts.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyConfiguration.#ctor(System.Uri,System.Uri,System.Int32,System.Int16)">
+            <summary>
+            Creates a <c>WarmStandbyConfiguration</c> instance.
+            </summary>
+            <param name="activeUri">Client Channel's active Uri.</param>
+            <param name="standbyUri">Client Channel's standby Uri.</param>
+            <param name="timeout">timeout between the reconnection attempts.</param>
+            <param name="attempts">number of reconnection attempts.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyConfiguration.#ctor(Genesyslab.Platform.Commons.Protocols.Endpoint,Genesyslab.Platform.Commons.Protocols.Endpoint,System.Int32,System.Int16,System.Int16)">
+            <summary>
+            Creates a <c>WarmStandbyConfiguration</c> instance.
+            </summary>
+            <param name="activeEp">Client Channel's active Endpoint.</param>
+            <param name="standbyEp">Client Channel's standby Endpoint.</param>
+            <param name="timeout">timeout between the reconnection attempts.</param>
+            <param name="attempts">number of reconnection attempts.</param>
+            <param name="switchovers">the number of primary/backup switchovers</param>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyConfiguration.#ctor(System.Uri,System.Uri,System.Int32,System.Int16,System.Int16)">
+            <summary>
+            Creates a <c>WarmStandbyConfiguration</c> instance.
+            </summary>
+            <param name="activeUri">Client Channel's active Uri.</param>
+            <param name="standbyUri">Client Channel's standby Uri.</param>
+            <param name="timeout">timeout between the reconnection attempts.</param>
+            <param name="attempts">number of reconnection attempts.</param>
+            <param name="switchovers">the number of primary/backup switchovers</param>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyConfiguration.#ctor(System.Uri,System.Uri)">
+            <summary>
+            Creates a <c>WarmStandbyConfiguration</c> instance.
+            </summary>
+            <param name="activeUri">Client Channel's active Uri.</param>
+            <param name="standbyUri">Client Channel's standby Uri.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyConfiguration.#ctor(Genesyslab.Platform.Commons.Protocols.Endpoint,Genesyslab.Platform.Commons.Protocols.Endpoint)">
+            <summary>
+            Creates a <c>WarmStandbyConfiguration</c> instance.
+            </summary>
+            <param name="activeEp">Client Channel's active Endpoint.</param>
+            <param name="standbyEp">Client Channel's standby Endpoint.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyConfiguration.ToString">
+            <summary>
+            Creates a String that represents the current Object. 
+            </summary>
+            <returns>String that represents the current Object.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyConfiguration.ActiveUri">
+            <summary>
+            Gets the active Uri.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyConfiguration.ActiveEndpoint">
+            <summary>
+            Gets/Sets the active Endpoint.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyConfiguration.StandbyUri">
+            <summary>
+            Gets the standby Uri.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyConfiguration.StandbyEndpoint">
+            <summary>
+            Gets/Sets the standby Endpoint.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyConfiguration.Timeout">
+            <summary>
+            Gets/Sets the timeout (in milliseconds) between the reconnection attempts.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyConfiguration.Attempts">
+            <summary>
+            Gets/Sets the number of reconnection attempts.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyConfiguration.Switchovers">
+            <summary>
+            Gets/Sets the number of primary/backup switchovers. If this parameter is not set,
+            or if it is set to null, then an unlimited number of switchovers are allowed.
+            If this parameter is set to 0 then switchover will not happen.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyEventArgs">
+            <summary>
+            <c>WarmStandbyEventArgs</c> class is a holder of <c>WarmStandbyService</c>'s <c>StateChanged</c> event information.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyEventArgs.#ctor(Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyState)">
+            <summary>
+            Constructor of the <c>WarmStandbyEventArgs</c> class. 
+            </summary>
+            <param name="state"><c>WarmStandbyService</c> state</param>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyEventArgs.State">
+            <summary>
+            Gets the <c>WarmStandbyService</c> state
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyState">
+            <summary>
+            <c>WarmStandbyState</c> enumeration lists all the states the <c>WarmStandbyService</c> can have.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyState.Off">
+            <summary>
+            <c>WarmStandbyService</c> is stopped/deactivated.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyState.Idle">
+            <summary>
+            <c>WarmStandbyService</c> is is started/activated and is monitoring the ClientChannel state transitions.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyState.Reconnecting">
+            <summary>
+            <c>WarmStandbyService</c> is active and trying to reconnect the Client Channel.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.ApplicationBlocks.WarmStandby.WarmStandbyState.Waiting">
+            <summary>
+            <c>WarmStandbyService</c> is active and waiting for the the reconnect timeout to expire.
+            </summary>
+        </member>
+    </members>
+</doc>

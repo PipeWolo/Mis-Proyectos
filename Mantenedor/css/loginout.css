@@ -1,0 +1,52 @@
+body, table, input, textarea, select, li, button{
+	font:1em "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	line-height:1.5em;
+	color:#444;
+	}	
+body{
+	font-size:12px;
+	background:#fff;		
+	text-align:center;
+	}		
+
+#login{
+	margin:5em auto;
+	background:#fff;
+	border:8px solid #eee;
+	width:500px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-moz-box-shadow:0 0 10px #4e707c;
+	-webkit-box-shadow:0 0 10px #4e707c;
+	box-shadow:0 0 10px #4e707c;
+	text-align:left;
+	position:relative;
+	}
+		
+#login a, #login a:visited{color:#0283b2;}
+#login a:hover{color:#111;}
+#login p{margin:.5em 25px;}
+#login div{
+	padding:4px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	position:relative;
+	}	
+
+#login .error
+{
+	margin: .5em 25px;
+	background: #FFFFCC;
+	padding: 4px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	text-align: left;
+	position: relative;
+	border:1px solid #eee
+}
+
+#login em {font-weight: bold;font-style: normal;color: #f00;}
+

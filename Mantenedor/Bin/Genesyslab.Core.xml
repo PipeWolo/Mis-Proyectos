@@ -1,0 +1,716 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genesyslab.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Genesyslab.Configuration.ConfigurationEventArgs">
+            <summary>
+            Summary description for ConfigurationEventArgs.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Processing.BlockedQueue">
+            <summary>
+            The blocked queue implementation is a variable size queue.
+            The <see cref="T:Genesyslab.Processing.ISink"/> methods block the calling thread
+            if the Source if empty
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Processing.DefaultQueue">
+            <summary>
+            The default queue implementation is a variable size queue.
+            This queue is thread safe, however the overhead in synchronization cost.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Processing.IQueue">
+            <summary>
+            A Queue implements the finite queue. It has <see cref="T:Genesyslab.Processing.ISource"/> 
+            from one side and <see cref="T:Genesyslab.Processing.ISink"/> from other side.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Processing.ISource">
+            <summary>
+            A Source implements the side of a queue where elements are
+            dequeued.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Processing.ISource.Dequeue">
+            <summary>
+            Dequeues the next element, or null if there is
+            nothing left on the queue.
+            </summary>
+            <returns>The object that is removed from the beginning of the <see cref="T:Genesyslab.Processing.ISource"/></returns>
+        </member>
+        <member name="M:Genesyslab.Processing.ISource.DequeueAll">
+            <summary>
+            Dequeues all available elements.
+            Returns a zero-sized array in case if there is nothing
+            left on the Source.
+            </summary>
+            <returns>The array of objects that are removed from the 
+            beginning of the <see cref="T:Genesyslab.Processing.ISource"/>.
+            If the Source is empty a zero-sized array will be returned.</returns>
+        </member>
+        <member name="P:Genesyslab.Processing.ISource.Count">
+            <summary>
+            Number of elements waiting in this Source.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Processing.ISink">
+            <summary>
+             A Sink implements the end of a finite-length queue
+             where elements are enqueued.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Processing.ISink.Enqueue(System.Object)">
+            <summary>
+            Enqueues the given element onto the Sink.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Processing.ISink.Enqueue(System.Object[])">
+            <summary>
+            Given an array of elements, atomically enqueues all of the elements
+            in the array. This guarantees that no other thread can interleave its
+            own elements with those being inserted from this array. The
+            implementation must enqueue all of the elements or none of them.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Processing.ISink.Count">
+            <summary>
+            Returns the number of elements waiting in this Sink.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Processing.DefaultQueue.EmptyArray">
+            <summary>
+            An empty array used as a return value when the Queue is empty.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Processing.DefaultQueue.#ctor(System.Int32)">
+            <summary>
+            Constructs a new <see cref="T:Genesyslab.Processing.DefaultQueue"/> instance.
+            <param name="capacity">Size of queue. Can not be 0. Value '-1' means variable size queue (default).</param>
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Processing.DefaultQueue.#ctor">
+            <summary>
+            Constructs a new <see cref="T:Genesyslab.Processing.DefaultQueue"/> instance.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Processing.DefaultQueue.RetrieveElements(System.Int32)">
+            <summary>
+            Removes the given number of elements from the queue and returns them in an array.
+            Trusts the caller that queue has at least count elements available.
+            </summary>
+            <param name="count">Number of elements.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Genesyslab.Processing.BlockedQueue.#ctor">
+            <summary>
+            Constructs a new <see cref="T:Genesyslab.Processing.BlockedQueue"/> instance.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Processing.Events.IEventManager">
+            <summary>
+            Represents event manager that agregates subscribtion registrar and event publishing
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Processing.Events.IEventManager.Subscribe(Genesyslab.Processing.Events.IEventSubscriber)">
+            <summary>
+            Registers the <see cref="T:Genesyslab.Processing.Events.IEventSubscriber"/> to receive events.
+            </summary>
+            <param name="subscriber">The <see cref="T:Genesyslab.Processing.Events.IEventSubscriber"/> to register.</param>
+            <exception cref="T:System.ArgumentException">The <see cref="T:Genesyslab.Processing.Events.IEventSubscriber"/> is registered already.</exception>
+            <exception cref="T:System.ArgumentNullException">The <see cref="T:Genesyslab.Processing.Events.IEventSubscriber"/> is null.</exception>
+        </member>
+        <member name="M:Genesyslab.Processing.Events.IEventManager.Unsubscribe(Genesyslab.Processing.Events.IEventSubscriber)">
+            <summary>
+            Unregisters the <see cref="T:Genesyslab.Processing.Events.IEventSubscriber"/> from receiving events.
+            </summary>
+            <param name="subscriber">The <see cref="T:Genesyslab.Processing.Events.IEventSubscriber"/> to unregister.</param>
+            <exception cref="T:System.ArgumentException">The <see cref="T:Genesyslab.Processing.Events.IEventSubscriber"/> is not registered.</exception>
+            <exception cref="T:System.ArgumentNullException">The <see cref="T:Genesyslab.Processing.Events.IEventSubscriber"/> is null.</exception>
+        </member>
+        <member name="P:Genesyslab.Processing.Events.IEventManager.Publisher">
+            <summary>
+            Event publisher.
+            See <see cref="T:Genesyslab.Processing.Events.IEventPublisher"/>
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Processing.Events.IEventPublisher">
+            <summary>
+            Represents event publisher.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Processing.Events.IEventPublisher.Publish(System.Object)">
+            <summary>
+            Publishes event so all subscribers can process it.
+            </summary>
+            <param name="element">event to publish.</param>
+        </member>
+        <member name="T:Genesyslab.Processing.Events.IEventSubscriber">
+            <summary>
+            Represent a sibscriber for the particular event type.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Processing.Events.IEventSubscriber.Process(System.Object)">
+            <summary>
+            Process the event when it arrives to <see cref="T:Genesyslab.Processing.Events.IEventSubscriber"/>.
+            </summary>
+            <param name="element">event to process.</param>
+        </member>
+        <member name="P:Genesyslab.Processing.Events.IEventSubscriber.Filter">
+            <summary>
+            The <see cref="T:Genesyslab.Processing.ICriteria"/> filter for events the <see cref="T:Genesyslab.Processing.Events.IEventSubscriber"/> is interested in.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Processing.Events.QueuedSubscriber.#ctor">
+            <summary>
+            Creates a new instance of the Genesyslab.Components.Processing.Events.QueuedSubscriber class.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Processing.Events.QueuedSubscriber.#ctor(System.Type)">
+            <summary>
+            Creates a new instance of the Genesyslab.Components.Processing.Events.QueuedSubscriber class.
+            </summary>
+            <param name="type">System.Type for event filtering.</param>
+        </member>
+        <member name="M:Genesyslab.Processing.Events.QueuedSubscriber.#ctor(Genesyslab.Processing.ICriteria)">
+            <summary>
+            Creates a new instance of the Genesyslab.Components.Processing.Events.QueuedSubscriber class.
+            </summary>
+            <param name="filter">Event filter</param>
+        </member>
+        <member name="M:Genesyslab.Processing.Events.QueuedSubscriber.Process(System.Object)">
+            <summary>
+            Process the event when it arrives to <see cref="T:Genesyslab.Processing.Events.IEventSubscriber"/>.
+            </summary>
+            <param name="element">event to process.</param>
+        </member>
+        <member name="P:Genesyslab.Processing.Events.QueuedSubscriber.Filter">
+            <summary>
+            The <see cref="T:Genesyslab.Processing.ICriteria"/> filter for events the <see cref="T:Genesyslab.Processing.Events.IEventSubscriber"/> is interested in.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Processing.Events.Remoting.ClientSubscriber">
+            <summary>
+            Client subscriber for remoting.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Processing.Events.Remoting.ClientSubscriber.Process(System.Object)">
+            <summary>
+            Process the event when it arrives to <see cref="T:Genesyslab.Processing.Events.IEventSubscriber"/>.
+            </summary>
+            <param name="element">event to process.</param>
+        </member>
+        <member name="T:Genesyslab.Processing.IHandler">
+            <summary>
+            This interface takes care of element processing.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Processing.IHandler.Process(System.Object)">
+            <summary>
+            Process one element at a time.
+            </summary>
+            <param name="element">Element to process.</param>
+        </member>
+        <member name="M:Genesyslab.Processing.IHandler.Process(System.Object[])">
+            <summary>
+            Process the elements.
+            </summary>
+            <param name="elements">Elements to process.</param>
+        </member>
+        <member name="T:Genesyslab.Processing.Pipelines.IPipeline">
+            <summary>
+            An <see cref="T:Genesyslab.Processing.Pipelines.IPipeline"/> manages the queue
+            and handler relationship.  The <see cref="T:Genesyslab.Processing.Pipelines.IPipelineManager"/> manages the automatic
+            forwarding of the elements from the queue to the Handler.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Processing.Pipelines.IPipeline.Source">
+            <summary>
+            Pipeline's source.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Processing.Pipelines.IPipeline.Handler">
+            <summary>
+            Handler that processes elements from the queue.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Processing.Pipelines.IPipelineManager">
+            <summary>
+            Managers and executes <see cref="T:Genesyslab.Processing.Pipelines.IPipeline"/> components.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Processing.Pipelines.IPipelineManager.RegisterPipeline(Genesyslab.Processing.Pipelines.IPipeline)">
+            <summary>
+            Register an <see cref="T:Genesyslab.Processing.Pipelines.IPipeline"/> with manager.
+            As soon as pipeline is registered in <see cref="T:Genesyslab.Processing.Pipelines.IPipelineManager"/> 
+            pipeline processing starts.
+            </summary>
+            <param name="pipeline">The pipeline to regester.</param>
+            <exception cref="T:System.ArgumentNullException">
+            pipeline is null.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            pipeline is already registered.
+            </exception>
+        </member>
+        <member name="M:Genesyslab.Processing.Pipelines.IPipelineManager.UnregisterPipeline(Genesyslab.Processing.Pipelines.IPipeline)">
+            <summary>
+            Unregister an <see cref="T:Genesyslab.Processing.Pipelines.IPipeline"/> from manager. 
+            Unregistering a pipeline stops the processing.
+            </summary>
+            <param name="pipeline">The pipeline to unregester.</param>
+            <exception cref="T:System.ArgumentNullException">
+            pipeline is null.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            pipeline is not registered.
+            </exception>
+        </member>
+        <member name="T:Genesyslab.Processing.ProcessingException">
+            <summary>
+            The exception that is thrown when a processing error occurs.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Processing.ProcessingException.#ctor">
+            <summary>
+            Initializes a new instance of the Genesyslab.Processing.ProcessingException class.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Processing.ProcessingException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the Genesyslab.Processing.ProcessingException class with a specified error message.
+            </summary>
+            <param name="message">A message that describes the exception.</param>
+        </member>
+        <member name="M:Genesyslab.Processing.ProcessingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the Genesyslab.Processing.ProcessingException class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">A message that describes the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception.
+            If the innerException parameter is not a null reference, the current exception is raised in a catch block that handles the inner exception.
+            </param>
+        </member>
+        <member name="M:Genesyslab.Processing.ProcessingException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the Genesyslab.Processing.ProcessingException class with serialized data. 
+            </summary>
+            <param name="info">The object that holds the serialized object data.</param>
+            <param name="context">The contextual information about the source or destination.</param>
+        </member>
+        <member name="T:Genesyslab.Processing.Stages.IStage">
+            <summary>
+            Represents element processing stage.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Processing.Stages.IStage.TargetSinks">
+            <summary>
+            Collection of <see cref="T:Genesyslab.Processing.ISink"/> for outcoming elements.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Processing.SinkCollection">
+            <summary>
+            Represents a collection of <see cref="T:Genesyslab.Processing.ISink"/>.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Processing.SinkCollection.#ctor">
+            <summary>
+            Constructs a new <see cref="T:Genesyslab.Processing.SinkCollection"/> instance.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Security.CredentialCache">
+            <summary>
+            Provides storage for multiple credentials.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Security.CredentialCache.#ctor">
+            <summary>
+            Creates a new instance of the Genesyslab.Components.Security.CredentialCache class.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Security.CredentialCache.Add(System.String,System.Net.ICredentials)">
+            <summary>
+            Adds a System.Net.NetworkCredential instance to the credential cache.
+            </summary>
+            <param name="authenticationType">The authentication scheme used.</param>
+            <param name="credential">The System.Net.NetworkCredential to add to the credential cache.</param>
+            <exception cref="T:System.ArgumentException">The same credentials are added more than once.</exception>
+            <exception cref="T:System.ArgumentNullException">AuthenticationType is null.</exception>
+        </member>
+        <member name="M:Genesyslab.Security.CredentialCache.Remove(System.String)">
+            <summary>
+            Deletes a System.Net.NetworkCredential instance from the cache.
+            </summary>
+            <param name="authenticationType">The authentication scheme used.</param>
+        </member>
+        <member name="M:Genesyslab.Security.CredentialCache.GetCredential(System.Uri,System.String)">
+            <summary>
+            Returns the System.Net.NetworkCredential instance associated with the specified authentication type.
+            </summary>
+            <param name="uri">Not used.</param>
+            <param name="authenticationType">The authentication scheme used.</param>
+            <returns>A System.Net.NetworkCredential or, if there is no matching credential in the cache, null.</returns>
+        </member>
+        <member name="M:Genesyslab.Security.IAuthenticationManager.Authenticate(System.Net.ICredentials)">
+            <summary>
+            Authenticates the subject based on provided credentials.
+            </summary>
+            <param name="credentials"></param>
+            <returns>The Genesyslab.Components.Security.Subject if authentication is succeeded.</returns>
+            <exception cref="!:Genesyslab.Components.Integration.MsCrm.BizFacadeException">If the subject is not authenticated.</exception>
+        </member>
+        <member name="T:Genesyslab.Security.IAuthenticationModule">
+            <summary>
+            Provides the base authentication interface for authentication modules. 
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Security.IAuthenticationModule.Authenticate(System.Net.ICredentials,Genesyslab.Security.Subject)">
+            <summary>
+            Authenticates the subject based on provided credentials. If the subject is authenticated
+            the module adds the principal to the subject.
+            </summary>
+            <param name="credentials">The credentials associated with the subject.</param>
+            <param name="subject">The subject of authentication.</param>
+            <exception cref="!:Genesyslab.Integration.MsCrm.BizFacadeException">If the subject is not authenticated.</exception>
+        </member>
+        <member name="P:Genesyslab.Security.IAuthenticationModule.AuthenticationType">
+            <summary>
+            Gets the authentication type provided by this authentication module.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Security.SecurityException">
+            <summary>
+            The exception that is thrown when a security error occurs.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Security.SecurityException.#ctor">
+            <summary>
+            Initializes a new instance of the Genesyslab.Components.Security.SecurityException class.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Security.SecurityException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the Genesyslab.Components.Security.SecurityException class with a specified error message.
+            </summary>
+            <param name="message">A message that describes the exception.</param>
+        </member>
+        <member name="M:Genesyslab.Security.SecurityException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the Genesyslab.Components.Security.SecurityException class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">A message that describes the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception.
+            If the innerException parameter is not a null reference, the current exception is raised in a catch block that handles the inner exception.
+            </param>
+        </member>
+        <member name="M:Genesyslab.Security.SecurityException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the Genesyslab.Components.Security.SecurityException class with serialized data. 
+            </summary>
+            <param name="info">The object that holds the serialized object data.</param>
+            <param name="context">The contextual information about the source or destination.</param>
+        </member>
+        <member name="T:Genesyslab.Security.Sessions.ISessionManager">
+            <summary>
+            Interface for user's sign in and sign out. 
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Security.Sessions.ISessionManager.SignIn(System.Net.ICredentials)">
+            <summary>
+            Sign in the user.
+            </summary>
+            <param name="credentials">User's credentials. System.Net.NetworkCredential or Genesyslab.Components.Security.CredentialCache can be used.</param>
+            <returns>User's session if sign in is successful.</returns>
+            <exception cref="!:Genesyslab.Components.Integration.MsCrm.BizFacadeException">If the user can not be signed in.</exception>
+        </member>
+        <member name="M:Genesyslab.Security.Sessions.ISessionManager.SignIn(System.Net.ICredentials,System.Object)">
+            <summary>
+            Sign in the user.
+            </summary>
+            <param name="credentials">User's credentials. System.Net.NetworkCredential or Genesyslab.Components.Security.CredentialCache can be used.</param>
+            <param name="cookie">User's cookie to store in session until sign out.</param>
+            <returns>User's session if sign in is successful.</returns>
+            <exception cref="!:Genesyslab.Components.Integration.MsCrm.BizFacadeException">If the user can not be signed in.</exception>
+        </member>
+        <member name="M:Genesyslab.Security.Sessions.ISessionManager.SignOut(Genesyslab.Security.Sessions.UserSession)">
+            <summary>
+            Sign out the user.
+            </summary>
+            <param name="session">User's session.</param>
+            <exception cref="T:System.ArgumentException">If the user's session does not exist.</exception>
+        </member>
+        <member name="M:Genesyslab.Security.Sessions.ISessionManager.SignOut(Genesyslab.Security.Subject)">
+            <summary>
+            Sign out the user from all sessions.
+            </summary>
+            <param name="subject">User's subject.</param>
+            <exception cref="T:System.ArgumentException">If the user has no sessions.</exception>
+        </member>
+        <member name="T:Genesyslab.Security.Subject">
+            <summary>
+            Represents a security subject. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Security.Subject.#ctor">
+            <summary>
+            Creates a new instance of the Genesyslab.Components.Security.Subject class.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Security.Subject.Add(System.String,System.Security.Principal.IPrincipal)">
+            <summary>
+            Adds a System.Security.Principal.IPrincipal instance to the subject.
+            </summary>
+            <param name="authenticationType">The authentication scheme used.</param>
+            <param name="principal">The System.Security.Principal.IPrincipal to the subject.</param>
+            <exception cref="T:System.ArgumentException">The same principals are added more than once.</exception>
+            <exception cref="T:System.ArgumentNullException">AuthenticationType is null.</exception>
+        </member>
+        <member name="M:Genesyslab.Security.Subject.Remove(System.String)">
+            <summary>
+            Deletes a System.Security.Principal.IPrincipal instance from the subject.
+            </summary>
+            <param name="authenticationType">The authentication scheme used.</param>
+        </member>
+        <member name="M:Genesyslab.Security.Subject.GetPrincipal(System.String)">
+            <summary>
+            Returns the System.Security.Principal.IPrincipal instance associated with the specified authentication type.
+            </summary>
+            <param name="authenticationType">The authentication scheme used.</param>
+            <returns>A System.Security.Principal.IPrincipal or, if there is no matching principal in the subject, null.</returns>
+        </member>
+        <member name="T:Genesyslab.Xml.AttributeFormattingXmlWriter">
+            <summary>
+            This custom XmlWriter puts attributes on a new line which makes the 
+            XML files with lots of attributes easier to read.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Xml.SerializableXPathNavigator">
+            <summary>
+            XPathNavigator, which can be written out as XML. Adds 
+            InnerXml/OuterXml properties and WriteTo()/WriteContentTo() methods
+            to XPathNavigator class.	 
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.SerializableXPathNavigator.#ctor(System.Xml.XPath.XPathNavigator)">
+            <summary>
+            Creates new SerializableXPathNavigator on top of another
+            XPathNavigator.
+            </summary>
+            <param name="navigator">Core XPathNavigator.</param>
+        </member>
+        <member name="M:Genesyslab.Xml.SerializableXPathNavigator.WriteTo(System.Xml.XmlWriter)">
+            <summary>
+            Saves the current node to the specified XmlWriter.
+            </summary>
+            <param name="w">XmlWriter to write to.</param>
+        </member>
+        <member name="M:Genesyslab.Xml.SerializableXPathNavigator.WriteContentTo(System.Xml.XmlWriter)">
+            <summary>
+            Saves all the child nodes of the current node to the specified XmlWriter.
+            </summary>
+            <param name="w">XmlWrite to write to.</param>
+        </member>
+        <member name="P:Genesyslab.Xml.SerializableXPathNavigator.OuterXml">
+            <summary>
+            Gets the XML markup representing the current node and all its child nodes.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Xml.SerializableXPathNavigator.InnerXml">
+            <summary>
+            Gets the XML markup representing only the child nodes of the current node.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Xml.XmlNodeWriter">
+            <summary>
+            XmlNodeWriter builds a tree of XmlNodes based on the XmlWriter methods that are called.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.#ctor(System.Xml.XmlElement,System.Boolean)">
+            <summary>
+            Construct XmlNodeWriter for building the content of the given root XmlElement node.
+            </summary>
+            <param name="root">If root contains any content it will be completely replaced by what the XmlNodeWriter produces.</param>
+            <param name="clearCurrentContents">Clear the current children of the given node</param>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.#ctor(System.Xml.XmlDocument,System.Boolean)">
+            <summary>
+            Construct XmlNodeWriter for building the content of the given root XmlDocument node.
+            </summary>
+            <param name="root">If root contains any content it will be completely replaced by what the XmlNodeWriter produces.</param>
+            <param name="clearCurrentContents">Clear the current children of the given node</param>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.Close">
+            <summary>
+            This auto-closes any open elements and puts the writer in the WriteState.Closed state.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.Flush">
+            <summary>
+            This is a noop.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.LookupPrefix(System.String)">
+            <summary>
+            Returns the result of GetPrefixOfNamespace on the current node.
+            </summary>
+            <param name="namespaceURI">The namespaceURI to lookup the associated prefix for.</param>
+            <returns>The prefix or null if no matching namespaceURI is in scope.</returns>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteBase64(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            This method is implemented using Convert.ToBase64String.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteBinHex(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            This is implementd using a temporary XmlTextWriter to turn the 
+            given binary blob into a string, then it calls WriteString with
+            the result.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteCData(System.String)">
+            <summary>
+            Creates a System.Xml.XmlCDataSection node.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteCharEntity(System.Char)">
+            <summary>
+            Writes the given char as a string.  The XmlDocument has no representation for 
+            character entities, so the fact that this was called will be lost.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteChars(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Calls WriteString with new string(buffer, index, count).
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteComment(System.String)">
+            <summary>
+            Creates an System.Xml.XmlComment node.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteDocType(System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates an System.Xml.XmlDocumentType node.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteEndAttribute">
+            <summary>
+            Closes the previous WriteStartAttribute call.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteEndDocument">
+            <summary>
+            Closes any open elements and puts the writer back in the Start state.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteEndElement">
+            <summary>
+            Closes the previous WriteStartElement call.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteEntityRef(System.String)">
+            <summary>
+            Creates a System.Xml.XmlEntityReference node.
+            </summary>
+            <param name="name">The name of the entity reference</param>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteFullEndElement">
+            <summary>
+            The DOM does not preserve this information, so this is equivalent to WriteEndElement.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteName(System.String)">
+            <summary>
+            Calls WriteString if the name is a valid XML name.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteNmToken(System.String)">
+            <summary>
+            Calls WriteString if the name is a valid XML NMTOKEN.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteProcessingInstruction(System.String,System.String)">
+            <summary>
+            Creates a System.Xml.XmlProcessingInstruction node.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteQualifiedName(System.String,System.String)">
+            <summary>
+            Looks up the prefix in scope for the given namespace and calls WriteString
+            with the prefix+":"+localName (or just localName if the prefix is the empty string).
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteRaw(System.String)">
+            <summary>
+            WriteRaw writes out the given string "unescaped", in other words it better be well formed XML markup.
+            So for the XmlNodeWriter we parse this string and build the resulting tree, so it maps to setting the
+            InnerXml property.  
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteRaw(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Calls WriteRaw(string) with new string(buffer, index, count)
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteStartAttribute(System.String,System.String,System.String)">
+            <summary>
+            Creates a System.Xml.XmlAttribute node.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteStartDocument">
+            <summary>
+            Writes the XmlDeclaration node with a standalone attribute.  This is only allowed when the
+            writer is in the Start state, which only happens if the writer was constructed with an
+            XmlDocument object.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteStartDocument(System.Boolean)">
+            <summary>
+            Writes the XmlDeclaration node with a standalone attribute.  This is only allowed when the
+            writer is in the Start state, which only happens if the writer was constructed with an
+            XmlDocument object.
+            </summary>
+            <param name="standalone">If true, standalone attribute has value "yes" otherwise it has the value "no".</param>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteStartElement(System.String,System.String,System.String)">
+            <summary>
+            Creates a System.Xml.XmlElement node.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteString(System.String)">
+            <summary>
+            Creates a System.Xml.XmlText node.  If the current node is already an XmlText
+            node it appends the text to that node.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteSurrogateCharEntity(System.Char,System.Char)">
+            <summary>
+            Calls WriteString with the character data.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Xml.XmlNodeWriter.WriteWhitespace(System.String)">
+            <summary>
+            Create a System.Xml.XmlWhitespace node.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Xml.XmlNodeWriter.WriteState">
+            <summary>
+            Return the current state of the writer.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Xml.XmlNodeWriter.XmlLang">
+            <summary>
+            Return the current XmlLang state.  This does not have an efficient implementation, so use at your own risk.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Xml.XmlNodeWriter.XmlSpace">
+            <summary>
+            Return the current XmlSpace state.  This does not have an efficient implementation, so use at your own risk.
+            </summary>
+        </member>
+    </members>
+</doc>

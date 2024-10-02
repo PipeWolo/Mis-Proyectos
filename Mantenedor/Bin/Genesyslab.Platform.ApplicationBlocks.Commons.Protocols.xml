@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genesyslab.Platform.ApplicationBlocks.Commons.Protocols</name>
+    </assembly>
+    <members>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.ProtocolConfiguration.WarmStandbyUri">
+            <summary>
+            Gets/Sets the standby URI for Warm Standby.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.ProtocolConfiguration.WarmStandbyAttempts">
+            <summary>
+            Gets/Sets the number of reconnection attempts for Warm Standby.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.ProtocolConfiguration.WarmStandbySwitchovers">
+            <summary>
+            Gets/Sets the number of primary/backup switchovers allowed for Warm Standby. 
+            If this parameter is not set, or if it is set to null, then an unlimited 
+            number of switchovers are allowed. If this parameter is set to 0 then 
+            switchover will not happen.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.ProtocolConfiguration.WarmStandbyTimeout">
+            <summary>
+            Gets/Sets the timeout (in milliseconds) between the reconnection attempts for Warm Standby.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.BasicChatConfiguration.AutoRegister">
+            <summary>
+            Value to be assigned to <see cref="P:Genesyslab.Platform.WebMedia.Protocols.BasicChatProtocol.AutoRegister"/> property before opening protocol (if not null).
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.BasicChatConfiguration.PersonId">
+            <summary>
+            Value to be assigned to <see cref="P:Genesyslab.Platform.WebMedia.Protocols.BasicChatProtocol.PersonId"/> property before opening protocol (if not null).
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.BasicChatConfiguration.TimeZoneOffset">
+            <summary>
+            Value to be assigned to <see cref="P:Genesyslab.Platform.WebMedia.Protocols.BasicChatProtocol.TimeZoneOffset"/> property before opening protocol (if not null).
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.BasicChatConfiguration.UserData">
+            <summary>
+            Value to be assigned to <see cref="P:Genesyslab.Platform.WebMedia.Protocols.BasicChatProtocol.UserData"/> property before opening protocol (if not null).
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.BasicChatConfiguration.UserNickname">
+            <summary>
+            Value to be assigned to <see cref="P:Genesyslab.Platform.WebMedia.Protocols.BasicChatProtocol.UserNickname"/> property before opening protocol (if not null).
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.BasicChatConfiguration.UserType">
+            <summary>
+            Value to be assigned to <see cref="P:Genesyslab.Platform.WebMedia.Protocols.BasicChatProtocol.UserType"/> property before opening protocol (if not null).
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.FlexChatConfiguration.AutoRegister">
+            <summary>
+            Value to be assigned to <see cref="P:Genesyslab.Platform.WebMedia.Protocols.FlexChatProtocol.AutoRegister"/> property before opening protocol (if not null).
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.FlexChatConfiguration.SecureKey">
+            <summary>
+            Value to be assigned to <see cref="P:Genesyslab.Platform.WebMedia.Protocols.FlexChatProtocol.SecureKey"/> property before opening protocol (if not null).
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.FlexChatConfiguration.TimeZoneOffset">
+            <summary>
+            Value to be assigned to <see cref="P:Genesyslab.Platform.WebMedia.Protocols.FlexChatProtocol.TimeZoneOffset"/> property before opening protocol (if not null).
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.FlexChatConfiguration.UserData">
+            <summary>
+            Value to be assigned to <see cref="P:Genesyslab.Platform.WebMedia.Protocols.FlexChatProtocol.UserData"/> property before opening protocol (if not null).
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.FlexChatConfiguration.UserId">
+            <summary>
+            Value to be assigned to <see cref="P:Genesyslab.Platform.WebMedia.Protocols.FlexChatProtocol.UserId"/> property before opening protocol (if not null).
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.FlexChatConfiguration.UserNickname">
+            <summary>
+            Value to be assigned to <see cref="P:Genesyslab.Platform.WebMedia.Protocols.FlexChatProtocol.UserNickname"/> property before opening protocol (if not null).
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.RoutingServerConfiguration.ClientName">
+            <summary>
+            Value to be assigned to <see cref="P:Genesyslab.Platform.Routing.Protocols.RoutingServerProtocol.ClientName"/> property before opening protocol  (if not null).
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.RoutingServerConfiguration.ClientType">
+            <summary>
+            Value to be assigned to <see cref="P:Genesyslab.Platform.Routing.Protocols.RoutingServerProtocol.ClientType"/> property before opening protocol  (if not null).
+            </summary>
+        </member>
+    </members>
+</doc>

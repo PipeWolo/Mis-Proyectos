@@ -1,0 +1,2132 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genesyslab.Platform.Outbound.Protocols</name>
+    </assembly>
+    <members>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundDesktop.DateTimeConverter">
+            <summary>
+            Summary description for DateTimeConverter.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundDesktop.OutboundDesktopFactory.FillActions">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundDesktop.OutboundDesktopResolver">
+            <summary>
+            PreviewInterationResolver class.
+            Usage example:
+            CampaignLoaded msg = new CampaignLoaded();
+            ...
+            OutboundDesktopFactory factory = 
+                new OutboundDesktopFactory(new OutboundDesktopResolver());
+            KeyValueCollection kv = factory.Marshal(msg);
+            ...
+            object obj = factory.Unmarshal(kv);
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterClient">
+            <summary>
+             Sent to OCS to register the client upon connection. For internal use only.
+                               
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterClient.Create">
+            <summary>
+             Creates message "RequestRegisterClient" with no parameters set.
+            </summary>
+            <returns>RequestRegisterClient instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterClient.Create(System.String,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "RequestRegisterClient" with all parameters set.
+            </summary>
+            <param name="libraryProtocol">Specifies the library protocol (internal use)</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <returns>RequestRegisterClient instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterClient.Create(System.String)">
+            <summary>
+             Creates message "RequestRegisterClient" with required set.
+            </summary>
+            <param name="libraryProtocol">Specifies the library protocol (internal use)</param>
+             <returns>RequestRegisterClient instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterClient.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterClient.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterClient.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterClient.LibraryProtocol">
+            <summary>
+             Property "LibraryProtocol".
+             Attribute description: Specifies the library protocol (internal use)
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterClient.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterClient.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterClient.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterClient.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestLoadCampaign">
+            <summary>
+            Causes the specified campaign to be loaded.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestLoadCampaign.Create">
+            <summary>
+             Creates message "RequestLoadCampaign" with no parameters set.
+            </summary>
+            <returns>RequestLoadCampaign instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestLoadCampaign.Create(System.Int32,System.Int32,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "RequestLoadCampaign" with all parameters set.
+            </summary>
+            <param name="campaignId">The configuration environment DBID of the current campaign</param>
+            <param name="groupId">The configuration environment DBID of the agent group</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <returns>RequestLoadCampaign instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestLoadCampaign.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestLoadCampaign.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestLoadCampaign.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestLoadCampaign.CampaignId">
+            <summary>
+             Property "CampaignId".
+             Attribute description: The configuration environment DBID of the current campaign
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestLoadCampaign.GroupId">
+            <summary>
+             Property "GroupId".
+             Attribute description: The configuration environment DBID of the agent group
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestLoadCampaign.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestLoadCampaign.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestLoadCampaign.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestLoadCampaign.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnloadCampaign">
+            <summary>
+             Unloads the specified campaign.
+                               
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnloadCampaign.Create">
+            <summary>
+             Creates message "RequestUnloadCampaign" with no parameters set.
+            </summary>
+            <returns>RequestUnloadCampaign instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnloadCampaign.Create(System.Int32,System.Int32,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "RequestUnloadCampaign" with all parameters set.
+            </summary>
+            <param name="campaignId">The configuration environment DBID of the current campaign</param>
+            <param name="groupId">The configuration environment DBID of the agent group</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <returns>RequestUnloadCampaign instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnloadCampaign.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnloadCampaign.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnloadCampaign.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnloadCampaign.CampaignId">
+            <summary>
+             Property "CampaignId".
+             Attribute description: The configuration environment DBID of the current campaign
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnloadCampaign.GroupId">
+            <summary>
+             Property "GroupId".
+             Attribute description: The configuration environment DBID of the agent group
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnloadCampaign.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnloadCampaign.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnloadCampaign.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnloadCampaign.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStartDialing">
+            <summary>
+             Causes dialing operations for the current campaign to begin.
+                               
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStartDialing.Create">
+            <summary>
+             Creates message "RequestStartDialing" with no parameters set.
+            </summary>
+            <returns>RequestStartDialing instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStartDialing.Create(System.Int32,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode,Genesyslab.Platform.Outbound.Protocols.OutboundServer.OptimizationMethod,System.Int32,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "RequestStartDialing" with all parameters set.
+            </summary>
+            <param name="campaignId">The configuration environment DBID of the current campaign</param>
+            <param name="groupId">The configuration environment DBID of the agent group</param>
+            <param name="dialMode">The dialing mode</param>
+            <param name="optimizeBy">The optimization method</param>
+            <param name="optimizeGoal">The optimization goal</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <returns>RequestStartDialing instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStartDialing.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStartDialing.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStartDialing.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStartDialing.CampaignId">
+            <summary>
+             Property "CampaignId".
+             Attribute description: The configuration environment DBID of the current campaign
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStartDialing.GroupId">
+            <summary>
+             Property "GroupId".
+             Attribute description: The configuration environment DBID of the agent group
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStartDialing.DialMode">
+            <summary>
+             Property "DialMode".
+             Attribute description: The dialing mode
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStartDialing.OptimizeBy">
+            <summary>
+             Property "OptimizeBy".
+             Attribute description: The optimization method
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStartDialing.OptimizeGoal">
+            <summary>
+             Property "OptimizeGoal".
+             Attribute description: The optimization goal
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStartDialing.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStartDialing.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStartDialing.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStartDialing.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStopDialing">
+            <summary>
+             Causes dialing operations for the current campaign to stop.
+                               
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStopDialing.Create">
+            <summary>
+             Creates message "RequestStopDialing" with no parameters set.
+            </summary>
+            <returns>RequestStopDialing instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStopDialing.Create(System.Int32,System.Int32,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "RequestStopDialing" with all parameters set.
+            </summary>
+            <param name="campaignId">The configuration environment DBID of the current campaign</param>
+            <param name="groupId">The configuration environment DBID of the agent group</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <returns>RequestStopDialing instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStopDialing.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStopDialing.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStopDialing.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStopDialing.CampaignId">
+            <summary>
+             Property "CampaignId".
+             Attribute description: The configuration environment DBID of the current campaign
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStopDialing.GroupId">
+            <summary>
+             Property "GroupId".
+             Attribute description: The configuration environment DBID of the agent group
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStopDialing.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStopDialing.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStopDialing.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestStopDialing.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestSetDialingMode">
+            <summary>
+             Sets the dialing mode for the current campaign
+                           
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestSetDialingMode.Create">
+            <summary>
+             Creates message "RequestSetDialingMode" with no parameters set.
+            </summary>
+            <returns>RequestSetDialingMode instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestSetDialingMode.Create(System.Int32,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode,Genesyslab.Platform.Outbound.Protocols.OutboundServer.OptimizationMethod,System.Int32,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "RequestSetDialingMode" with all parameters set.
+            </summary>
+            <param name="campaignId">The configuration environment DBID of the current campaign</param>
+            <param name="groupId">The configuration environment DBID of the agent group</param>
+            <param name="dialMode">The dialing mode</param>
+            <param name="optimizeBy">The optimization method</param>
+            <param name="optimizeGoal">The optimization goal</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <returns>RequestSetDialingMode instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestSetDialingMode.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestSetDialingMode.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestSetDialingMode.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestSetDialingMode.CampaignId">
+            <summary>
+             Property "CampaignId".
+             Attribute description: The configuration environment DBID of the current campaign
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestSetDialingMode.GroupId">
+            <summary>
+             Property "GroupId".
+             Attribute description: The configuration environment DBID of the agent group
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestSetDialingMode.DialMode">
+            <summary>
+             Property "DialMode".
+             Attribute description: The dialing mode
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestSetDialingMode.OptimizeBy">
+            <summary>
+             Property "OptimizeBy".
+             Attribute description: The optimization method
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestSetDialingMode.OptimizeGoal">
+            <summary>
+             Property "OptimizeGoal".
+             Attribute description: The optimization goal
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestSetDialingMode.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestSetDialingMode.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestSetDialingMode.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestSetDialingMode.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestGetCampaignStatus">
+            <summary>
+             Retrieves the current campaign's status.
+                           
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestGetCampaignStatus.Create">
+            <summary>
+             Creates message "RequestGetCampaignStatus" with no parameters set.
+            </summary>
+            <returns>RequestGetCampaignStatus instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestGetCampaignStatus.Create(System.Int32,System.Int32,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "RequestGetCampaignStatus" with all parameters set.
+            </summary>
+            <param name="campaignId">The configuration environment DBID of the current campaign</param>
+            <param name="groupId">The configuration environment DBID of the agent group</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <returns>RequestGetCampaignStatus instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestGetCampaignStatus.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestGetCampaignStatus.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestGetCampaignStatus.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestGetCampaignStatus.CampaignId">
+            <summary>
+             Property "CampaignId".
+             Attribute description: The configuration environment DBID of the current campaign
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestGetCampaignStatus.GroupId">
+            <summary>
+             Property "GroupId".
+             Attribute description: The configuration environment DBID of the agent group
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestGetCampaignStatus.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestGetCampaignStatus.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestGetCampaignStatus.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestGetCampaignStatus.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterCampaign">
+            <summary>
+             Registers the specified campaign with OCS.
+                           
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterCampaign.Create">
+            <summary>
+             Creates message "RequestRegisterCampaign" with no parameters set.
+            </summary>
+            <returns>RequestRegisterCampaign instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterCampaign.Create(System.Int32,System.Int32,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "RequestRegisterCampaign" with all parameters set.
+            </summary>
+            <param name="campaignId">The configuration environment DBID of the current campaign</param>
+            <param name="groupId">The configuration environment DBID of the agent group</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <returns>RequestRegisterCampaign instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterCampaign.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterCampaign.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterCampaign.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterCampaign.CampaignId">
+            <summary>
+             Property "CampaignId".
+             Attribute description: The configuration environment DBID of the current campaign
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterCampaign.GroupId">
+            <summary>
+             Property "GroupId".
+             Attribute description: The configuration environment DBID of the agent group
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterCampaign.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterCampaign.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterCampaign.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestRegisterCampaign.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnregisterCampaign">
+            <summary>
+             Unregisters the specified campaign with OCS.
+                           
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnregisterCampaign.Create">
+            <summary>
+             Creates message "RequestUnregisterCampaign" with no parameters set.
+            </summary>
+            <returns>RequestUnregisterCampaign instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnregisterCampaign.Create(System.Int32,System.Int32,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "RequestUnregisterCampaign" with all parameters set.
+            </summary>
+            <param name="campaignId">The configuration environment DBID of the current campaign</param>
+            <param name="groupId">The configuration environment DBID of the agent group</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <returns>RequestUnregisterCampaign instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnregisterCampaign.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnregisterCampaign.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnregisterCampaign.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnregisterCampaign.CampaignId">
+            <summary>
+             Property "CampaignId".
+             Attribute description: The configuration environment DBID of the current campaign
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnregisterCampaign.GroupId">
+            <summary>
+             Property "GroupId".
+             Attribute description: The configuration environment DBID of the agent group
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnregisterCampaign.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnregisterCampaign.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnregisterCampaign.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestUnregisterCampaign.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestForceUnloadCampaign">
+            <summary>
+             Forcibly unloads the specified campaign.
+                         
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestForceUnloadCampaign.Create">
+            <summary>
+             Creates message "RequestForceUnloadCampaign" with no parameters set.
+            </summary>
+            <returns>RequestForceUnloadCampaign instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestForceUnloadCampaign.Create(System.Int32,System.Int32,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+             Creates message "RequestForceUnloadCampaign" with all parameters set.
+            </summary>
+            <param name="campaignId">The configuration environment DBID of the current campaign</param>
+            <param name="groupId">The configuration environment DBID of the agent group</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <returns>RequestForceUnloadCampaign instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestForceUnloadCampaign.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestForceUnloadCampaign.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestForceUnloadCampaign.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestForceUnloadCampaign.CampaignId">
+            <summary>
+             Property "CampaignId".
+             Attribute description: The configuration environment DBID of the current campaign
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestForceUnloadCampaign.GroupId">
+            <summary>
+             Property "GroupId".
+             Attribute description: The configuration environment DBID of the agent group
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestForceUnloadCampaign.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestForceUnloadCampaign.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestForceUnloadCampaign.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Requests.RequestForceUnloadCampaign.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventRegistered">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventRegistered.Create">
+            <summary>
+             Creates message "EventRegistered" with no parameters set.
+            </summary>
+            <returns>EventRegistered instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventRegistered.Create(Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode)">
+            <summary>
+             Creates message "EventRegistered" with all parameters set.
+            </summary>
+            <param name="dialMode">The dialing mode</param>
+            <returns>EventRegistered instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventRegistered.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventRegistered.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventRegistered.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventRegistered.DialMode">
+            <summary>
+             Property "DialMode".
+             Attribute description: The dialing mode
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventRegistered.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventRegistered.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventRegistered.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded">
+            <summary>
+             The specified campaign has been successfully loaded.
+                         
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded.Create">
+            <summary>
+             Creates message "EventCampaignLoaded" with no parameters set.
+            </summary>
+            <returns>EventCampaignLoaded instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded.Create(System.Int32,System.Int32,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.GroupCampaignStatus,Genesyslab.Platform.Outbound.Protocols.OutboundServer.OptimizationMethod,Genesyslab.Platform.Commons.Collections.KeyValueCollection,System.String,System.Int32)">
+            <summary>
+             Creates message "EventCampaignLoaded" with all parameters set.
+            </summary>
+            <param name="requestId">Contains the reference ID of the request to which the current event is a response</param>
+            <param name="campaignId">The configuration environment DBID of the current campaign</param>
+            <param name="groupId">The configuration environment DBID of the agent group</param>
+            <param name="dialMode">The dialing mode</param>
+            <param name="optimizeGoal">The optimization goal</param>
+            <param name="groupCampaignStatus">The current group campaign status</param>
+            <param name="optimizeBy">The optimization method</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <param name="errorMessage">The error message describing the current error condition</param>
+            <param name="errorCode">The error code of the current error condition</param>
+            <returns>EventCampaignLoaded instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded.RequestId">
+            <summary>
+             Property "RequestId".
+             Attribute description: Contains the reference ID of the request to which the current event is a response
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded.CampaignId">
+            <summary>
+             Property "CampaignId".
+             Attribute description: The configuration environment DBID of the current campaign
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded.GroupId">
+            <summary>
+             Property "GroupId".
+             Attribute description: The configuration environment DBID of the agent group
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded.DialMode">
+            <summary>
+             Property "DialMode".
+             Attribute description: The dialing mode
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded.OptimizeGoal">
+            <summary>
+             Property "OptimizeGoal".
+             Attribute description: The optimization goal
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded.GroupCampaignStatus">
+            <summary>
+             Property "GroupCampaignStatus".
+             Attribute description: The current group campaign status
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded.OptimizeBy">
+            <summary>
+             Property "OptimizeBy".
+             Attribute description: The optimization method
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded.ErrorMessage">
+            <summary>
+             Property "ErrorMessage".
+             Attribute description: The error message describing the current error condition
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded.ErrorCode">
+            <summary>
+             Property "ErrorCode".
+             Attribute description: The error code of the current error condition
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignLoaded.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded">
+            <summary>
+             The specified campaign has been successfully unloaded.
+                         
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded.Create">
+            <summary>
+             Creates message "EventCampaignUnloaded" with no parameters set.
+            </summary>
+            <returns>EventCampaignUnloaded instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded.Create(System.Int32,System.Int32,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.GroupCampaignStatus,Genesyslab.Platform.Outbound.Protocols.OutboundServer.OptimizationMethod,Genesyslab.Platform.Commons.Collections.KeyValueCollection,System.String,System.Int32)">
+            <summary>
+             Creates message "EventCampaignUnloaded" with all parameters set.
+            </summary>
+            <param name="requestId">Contains the reference ID of the request to which the current event is a response</param>
+            <param name="campaignId">The configuration environment DBID of the current campaign</param>
+            <param name="groupId">The configuration environment DBID of the agent group</param>
+            <param name="dialMode">The dialing mode</param>
+            <param name="optimizeGoal">The optimization goal</param>
+            <param name="groupCampaignStatus">The current group campaign status</param>
+            <param name="optimizeBy">The optimization method</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <param name="errorMessage">The error message describing the current error condition</param>
+            <param name="errorCode">The error code of the current error condition</param>
+            <returns>EventCampaignUnloaded instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded.RequestId">
+            <summary>
+             Property "RequestId".
+             Attribute description: Contains the reference ID of the request to which the current event is a response
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded.CampaignId">
+            <summary>
+             Property "CampaignId".
+             Attribute description: The configuration environment DBID of the current campaign
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded.GroupId">
+            <summary>
+             Property "GroupId".
+             Attribute description: The configuration environment DBID of the agent group
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded.DialMode">
+            <summary>
+             Property "DialMode".
+             Attribute description: The dialing mode
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded.OptimizeGoal">
+            <summary>
+             Property "OptimizeGoal".
+             Attribute description: The optimization goal
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded.GroupCampaignStatus">
+            <summary>
+             Property "GroupCampaignStatus".
+             Attribute description: The current group campaign status
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded.OptimizeBy">
+            <summary>
+             Property "OptimizeBy".
+             Attribute description: The optimization method
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded.ErrorMessage">
+            <summary>
+             Property "ErrorMessage".
+             Attribute description: The error message describing the current error condition
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded.ErrorCode">
+            <summary>
+             Property "ErrorCode".
+             Attribute description: The error code of the current error condition
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnloaded.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted">
+            <summary>
+             Dialing operations for the specvified campaign have successfully begun.
+                         
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted.Create">
+            <summary>
+             Creates message "EventDialingStarted" with no parameters set.
+            </summary>
+            <returns>EventDialingStarted instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted.Create(System.Int32,System.Int32,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.GroupCampaignStatus,Genesyslab.Platform.Outbound.Protocols.OutboundServer.OptimizationMethod,Genesyslab.Platform.Commons.Collections.KeyValueCollection,System.String,System.Int32)">
+            <summary>
+             Creates message "EventDialingStarted" with all parameters set.
+            </summary>
+            <param name="requestId">Contains the reference ID of the request to which the current event is a response</param>
+            <param name="campaignId">The configuration environment DBID of the current campaign</param>
+            <param name="groupId">The configuration environment DBID of the agent group</param>
+            <param name="dialMode">The dialing mode</param>
+            <param name="optimizeGoal">The optimization goal</param>
+            <param name="groupCampaignStatus">The current group campaign status</param>
+            <param name="optimizeBy">The optimization method</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <param name="errorMessage">The error message describing the current error condition</param>
+            <param name="errorCode">The error code of the current error condition</param>
+            <returns>EventDialingStarted instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted.RequestId">
+            <summary>
+             Property "RequestId".
+             Attribute description: Contains the reference ID of the request to which the current event is a response
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted.CampaignId">
+            <summary>
+             Property "CampaignId".
+             Attribute description: The configuration environment DBID of the current campaign
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted.GroupId">
+            <summary>
+             Property "GroupId".
+             Attribute description: The configuration environment DBID of the agent group
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted.DialMode">
+            <summary>
+             Property "DialMode".
+             Attribute description: The dialing mode
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted.OptimizeGoal">
+            <summary>
+             Property "OptimizeGoal".
+             Attribute description: The optimization goal
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted.GroupCampaignStatus">
+            <summary>
+             Property "GroupCampaignStatus".
+             Attribute description: The current group campaign status
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted.OptimizeBy">
+            <summary>
+             Property "OptimizeBy".
+             Attribute description: The optimization method
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted.ErrorMessage">
+            <summary>
+             Property "ErrorMessage".
+             Attribute description: The error message describing the current error condition
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted.ErrorCode">
+            <summary>
+             Property "ErrorCode".
+             Attribute description: The error code of the current error condition
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStarted.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped">
+            <summary>
+             Dialing operations for the specified campaign have been stopped.
+                         
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped.Create">
+            <summary>
+             Creates message "EventDialingStopped" with no parameters set.
+            </summary>
+            <returns>EventDialingStopped instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped.Create(System.Int32,System.Int32,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.GroupCampaignStatus,Genesyslab.Platform.Outbound.Protocols.OutboundServer.OptimizationMethod,Genesyslab.Platform.Commons.Collections.KeyValueCollection,System.String,System.Int32)">
+            <summary>
+             Creates message "EventDialingStopped" with all parameters set.
+            </summary>
+            <param name="requestId">Contains the reference ID of the request to which the current event is a response</param>
+            <param name="campaignId">The configuration environment DBID of the current campaign</param>
+            <param name="groupId">The configuration environment DBID of the agent group</param>
+            <param name="dialMode">The dialing mode</param>
+            <param name="optimizeGoal">The optimization goal</param>
+            <param name="groupCampaignStatus">The current group campaign status</param>
+            <param name="optimizeBy">The optimization method</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <param name="errorMessage">The error message describing the current error condition</param>
+            <param name="errorCode">The error code of the current error condition</param>
+            <returns>EventDialingStopped instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped.RequestId">
+            <summary>
+             Property "RequestId".
+             Attribute description: Contains the reference ID of the request to which the current event is a response
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped.CampaignId">
+            <summary>
+             Property "CampaignId".
+             Attribute description: The configuration environment DBID of the current campaign
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped.GroupId">
+            <summary>
+             Property "GroupId".
+             Attribute description: The configuration environment DBID of the agent group
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped.DialMode">
+            <summary>
+             Property "DialMode".
+             Attribute description: The dialing mode
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped.OptimizeGoal">
+            <summary>
+             Property "OptimizeGoal".
+             Attribute description: The optimization goal
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped.GroupCampaignStatus">
+            <summary>
+             Property "GroupCampaignStatus".
+             Attribute description: The current group campaign status
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped.OptimizeBy">
+            <summary>
+             Property "OptimizeBy".
+             Attribute description: The optimization method
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped.ErrorMessage">
+            <summary>
+             Property "ErrorMessage".
+             Attribute description: The error message describing the current error condition
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped.ErrorCode">
+            <summary>
+             Property "ErrorCode".
+             Attribute description: The error code of the current error condition
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingStopped.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged">
+            <summary>
+             The dialing mode for the specified campaign has been changed.
+                         
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged.Create">
+            <summary>
+             Creates message "EventDialingModeChanged" with no parameters set.
+            </summary>
+            <returns>EventDialingModeChanged instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged.Create(System.Int32,System.Int32,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.GroupCampaignStatus,Genesyslab.Platform.Outbound.Protocols.OutboundServer.OptimizationMethod,Genesyslab.Platform.Commons.Collections.KeyValueCollection,System.String,System.Int32)">
+            <summary>
+             Creates message "EventDialingModeChanged" with all parameters set.
+            </summary>
+            <param name="requestId">Contains the reference ID of the request to which the current event is a response</param>
+            <param name="campaignId">The configuration environment DBID of the current campaign</param>
+            <param name="groupId">The configuration environment DBID of the agent group</param>
+            <param name="dialMode">The dialing mode</param>
+            <param name="optimizeGoal">The optimization goal</param>
+            <param name="groupCampaignStatus">The current group campaign status</param>
+            <param name="optimizeBy">The optimization method</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <param name="errorMessage">The error message describing the current error condition</param>
+            <param name="errorCode">The error code of the current error condition</param>
+            <returns>EventDialingModeChanged instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged.RequestId">
+            <summary>
+             Property "RequestId".
+             Attribute description: Contains the reference ID of the request to which the current event is a response
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged.CampaignId">
+            <summary>
+             Property "CampaignId".
+             Attribute description: The configuration environment DBID of the current campaign
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged.GroupId">
+            <summary>
+             Property "GroupId".
+             Attribute description: The configuration environment DBID of the agent group
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged.DialMode">
+            <summary>
+             Property "DialMode".
+             Attribute description: The dialing mode
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged.OptimizeGoal">
+            <summary>
+             Property "OptimizeGoal".
+             Attribute description: The optimization goal
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged.GroupCampaignStatus">
+            <summary>
+             Property "GroupCampaignStatus".
+             Attribute description: The current group campaign status
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged.OptimizeBy">
+            <summary>
+             Property "OptimizeBy".
+             Attribute description: The optimization method
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged.ErrorMessage">
+            <summary>
+             Property "ErrorMessage".
+             Attribute description: The error message describing the current error condition
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged.ErrorCode">
+            <summary>
+             Property "ErrorCode".
+             Attribute description: The error code of the current error condition
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventDialingModeChanged.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus">
+            <summary>
+             Notifies of the current status of the specified campaign.
+                         
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus.Create">
+            <summary>
+             Creates message "EventCampaignStatus" with no parameters set.
+            </summary>
+            <returns>EventCampaignStatus instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus.Create(System.Int32,System.Int32,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.GroupCampaignStatus,Genesyslab.Platform.Outbound.Protocols.OutboundServer.OptimizationMethod,Genesyslab.Platform.Commons.Collections.KeyValueCollection,System.String,System.Int32)">
+            <summary>
+             Creates message "EventCampaignStatus" with all parameters set.
+            </summary>
+            <param name="requestId">Contains the reference ID of the request to which the current event is a response</param>
+            <param name="campaignId">The configuration environment DBID of the current campaign</param>
+            <param name="groupId">The configuration environment DBID of the agent group</param>
+            <param name="dialMode">The dialing mode</param>
+            <param name="optimizeGoal">The optimization goal</param>
+            <param name="groupCampaignStatus">The current group campaign status</param>
+            <param name="optimizeBy">The optimization method</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <param name="errorMessage">The error message describing the current error condition</param>
+            <param name="errorCode">The error code of the current error condition</param>
+            <returns>EventCampaignStatus instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus.RequestId">
+            <summary>
+             Property "RequestId".
+             Attribute description: Contains the reference ID of the request to which the current event is a response
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus.CampaignId">
+            <summary>
+             Property "CampaignId".
+             Attribute description: The configuration environment DBID of the current campaign
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus.GroupId">
+            <summary>
+             Property "GroupId".
+             Attribute description: The configuration environment DBID of the agent group
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus.DialMode">
+            <summary>
+             Property "DialMode".
+             Attribute description: The dialing mode
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus.OptimizeGoal">
+            <summary>
+             Property "OptimizeGoal".
+             Attribute description: The optimization goal
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus.GroupCampaignStatus">
+            <summary>
+             Property "GroupCampaignStatus".
+             Attribute description: The current group campaign status
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus.OptimizeBy">
+            <summary>
+             Property "OptimizeBy".
+             Attribute description: The optimization method
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus.ErrorMessage">
+            <summary>
+             Property "ErrorMessage".
+             Attribute description: The error message describing the current error condition
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus.ErrorCode">
+            <summary>
+             Property "ErrorCode".
+             Attribute description: The error code of the current error condition
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignStatus.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered">
+            <summary>
+             The specified campaign has been successfully registered with OCS.
+                         
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered.Create">
+            <summary>
+             Creates message "EventCampaignRegistered" with no parameters set.
+            </summary>
+            <returns>EventCampaignRegistered instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered.Create(System.Int32,System.Int32,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.GroupCampaignStatus,Genesyslab.Platform.Outbound.Protocols.OutboundServer.OptimizationMethod,Genesyslab.Platform.Commons.Collections.KeyValueCollection,System.String,System.Int32)">
+            <summary>
+             Creates message "EventCampaignRegistered" with all parameters set.
+            </summary>
+            <param name="requestId">Contains the reference ID of the request to which the current event is a response</param>
+            <param name="campaignId">The configuration environment DBID of the current campaign</param>
+            <param name="groupId">The configuration environment DBID of the agent group</param>
+            <param name="dialMode">The dialing mode</param>
+            <param name="optimizeGoal">The optimization goal</param>
+            <param name="groupCampaignStatus">The current group campaign status</param>
+            <param name="optimizeBy">The optimization method</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <param name="errorMessage">The error message describing the current error condition</param>
+            <param name="errorCode">The error code of the current error condition</param>
+            <returns>EventCampaignRegistered instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered.RequestId">
+            <summary>
+             Property "RequestId".
+             Attribute description: Contains the reference ID of the request to which the current event is a response
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered.CampaignId">
+            <summary>
+             Property "CampaignId".
+             Attribute description: The configuration environment DBID of the current campaign
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered.GroupId">
+            <summary>
+             Property "GroupId".
+             Attribute description: The configuration environment DBID of the agent group
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered.DialMode">
+            <summary>
+             Property "DialMode".
+             Attribute description: The dialing mode
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered.OptimizeGoal">
+            <summary>
+             Property "OptimizeGoal".
+             Attribute description: The optimization goal
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered.GroupCampaignStatus">
+            <summary>
+             Property "GroupCampaignStatus".
+             Attribute description: The current group campaign status
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered.OptimizeBy">
+            <summary>
+             Property "OptimizeBy".
+             Attribute description: The optimization method
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered.ErrorMessage">
+            <summary>
+             Property "ErrorMessage".
+             Attribute description: The error message describing the current error condition
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered.ErrorCode">
+            <summary>
+             Property "ErrorCode".
+             Attribute description: The error code of the current error condition
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignRegistered.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered">
+            <summary>
+             The specified campaign has been successfully unregistered with OCS.
+                         
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered.Create">
+            <summary>
+             Creates message "EventCampaignUnregistered" with no parameters set.
+            </summary>
+            <returns>EventCampaignUnregistered instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered.Create(System.Int32,System.Int32,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.GroupCampaignStatus,Genesyslab.Platform.Outbound.Protocols.OutboundServer.OptimizationMethod,Genesyslab.Platform.Commons.Collections.KeyValueCollection,System.String,System.Int32)">
+            <summary>
+             Creates message "EventCampaignUnregistered" with all parameters set.
+            </summary>
+            <param name="requestId">Contains the reference ID of the request to which the current event is a response</param>
+            <param name="campaignId">The configuration environment DBID of the current campaign</param>
+            <param name="groupId">The configuration environment DBID of the agent group</param>
+            <param name="dialMode">The dialing mode</param>
+            <param name="optimizeGoal">The optimization goal</param>
+            <param name="groupCampaignStatus">The current group campaign status</param>
+            <param name="optimizeBy">The optimization method</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <param name="errorMessage">The error message describing the current error condition</param>
+            <param name="errorCode">The error code of the current error condition</param>
+            <returns>EventCampaignUnregistered instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered.RequestId">
+            <summary>
+             Property "RequestId".
+             Attribute description: Contains the reference ID of the request to which the current event is a response
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered.CampaignId">
+            <summary>
+             Property "CampaignId".
+             Attribute description: The configuration environment DBID of the current campaign
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered.GroupId">
+            <summary>
+             Property "GroupId".
+             Attribute description: The configuration environment DBID of the agent group
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered.DialMode">
+            <summary>
+             Property "DialMode".
+             Attribute description: The dialing mode
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered.OptimizeGoal">
+            <summary>
+             Property "OptimizeGoal".
+             Attribute description: The optimization goal
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered.GroupCampaignStatus">
+            <summary>
+             Property "GroupCampaignStatus".
+             Attribute description: The current group campaign status
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered.OptimizeBy">
+            <summary>
+             Property "OptimizeBy".
+             Attribute description: The optimization method
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered.ErrorMessage">
+            <summary>
+             Property "ErrorMessage".
+             Attribute description: The error message describing the current error condition
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered.ErrorCode">
+            <summary>
+             Property "ErrorCode".
+             Attribute description: The error code of the current error condition
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventCampaignUnregistered.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError">
+            <summary>
+             An error has occured. The ErrorMessage and ErrorCode properties will contain the error information.
+                         
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError.Create">
+            <summary>
+             Creates message "EventError" with no parameters set.
+            </summary>
+            <returns>EventError instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError.Create(System.Int32,System.Int32,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode,System.Int32,Genesyslab.Platform.Outbound.Protocols.OutboundServer.GroupCampaignStatus,Genesyslab.Platform.Outbound.Protocols.OutboundServer.OptimizationMethod,Genesyslab.Platform.Commons.Collections.KeyValueCollection,System.String,System.Int32)">
+            <summary>
+             Creates message "EventError" with all parameters set.
+            </summary>
+            <param name="requestId">Contains the reference ID of the request to which the current event is a response</param>
+            <param name="campaignId">The configuration environment DBID of the current campaign</param>
+            <param name="groupId">The configuration environment DBID of the agent group</param>
+            <param name="dialMode">The dialing mode</param>
+            <param name="optimizeGoal">The optimization goal</param>
+            <param name="groupCampaignStatus">The current group campaign status</param>
+            <param name="optimizeBy">The optimization method</param>
+            <param name="requestProperties">A KeyValue list of additional information passed to the request</param>
+            <param name="errorMessage">The error message describing the current error condition</param>
+            <param name="errorCode">The error code of the current error condition</param>
+            <returns>EventError instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError.ToString">
+            <summary>
+             DefaultValue ToString method
+            </summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError.ToString(System.Boolean,System.Boolean)">
+            <summary>
+             Specific ToString method, required for Logging system
+            </summary>
+            <param name="hide">If true, the message properties marked as LogHidden will not be shown.</param>
+            <param name="truncate">If true, the message will be truncated, if necessary.</param>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError.ReferenceId">
+            <summary>The reference id by which requests are associated with corresponding events.</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError.RequestId">
+            <summary>
+             Property "RequestId".
+             Attribute description: Contains the reference ID of the request to which the current event is a response
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError.CampaignId">
+            <summary>
+             Property "CampaignId".
+             Attribute description: The configuration environment DBID of the current campaign
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError.GroupId">
+            <summary>
+             Property "GroupId".
+             Attribute description: The configuration environment DBID of the agent group
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError.DialMode">
+            <summary>
+             Property "DialMode".
+             Attribute description: The dialing mode
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError.OptimizeGoal">
+            <summary>
+             Property "OptimizeGoal".
+             Attribute description: The optimization goal
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError.GroupCampaignStatus">
+            <summary>
+             Property "GroupCampaignStatus".
+             Attribute description: The current group campaign status
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError.OptimizeBy">
+            <summary>
+             Property "OptimizeBy".
+             Attribute description: The optimization method
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError.RequestProperties">
+            <summary>
+             Property "RequestProperties".
+             Attribute description: A KeyValue list of additional information passed to the request
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError.ErrorMessage">
+            <summary>
+             Property "ErrorMessage".
+             Attribute description: The error message describing the current error condition
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError.ErrorCode">
+            <summary>
+             Property "ErrorCode".
+             Attribute description: The error code of the current error condition
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError.Name">
+            <summary>
+             Gets the name of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError.Id">
+            <summary>
+             Gets the Id of the message
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Events.EventError.Item(System.String)">
+            <summary>
+             Gets or sets the values of message properties. Please do not use 'set' accessor, because of performance impact.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Errors">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Errors.NoError">
+            <summary>
+             No error
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Errors.ServerConnectionError">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Errors.RegistrationError">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Errors.CampaignNotFound">
+            <summary>
+             The specified campaign cannot be found.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Errors.CampaignNotLoaded">
+            <summary>
+             The specified campaign has not been loaded.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Errors.CampaignAlreadyLoaded">
+            <summary>
+             The specified campaign is already loaded.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Errors.CampaignNotStarted">
+            <summary>
+             The specified campaign has not been started.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Errors.CampaignAlreadyStarted">
+            <summary>
+             The specified campaign is already started.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Errors.GroupNotFound">
+            <summary>
+             The specified group has not been found.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Errors.CampaignGroupNotFound">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Errors.InvalidParameter">
+            <summary>
+             The request contains an invalid parameter.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Errors.InvalidCampaignMode">
+            <summary>
+             The specified campaign mode is invalid.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Errors.InvalidCampaignSchedule">
+            <summary>
+             The campaign schedule is invalid.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Errors.CampaignScheduleNotFound">
+            <summary>
+             The campaign schedule cannot be foud.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Errors.InvalidCampaignScheduleMode">
+            <summary>
+             The campaign schedule mode is invalid
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.Errors.LicenseViolation">
+            <summary>
+             There has been a license violation
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.GroupCampaignStatus">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.GroupCampaignStatus.NotLoaded">
+            <summary>
+             The campaign is not loaded
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.GroupCampaignStatus.WaitingUnload">
+            <summary>
+             The campaign is waiting for unload
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.GroupCampaignStatus.UnloadInProgress">
+            <summary>
+             The campaign unload is in progress
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.GroupCampaignStatus.InActive">
+            <summary>
+             The campaign is inactive
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.GroupCampaignStatus.Active">
+            <summary>
+             The campaign is active
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.GroupCampaignStatus.Running">
+            <summary>
+             The campaign is running
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode.NoDialMode">
+            <summary>
+             No dial mode
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode.Predict">
+            <summary>
+             Predict dialing mode
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode.Progress">
+            <summary>
+             Progress dialing mode
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode.Preview">
+            <summary>
+             Preview dialing mode
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode.ProgressAndSeize">
+            <summary>
+             Progress and seize dialing mode
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode.PredictAndSeize">
+            <summary>
+             Predict and seize dialing mode
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode.Power">
+            <summary>
+             Power dialing mode
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode.PowerAndSeize">
+            <summary>
+             Power and seize dialing mode
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode.PushPreview">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode.ProgressGVP">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode.PredictGVP">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.DialMode.PowerGVP">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.OptimizationMethod">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.OptimizationMethod.NoOptimizationMethod">
+            <summary>
+             No optimization method
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.OptimizationMethod.BusyFactor">
+            <summary>
+             Busy factor optimization method
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.OptimizationMethod.OverdialRate">
+            <summary>
+             Overdial rate optimization method
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Outbound.Protocols.OutboundServer.OptimizationMethod.WaitTime">
+            <summary>
+             Wait time optimization method
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.OutboundServerProtocolFactory">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Outbound.Protocols.OutboundServer.OutboundServerInternalProtocolFactory">
+            <exclude/>
+        </member>
+    </members>
+</doc>

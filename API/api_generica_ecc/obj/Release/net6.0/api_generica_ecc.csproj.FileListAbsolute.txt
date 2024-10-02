@@ -1,0 +1,794 @@
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\appsettings.Development.json
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\appsettings.json
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.exe
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.deps.json
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.runtimeconfig.json
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.pdb
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\Microsoft.OpenApi.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\Oracle.ManagedDataAccess.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\System.Drawing.Common.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\System.Security.Permissions.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\System.Windows.Extensions.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\runtimes\linux\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\runtimes\osx\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.AssemblyReference.cache
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.GeneratedMSBuildEditorConfig.editorconfig
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfoInputs.cache
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfo.cs
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CoreCompileInputs.cache
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cs
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cache
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\obj\Release\net6.0\staticwebassets.build.json
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\obj\Release\net6.0\staticwebassets.development.json
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\obj\Release\net6.0\scopedcss\bundle\api_generica_ecc.styles.css
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CopyComplete
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\obj\Release\net6.0\refint\api_generica_ecc.dll
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.pdb
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.genruntimeconfig.cache
+D:\ECC\Proyectos\ECC\APIGenerica\api_generica_ecc\api_generica_ecc\obj\Release\net6.0\ref\api_generica_ecc.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\appsettings.Development.json
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\appsettings.json
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.exe
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.deps.json
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.runtimeconfig.json
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.pdb
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\Microsoft.OpenApi.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\Oracle.ManagedDataAccess.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\System.Drawing.Common.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\System.Security.Permissions.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\System.Windows.Extensions.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\runtimes\linux\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\runtimes\osx\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.AssemblyReference.cache
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.GeneratedMSBuildEditorConfig.editorconfig
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfoInputs.cache
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfo.cs
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CoreCompileInputs.cache
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cs
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cache
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\obj\Release\net6.0\staticwebassets.build.json
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\obj\Release\net6.0\staticwebassets.development.json
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\obj\Release\net6.0\scopedcss\bundle\api_generica_ecc.styles.css
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CopyComplete
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\obj\Release\net6.0\refint\api_generica_ecc.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.pdb
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.genruntimeconfig.cache
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel\api_generica_ecc\obj\Release\net6.0\ref\api_generica_ecc.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\appsettings.Development.json
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\appsettings.json
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.exe
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.deps.json
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.runtimeconfig.json
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.pdb
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.OpenApi.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Oracle.ManagedDataAccess.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Renci.SshNet.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\SshNet.Security.Cryptography.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.Protocols.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Drawing.Common.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Security.Permissions.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Windows.Extensions.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\linux\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\osx\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.AssemblyReference.cache
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfoInputs.cache
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfo.cs
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CoreCompileInputs.cache
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cs
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cache
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets.build.json
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets.development.json
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\scopedcss\bundle\api_generica_ecc.styles.css
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CopyComplete
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\refint\api_generica_ecc.dll
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.pdb
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.genruntimeconfig.cache
+C:\ProyectosNet\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\ref\api_generica_ecc.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\appsettings.Development.json
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\appsettings.json
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.exe
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.deps.json
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.runtimeconfig.json
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\ref\api_generica_ecc.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.pdb
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.OpenApi.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Oracle.ManagedDataAccess.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Renci.SshNet.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\SshNet.Security.Cryptography.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.Protocols.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Drawing.Common.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Security.Permissions.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Windows.Extensions.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\linux\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\osx\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfoInputs.cache
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfo.cs
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CoreCompileInputs.cache
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cs
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cache
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets.build.json
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets.development.json
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\scopedcss\bundle\api_generica_ecc.styles.css
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CopyComplete
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\ref\api_generica_ecc.dll
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.pdb
+C:\Desarrollo\API\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.genruntimeconfig.cache
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\appsettings.Development.json
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\appsettings.json
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.exe
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.deps.json
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.runtimeconfig.json
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.pdb
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Aspose.Cells.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.OpenApi.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Oracle.ManagedDataAccess.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\SkiaSharp.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Renci.SshNet.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\SshNet.Security.Cryptography.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Drawing.Common.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Security.Permissions.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\System.Windows.Extensions.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\osx\native\libSkiaSharp.dylib
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win-arm64\native\libSkiaSharp.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win-x64\native\libSkiaSharp.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win-x86\native\libSkiaSharp.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\linux\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\osx\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.AssemblyReference.cache
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.GeneratedMSBuildEditorConfig.editorconfig
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfoInputs.cache
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfo.cs
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CoreCompileInputs.cache
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cs
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cache
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets.build.json
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets.development.json
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\scopedcss\bundle\api_generica_ecc.styles.css
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CopyComplete
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\refint\api_generica_ecc.dll
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.pdb
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.genruntimeconfig.cache
+D:\ECC\Proyectos\Entel\BO ENTEL\api_bo_entel_rpa\api_generica_ecc\obj\Release\net6.0\ref\api_generica_ecc.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\appsettings.Development.json
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\appsettings.json
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.exe
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.deps.json
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.runtimeconfig.json
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.pdb
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Aspose.Cells.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.OpenApi.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Oracle.ManagedDataAccess.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\SkiaSharp.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Renci.SshNet.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\SshNet.Security.Cryptography.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Drawing.Common.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Security.Permissions.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Windows.Extensions.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\osx\native\libSkiaSharp.dylib
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win-arm64\native\libSkiaSharp.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win-x64\native\libSkiaSharp.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win-x86\native\libSkiaSharp.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\linux\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\osx\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.AssemblyReference.cache
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.GeneratedMSBuildEditorConfig.editorconfig
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfoInputs.cache
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfo.cs
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CoreCompileInputs.cache
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cs
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cache
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets.build.json
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets.development.json
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\scopedcss\bundle\api_generica_ecc.styles.css
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CopyComplete
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\refint\api_generica_ecc.dll
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.pdb
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.genruntimeconfig.cache
+D:\ECC\Proyectos\ECC\SmartBackOffice\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\ref\api_generica_ecc.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\appsettings.Development.json
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\appsettings.json
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.exe
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.deps.json
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.runtimeconfig.json
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.pdb
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Aspose.Cells.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.OpenApi.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Oracle.ManagedDataAccess.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\SkiaSharp.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Renci.SshNet.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\SshNet.Security.Cryptography.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.Protocols.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Drawing.Common.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Security.Permissions.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Windows.Extensions.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\osx\native\libSkiaSharp.dylib
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\linux\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\osx\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.AssemblyReference.cache
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfoInputs.cache
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfo.cs
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CoreCompileInputs.cache
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cs
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cache
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets\msbuild.api_generica_ecc.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets\msbuild.build.api_generica_ecc.props
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.api_generica_ecc.props
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.api_generica_ecc.props
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets.pack.json
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets.build.json
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets.development.json
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\scopedcss\bundle\api_generica_ecc.styles.css
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CopyComplete
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\refint\api_generica_ecc.dll
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.pdb
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.genruntimeconfig.cache
+C:\Desarrollo\Proyectos\ECC\SMARTBACKOFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\ref\api_generica_ecc.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\appsettings.Development.json
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\appsettings.json
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.exe
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.deps.json
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.runtimeconfig.json
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.pdb
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Aspose.Cells.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.OpenApi.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Oracle.ManagedDataAccess.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\SkiaSharp.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Renci.SshNet.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\SshNet.Security.Cryptography.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.Protocols.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Drawing.Common.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Security.Permissions.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\System.Windows.Extensions.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\osx\native\libSkiaSharp.dylib
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\linux\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\osx\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.AssemblyReference.cache
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfoInputs.cache
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfo.cs
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CoreCompileInputs.cache
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cs
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cache
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets\msbuild.api_generica_ecc.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets\msbuild.build.api_generica_ecc.props
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.api_generica_ecc.props
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.api_generica_ecc.props
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets.pack.json
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets.build.json
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\staticwebassets.development.json
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\scopedcss\bundle\api_generica_ecc.styles.css
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CopyComplete
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\refint\api_generica_ecc.dll
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.pdb
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.genruntimeconfig.cache
+C:\Desarrollo\SMART BACK OFFICE\api_smbo_easy_rpa\api_generica_ecc\obj\Release\net6.0\ref\api_generica_ecc.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\appsettings.Development.json
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\appsettings.json
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.exe
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.deps.json
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.runtimeconfig.json
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.pdb
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Aspose.Cells.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.OpenApi.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Oracle.ManagedDataAccess.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\SkiaSharp.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Renci.SshNet.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\SshNet.Security.Cryptography.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.Protocols.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.Drawing.Common.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.Security.Permissions.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.Windows.Extensions.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\osx\native\libSkiaSharp.dylib
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\linux\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\osx\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.AssemblyReference.cache
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfoInputs.cache
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfo.cs
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CoreCompileInputs.cache
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cs
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cache
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\staticwebassets\msbuild.api_generica_ecc.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\staticwebassets\msbuild.build.api_generica_ecc.props
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.api_generica_ecc.props
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.api_generica_ecc.props
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\staticwebassets.pack.json
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\staticwebassets.build.json
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\staticwebassets.development.json
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\scopedcss\bundle\api_generica_ecc.styles.css
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CopyComplete
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\refint\api_generica_ecc.dll
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.pdb
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.genruntimeconfig.cache
+C:\Desarrollo\Proyectos\RPA\VERINT\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\ref\api_generica_ecc.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\appsettings.Development.json
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\appsettings.json
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.exe
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.deps.json
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.runtimeconfig.json
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.pdb
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Aspose.Cells.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.OpenApi.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Oracle.ManagedDataAccess.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\SkiaSharp.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Renci.SshNet.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\SshNet.Security.Cryptography.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.Drawing.Common.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.Security.Permissions.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\System.Windows.Extensions.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\osx\native\libSkiaSharp.dylib
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win-arm64\native\libSkiaSharp.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win-x64\native\libSkiaSharp.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win-x86\native\libSkiaSharp.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\linux\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\osx\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.AssemblyReference.cache
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.GeneratedMSBuildEditorConfig.editorconfig
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfoInputs.cache
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfo.cs
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CoreCompileInputs.cache
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cs
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cache
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\staticwebassets.build.json
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\staticwebassets.development.json
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\scopedcss\bundle\api_generica_ecc.styles.css
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CopyComplete
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\refint\api_generica_ecc.dll
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.pdb
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.genruntimeconfig.cache
+D:\ECC\Proyectos\RPA\verint\api_rpa_verint\api_generica_ecc\obj\Release\net6.0\ref\api_generica_ecc.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\appsettings.Development.json
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\appsettings.json
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.exe
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.deps.json
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.runtimeconfig.json
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.pdb
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\Aspose.Cells.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\Microsoft.OpenApi.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\Oracle.ManagedDataAccess.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\SkiaSharp.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\Renci.SshNet.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\SshNet.Security.Cryptography.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.Protocols.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\System.Drawing.Common.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\System.Security.Permissions.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\System.Windows.Extensions.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\runtimes\osx\native\libSkiaSharp.dylib
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\runtimes\win-x64\native\libSkiaSharp.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\runtimes\win-x86\native\libSkiaSharp.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\runtimes\linux\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\runtimes\osx\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.AssemblyReference.cache
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfoInputs.cache
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfo.cs
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CoreCompileInputs.cache
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cs
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cache
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\obj\Release\net6.0\staticwebassets.build.json
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\obj\Release\net6.0\staticwebassets.development.json
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\obj\Release\net6.0\scopedcss\bundle\api_generica_ecc.styles.css
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CopyComplete
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\obj\Release\net6.0\refint\api_generica_ecc.dll
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.pdb
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.genruntimeconfig.cache
+C:\ProyectosNet\api_rpa_pichincha\api_generica_ecc\obj\Release\net6.0\ref\api_generica_ecc.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\appsettings.Development.json
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\appsettings.json
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.exe
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.deps.json
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.runtimeconfig.json
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\api_generica_ecc.pdb
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\Aspose.Cells.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\Microsoft.OpenApi.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\Oracle.ManagedDataAccess.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\SkiaSharp.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\Renci.SshNet.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\SshNet.Security.Cryptography.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\System.DirectoryServices.Protocols.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\System.Drawing.Common.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\System.Security.Permissions.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\System.Windows.Extensions.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\runtimes\osx\native\libSkiaSharp.dylib
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\runtimes\win-x64\native\libSkiaSharp.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\runtimes\win-x86\native\libSkiaSharp.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\runtimes\linux\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\runtimes\osx\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.AssemblyReference.cache
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfoInputs.cache
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.AssemblyInfo.cs
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CoreCompileInputs.cache
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cs
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.MvcApplicationPartsAssemblyInfo.cache
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\obj\Release\net6.0\staticwebassets.build.json
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\obj\Release\net6.0\staticwebassets.development.json
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\obj\Release\net6.0\scopedcss\bundle\api_generica_ecc.styles.css
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.csproj.CopyComplete
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\obj\Release\net6.0\refint\api_generica_ecc.dll
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.pdb
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\obj\Release\net6.0\api_generica_ecc.genruntimeconfig.cache
+C:\ProyectosNet\api_rpa_smbo_peru\api_generica_ecc\obj\Release\net6.0\ref\api_generica_ecc.dll

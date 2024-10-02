@@ -1,0 +1,2203 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genesyslab.Platform.Commons.Connection</name>
+    </assembly>
+    <members>
+        <member name="T:Genesyslab.Platform.Commons.Connection.IConnection">
+            <summary>
+            <c>IConnection</c> allows for direct communication with a server using 
+            TCP/IP. This binary stream is encapsulated by the <c>Channel</c> classes, 
+            such as <see cref="!:Genesyslab.Platform.Commons.Protocols.ClientChannel">ClientChannel</see>, 
+            which present a message-based interface to your applications.<br/><br/>
+            
+            Direct use of this interface is for Genesys internal use only.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.IConnection.Open">
+            <summary>
+            Opens connection to server.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.IConnection.Close">
+            <summary>
+            Closes connection to server.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.IConnection.ForceClose">
+            <summary>
+            Close the connection without waiting for pending messages.
+            The checks count during this operation is minimal,
+            so be careful.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.IConnection.Configure(Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration)">
+            <summary>
+            Configure or reconfigure this connection's additional
+            parameters. (e.g. ADDP).
+            </summary>
+            <param name="config">Connection parameters.</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.IConnection.SetContext(Genesyslab.Platform.Commons.Connection.Configuration.ConnectionContext)">
+            <summary>
+            Sets the connection context
+            </summary>
+            <param name="ctx">connection context</param>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.IConnection.Uri">
+            <summary>
+            Gets current server Uri.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.IConnection.Host">
+            <summary>
+            Gets current server Host.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.IConnection.Port">
+            <summary>
+            Gets current server Port.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.IConnection.State">
+            <summary>
+            Gets current ConnectionState value.
+            </summary>
+        </member>
+        <member name="E:Genesyslab.Platform.Commons.Connection.IConnection.Opened">
+            <summary>
+            Fired, when connection is opened.
+            </summary>
+        </member>
+        <member name="E:Genesyslab.Platform.Commons.Connection.IConnection.Closed">
+            <summary>
+            Fired, when connection is closed.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.IConnection.Interceptor">
+            <summary>
+            Return interceptor of this connection.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.IConnection.Invoker">
+            <summary>
+            Connection can use invoker (if it's set) to parse messages.
+            It is recomended to use the invoker if you know that it can take long
+            to parse the message. Wether invoker will be used or not is
+            implementation specific. For instance it seems a good idea to set
+            some kind of thread pool as invoker for some busy connection, but
+            you can break the order of message arrival by doing so.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.AbstractConnection.SetContext(Genesyslab.Platform.Commons.Connection.Configuration.ConnectionContext)">
+            <summary>
+            Sets connection context.
+            </summary>
+            <param name="ctx">Connection context</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.AbstractConnection.GetEncoding">
+            <summary>
+            Gets <see cref="T:System.Text.Encoding"/> that is used in connection for encoding/decoding of strings.
+            </summary>
+            <returns>Current encoding used</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.AbstractConnection.ForceClose">
+            <summary>
+            Forces connection to close.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.AbstractConnection.DoClose(System.Exception)">
+             Perform close operation itself. Here the resources used by connection
+             should be actually freed. This method is used in both graceful and
+             force close operations. The logic that performs "before close" cleanup
+             should be defined in startClose() method. Call suer.doClose() to set
+             appropiate connection state and notify handlers.
+            
+             @param closeReason Reason to close connection
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.AbstractConnection.StartClose(System.Exception)">
+             Perform "before close" cleanup. Used for graceful close operation.
+             Please note, that it is implmentation responsibility to complete
+             close operation (call doClose()) at some point after startClose().
+             forceClose() won't call this method, it will call doClose() directly
+            
+             @param closeReason Reason to close connection
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.AbstractConnection.AttributeSubscribed(System.Int32,System.String)">
+            <exclude/>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.AbstractConnection.Uri">
+            <summary>
+            Gets string URI representation of the connection.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.AbstractConnection.Host">
+            <summary>
+            Gets host this connection is connected to.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.AbstractConnection.Port">
+            <summary>
+            Gets port this connection is connected to.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.AbstractConnection.State">
+            <summary>
+            Gets/sets state of the connection.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.AddpInterceptor">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.NoInterceptor">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.IInterceptorProvider">
+            Internal interceptor interface. Contains connection/implementation
+            specific methods of interceptor.
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.IInterceptor">
+            <exclude/>
+            <summary>
+            Summary description for Interceptor.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.IInterceptor.ExecuteCommand(Genesyslab.Platform.Commons.Connection.ICommand)">
+             Executes interceptor command. The commands are specific
+             to concrete interceptor and ussualy are defined as nested classes
+             of that interceptor.
+            
+             @param command interceptor command
+             @throws IllegalArgumentException if command is not the command of this
+                  interceptor
+             @throws IllegalStateException if interce 
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.IInterceptor.Configure(Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration)">
+             [Re]Configure interceptor
+            
+             @param config Config to read parameters from
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.IInterceptorProvider.Start">
+            Start interceptor operations.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.IInterceptorProvider.Dispose">
+            Dispose interceptor.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.IInterceptorProvider.GetPacketLength(System.Byte[],System.Int32,System.Int32)">
+             Returns packet length. If there is not enough binary data to
+             calculate packet length 0 (zero) should be returned.
+             Used for cutting an own packet from stream.
+            
+             @param src Stream.
+             @param offset Stream offset.
+             @param len Stream length.
+             @return Packet length or 0 (zero) if more data is needed.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.IInterceptorProvider.GetPacketLength(Genesyslab.Platform.Commons.Connection.ShiftByteArrayOutputStream)">
+             Returns packet length. If there is not enough binary data to
+             calculate packet length 0 (zero) should be returned.
+             Used for cutting an own packet from stream.
+            
+             @param stream Stream.
+             @return Packet length or 0 (zero) if more data is needed.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.IInterceptorProvider.ProcessPacket(Genesyslab.Platform.Commons.Connection.ShiftByteArrayOutputStream,System.Int32)">
+             Process packet. If the packet is accepted by Interceptor it
+             performs its specific actions and returns true. Otherwise
+             returns false. If the Interceptor accepts the packet then it will
+             not be processed further, so it's Interceptor's responsibility
+             to shift the stream to the end of packet.
+            
+             @param stream Stream.
+             @param packetLen Packet length.
+             @return true - if packet is processed, false otherwise.
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.AddpInterceptor.ActiveKey">
+            Configuration value with that key sets the active status of ADDP.
+            By default ADDP is active and will send init packet to remote
+            party upon connection. When the value is 'false' init packet is
+            not sent. Such "passive" ADDP is useful for servers.
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.AddpInterceptor.AddpCommand">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.ICommand">
+            Marker interface for Interceptor commands.
+            Concrete implementation will add functionality.
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.AddpInterceptor.SuspendCommand">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.AddpInterceptor.ResumeCommand">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.Timer.ITimerAction">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Timer.ITimerAction.OnTimer">
+            <summary>
+            Method is executed when timer fires. Analogue of <code>run()</code>
+            in {@link java.util.TimerTask}. Note: the method is required to
+            complete quickly. If it takes long time to execute, it may result in
+            delays for other actions or even in network operation.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.AttributeSubscriptionList">
+            <summary>
+            AttributeSubscriptionList class. Can be used for defining pairs messageId::attributeId for subscription.
+            Subscribed attributes can be undefined in protocol. But in any case subscribed attribute will not
+            be parsed by PSDK even if it is defined in protocol.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.AttributeSubscriptionList.SubscriptionListKey">
+            <summary>
+            Optional configuration parameter for <see cref="T:Genesyslab.Platform.Commons.Connection.Configuration.ConnectionContext"/>. Can be used by user for defining attributes in messages 
+            which should be placed in messages as is (without parsing). Attributes can be unknown for protocol.
+            Using this constant user can add own <see cref="T:Genesyslab.Platform.Commons.Connection.AttributeSubscriptionList"/> to <see cref="T:Genesyslab.Platform.Commons.Connection.Configuration.ConnectionContext"/>.
+            Example: 
+            <code>[C#]
+            AttributeSubscriptionList lst = new AttributeSubscriptionList();
+            lst.Add(501, "1");
+            ...
+            //to apply subscription for given channel:
+            channel.ConnectionContext.SetAttribute(AttributeSubscriptionList.SubscriptionListKey, lst);
+            //or 
+            lst.ApplyToContext(channel.ConnectionContext);
+            </code>
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.AttributeSubscriptionList.ApplyToContext(Genesyslab.Platform.Commons.Connection.Configuration.ConnectionContext)">
+            <summary>
+            Apply this subscription list to given <see cref="T:Genesyslab.Platform.Commons.Connection.Configuration.ConnectionContext"/>. This method replaces
+            subscription in the context (if exists) with the current one.
+            </summary>
+            <param name="ctx">ConnectionContext to apply subscription to</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.AttributeSubscriptionList.Contains(System.Int32,System.String)">
+            <summary>
+            Checks if given pair messageId::attributeId is in list.
+            </summary>
+            <param name="messageId">message ID</param>
+            <param name="attrId">attribute ID</param>
+            <returns>true, if this messageId::attributeId is in list.</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.AttributeSubscriptionList.AddAttribute(System.Int32,System.String)">
+            <summary>
+            Adds given pair messageId::attributeId to list.
+            </summary>
+            <param name="messageId">message ID</param>
+            <param name="attributeId">attribute ID</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.AttributeSubscriptionList.RemoveAttribute(System.Int32,System.String)">
+            <summary>
+            Removes subscription for given messageId::attrId pair.
+            </summary>
+            <param name="messageId">message ID</param>
+            <param name="attrId">attribute ID</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.AttributeSubscriptionList.RemoveWholeMessage(System.Int32)">
+            <summary>
+            Removes subscription to all attributes for given message.
+            </summary>
+            <param name="messageId">message ID</param>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.CommonConnection">
+            <summary>
+            CommonConnection class.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.ConnectionImpl">
+            Internal connection related methods. You will need this interface
+            only if you are going to create own Connection implementation.
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.ConnectionBase.StringAttributeEncodingKey">
+            <summary>
+            StringAttributeEncodingKey - optional. Sets Encoding name used for parsing all string attributes 
+            received or sent from/to server. By default Encoding.Default is used (see MSDN documentation for
+            details).
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.ConnectionBase.Configure(Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration)">
+            <summary>
+            Configures connection with IConnectionConfiguration instance.
+            </summary>
+            <param name="config">IConnectionConfiguration instance</param>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.ConnectionBase.Interceptor">
+            <summary>
+            Gets IInterceptor instance
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.ConnectionBase.Invoker">
+            <summary>
+            Gets/sets connection invoker
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.ConnectionBase.WritePoint">
+            <exclude/>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.CommonConnection.BindHostKey">
+            <summary>
+            Constants for ConnectionConfiguration that specifies host and port from which 
+            connection should be made (bind to).
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.CommonConnection.BindPortKey">
+            <summary>
+            Constants for ConnectionConfiguration that specifies host and port from which 
+            connection should be made (bind to).
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.CommonConnection.DesiredAddressFamilyKey">
+            <summary>
+            Constant for ConnectionConfiguration which sets desired address family, which will be
+            chosen by PSDK in case the client OS contains multiple families installed. For example,
+            this option can be set to 'InterNetworkV6' for choosing IPv6 family, if OS contains it
+            along with some another families ('InterNetwork', etc.)
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.CommonConnection.BlockingModeKey">
+            <summary>
+            Constant for ConnectionConfiguration that specify <see cref="P:Genesyslab.Platform.Commons.Connection.CommonConnection.Blocking"/> mode.
+            Possible values are: true or false or type bool.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.CommonConnection.TlsKey">
+            <summary>
+            Constants for ConnectionConfiguration that specifies TLS security options.
+            Possible values for TlsKey are 0 or 1. 1 - TLS enabled, 0 - disabled (default).
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.CommonConnection.CertificateKey">
+            <summary>
+            CertificateKey - optional, is a string that represent path to certificate file, which should be 
+            used to authenticate to server.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.CommonConnection.CertificatePwdKey">
+            <summary>
+            CertificatePwdKey - optional, password which should be used for openning certificate file.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.CommonConnection.CertificateNameKey">
+            <summary>
+            CertificateNameKey - optional, Certificate Name used on server (certificate 'CN' option).
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.CommonConnection.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructs CommonConnection object with given host, port values.
+            </summary>
+            <param name="host">host to which connection will be established.</param>
+            <param name="port">port on which remote host is listening</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.CommonConnection.#ctor(System.String,System.Int32,Genesyslab.Platform.Commons.Connection.Configuration.ConnectionContext)">
+            <summary>
+            Constructs CommonConnection object with given host, port and ConnectionContext values.
+            </summary>
+            <param name="host">host to which connection will be established.</param>
+            <param name="port">port on which remote host is listening</param>
+            <param name="ctx">ConnectionContext with additional specific information</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.CommonConnection.#ctor(System.Net.Sockets.Socket)">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.CommonConnection.#ctor(System.Net.Sockets.Socket,System.Net.Security.SslStream)">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.CommonConnection.OnEnableLogging(Genesyslab.Platform.Commons.Logging.ILogger)">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.CommonConnection.Open">
+            <summary>
+            Opens connection.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.CommonConnection.StartClose(System.Exception)">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.CommonConnection.Write(System.Byte[])">
+            <summary>
+            Writes binary block of data to the current IWritePoint implementation.
+            </summary>
+            <param name="buf">block of data to be sent</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.CommonConnection.InitProtocol(Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration)">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.CommonConnection.UpgradeTls">
+            <summary>
+            Initializes TLS on given connection. Used in 'auto-detect' feature.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.CommonConnection.LogSocketState">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.CommonConnection.Dispose">
+            <summary>
+            Disposes this object.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.CommonConnection.TlsProperties">
+            <summary>
+            Gets TLS settings.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.CommonConnection.MaxDataSize">
+            <summary>
+            Gets/Sets maximal size of the block for reading from socket at once. Could 
+            affect performance only.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.CommonConnection.AddressFamilySelector">
+            <summary>
+            Gets/sets current <b>IIPAdressFamilySelector</b> implementation.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.CommonConnection.Blocking">
+            <summary>
+            Gets or sets a value that indicates whether the Socket is in blocking mode.
+            See <see cref="P:System.Net.Sockets.Socket.Blocking"/> in MSDN for details.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.CommonConnection.ID">
+            <summary>
+            Gets connection ID (Socket #).
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.CommonConnection.WritePoint">
+            <summary>
+            Gets currently used IWritePoint object.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.CommonMessageProducerFactory">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.CommonMessageProducerImpl">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.IMessageProducer">
+            <exclude/>
+            <summary>
+            Summary description for MessageProducer.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.CommonMessageProducerImpl.GetShort">
+             Get short (2 bytes) value from message buffer (byte array).
+            
+             @return short value.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.CommonMessageProducerImpl.GetBinaryAttr">
+             Get short binary (64K or less) attribute from the stream.
+            
+             @return binary attribute value.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.CommonMessageProducerImpl.GetLongBinaryAttr">
+             Get long (>64K) binary value from message buffer (byte array).
+            
+             @return Attribute.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.CommonMessageProducerImpl.GetLongStringAttrValue">
+            Get Long String type attribute from message buffer (bytes array).
+            @return Attribute.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.CommonMessageProducerImpl.GetLong">
+            Get long value from message buffer (bytes array).
+            @return Value.
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.CommonMessageTransportImpl">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.IMessageTransport">
+            <summary>
+             Transport is StructureHandler for client-to-server way.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.IMessageStructureHandler">
+            <summary>
+             Handler can be shared by multiple threads so it has to be stateless.
+             That's why the state is external and passed in and out of every method.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.IMessageTransport.ProcessData(System.Byte[],System.Int32,System.Int32)">
+             Network layer endpoint. (server -> client)
+            
+             @param b
+             @param offset
+             @param len
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.IMessageTransport.SetConnection(Genesyslab.Platform.Commons.Connection.ConnectionBase)">
+             Dependency injection method for ConnectionImpl.
+            
+             @param connection connection of this transport
+        </member>
+        <member name="T:RTools.Util.CharBuffer">
+            <summary>
+            Buffer for characters.  This approximates StringBuilder
+            but is designed to be faster for specific operations.
+            This is about 30% faster for the operations I'm interested in
+            (Append, Clear, Length, ToString).
+            This trades off memory for speed.
+            </summary>
+            <remarks>
+            <para>To make Remove from the head fast, this is implemented
+            as a ring buffer.</para>
+            <para>This uses head and tail indices into a fixed-size 
+            array. This will grow the array as necessary.</para>
+            </remarks>
+        </member>
+        <member name="M:RTools.Util.CharBuffer.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.CharBuffer.#ctor(System.Int32)">
+            <summary>
+            Construct with a specific capacity.
+            </summary>
+            <param name="capacity"></param>
+        </member>
+        <member name="M:RTools.Util.CharBuffer.Grow(System.Int32)">
+            <summary>
+            Reallocate the buffer to be larger. For the new size, this
+            uses the max of the requested length and double the current
+            capacity.
+            This does not shift, meaning it does not change the head or
+            tail indices.
+            </summary>
+            <param name="requestedLen">The new requested length.</param>
+        </member>
+        <member name="M:RTools.Util.CharBuffer.CheckCapacity(System.Int32)">
+            <summary>
+            Ensure that we're set for the requested length by 
+            potentially growing or shifting contents.
+            </summary>
+            <param name="requestedLength"></param>
+        </member>
+        <member name="M:RTools.Util.CharBuffer.ShiftToZero">
+            <summary>
+            Move the buffer contents such that headIndex becomes 0.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.CharBuffer.SetBuffer(System.Char[],System.Int32)">
+            <summary>
+            Overwrite this object's underlying buffer with the specified
+            buffer.
+            </summary>
+            <param name="b">The character array.</param>
+            <param name="len">The number of characters to consider filled
+            in the input buffer.</param>
+        </member>
+        <member name="M:RTools.Util.CharBuffer.Append(System.Char)">
+            <summary>
+            Append a character to this buffer.
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:RTools.Util.CharBuffer.Append(System.String)">
+            <summary>
+            Append a string to this buffer.
+            </summary>
+            <param name="s">The string to append.</param>
+        </member>
+        <member name="M:RTools.Util.CharBuffer.Append(RTools.Util.CharBuffer)">
+            <summary>
+            Append a string to this buffer.
+            </summary>
+            <param name="s">The string to append.</param>
+        </member>
+        <member name="M:RTools.Util.CharBuffer.Remove(System.Int32)">
+            <summary>
+            Remove a character at the specified index.
+            </summary>
+            <param name="i">The index of the character to remove.</param>
+            <returns></returns>
+        </member>
+        <member name="M:RTools.Util.CharBuffer.Remove(System.Int32,System.Int32)">
+            <summary>
+            Remove a specified number of characters at the specified index.
+            </summary>
+            <param name="i">The index of the characters to remove.</param>
+            <param name="n">The number of characters to remove.</param>
+        </member>
+        <member name="M:RTools.Util.CharBuffer.IndexOf(System.Char)">
+            <summary>
+            Find the first instance of a character in the buffer, and
+            return its index.  This returns -1 if the character is
+            not found.
+            </summary>
+            <param name="c">The character to find.</param>
+            <returns>The index of the specified character, or -1
+            for not found.</returns>
+        </member>
+        <member name="M:RTools.Util.CharBuffer.Clear">
+            <summary>
+            Empty the buffer.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.CharBuffer.ToString">
+            <summary>
+            Return the current contents as a string.
+            </summary>
+            <returns>The new string.</returns>
+        </member>
+        <member name="P:RTools.Util.CharBuffer.Length">
+            <summary>
+            Gets/Sets the number of characters in the character buffer.
+            Increasing the length this way provides indeterminate results.
+            </summary>
+        </member>
+        <member name="P:RTools.Util.CharBuffer.Capacity">
+            <summary>
+            Returns the capacity of this character buffer.
+            </summary>
+        </member>
+        <member name="P:RTools.Util.CharBuffer.Item(System.Int32)">
+            <summary>
+            Indexer.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration">
+            <summary>
+            <c>IConnectionConfiguration</c> allows you to configure any specific options used in
+            communication with the server. This interface is similar to a collection of string, bool, 
+            and integer values.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration.GetOption(System.String)">
+            <summary>
+            Get string parameter from the config. Default value is <c>null</c>.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <returns>value of the parameter or null if parameter is not found</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration.GetOption(System.String,System.String)">
+            <summary>
+            Get string parameter from the config.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <param name="defaultValue">value to return if parameter is not found</param>
+            <returns>value of the parameter</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration.SetOption(System.String,System.String)">
+            <summary>
+            Set string parameter into config.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <param name="strValue">string value to set</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration.GetBoolean(System.String)">
+            <summary>
+            Get bool parameter from the config. Default value is <c>false</c>.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <returns>value of the parameter or false if parameter is not found</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration.GetBoolean(System.String,System.Boolean)">
+            <summary>
+            Get bool parameter from the config.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <param name="defaultValue">value to return if parameter is not found</param>
+            <returns>value of the parameter</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration.SetBoolean(System.String,System.Boolean)">
+            <summary>
+            Set bool parameter into config.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <param name="boolValue">bool value to set</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration.GetInteger(System.String)">
+            <summary>
+            Get int parameter from the config. Default value is <c>0</c>.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <returns>value of the parameter or 0 if parameter is not found</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration.GetInteger(System.String,System.Int32)">
+            <summary>
+            Get int parameter from the config.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <param name="defaultValue">value to return if parameter is not found</param>
+            <returns>value of the parameter</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration.SetInteger(System.String,System.Int32)">
+            <summary>
+            Set int parameter into config.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <param name="intValue">int value to set</param>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.Configuration.AbstractConnectionConfiguration">
+            <summary>
+            <c>AbstractConnectionConfiguration</c> is an abstract class which implements common methods assuming 
+            that real container can hold only string values. It is used in all concrete implementations such as 
+            KeyValueConfiguration, and PropertyConfiguration.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.AbstractConnectionConfiguration.GetOption(System.String)">
+            <summary>
+            Get string parameter from the config. Default value is <c>null</c>.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <returns>value of the parameter or null if parameter is not found</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Genesyslab.Platform.Commons.Connection.Configuration.AbstractConnectionConfiguration.GetBoolean(System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:Genesyslab.Platform.Commons.Connection.Configuration.AbstractConnectionConfiguration.GetBoolean(System.String,System.Boolean)" -->
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.AbstractConnectionConfiguration.GetInteger(System.String)">
+            <summary>
+            Get int parameter from the config. Default value is <c>0</c>.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <returns>value of the parameter or 0 if parameter is not found</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.AbstractConnectionConfiguration.GetInteger(System.String,System.Int32)">
+            <summary>
+            Get int parameter from the config.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <param name="defaultValue">value to return if parameter is not found</param>
+            <returns>value of the parameter</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.AbstractConnectionConfiguration.SetBoolean(System.String,System.Boolean)">
+            <summary>
+            Set bool parameter into config.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <param name="boolValue">bool value to set</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.AbstractConnectionConfiguration.SetInteger(System.String,System.Int32)">
+            <summary>
+            Set int parameter into config.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <param name="intValue">int value to set</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.AbstractConnectionConfiguration.SetOption(System.String,System.String)">
+            <summary>
+            Set string parameter into config.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <param name="strValue">string value to set</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.AbstractConnectionConfiguration.GetOption(System.String,System.String)">
+            <summary>
+            Get string parameter from the config.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <param name="defaultValue">value to return if parameter is not found</param>
+            <returns>value of the parameter</returns>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.Configuration.ConnectionContext">
+            <summary>
+            Context gather all the configuration of connection and protocol in one place.
+            It contains ConnectionConfiguration which is simple data such as ADDP or client port binding.
+            It also contains server contexts which configure registration of client at the server.
+            And finaly it contains complex configuration objects - attributes - the data can not be passed
+            as simple strings or ints
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.ConnectionContext.SetAttribute(System.String,System.Object)">
+             <summary>
+             Add or replace attribute with given key. Return old value of attribute or null if
+             attribute does not exist. User should set 'null' to remove attribute for the given key.
+             </summary>
+            <param name="key">attribute key</param> 
+            <param name="attribute">attribute value</param>
+            <returns>old value or null</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.ConnectionContext.GetAttribute(System.String)">
+            <summary>
+            Retrieve attribute with given key
+            </summary>
+            <param name="key">attribute key</param>
+            <returns>attribute value or null</returns>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.Configuration.FileConfiguration">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.Configuration.PropertyConfiguration">
+            <summary>
+            This class is an implementaion of <see cref="T:Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration">IConnectionConfiguration</see>
+            interface, which contains all values in <c>Hashtable</c>. It can be instantiated with any 
+            Hashtable instance.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.PropertyConfiguration.#ctor">
+            <summary>
+            Creates empty PropertyConfiguration object.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.PropertyConfiguration.#ctor(System.Collections.Hashtable)">
+            <summary>
+            Creates object and set all configuration using given Hashtable object.
+            </summary>
+            <param name="props">collection with configuration properties</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.PropertyConfiguration.SetOption(System.String,System.String)">
+            <summary>
+            Set string parameter into config.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <param name="strValue">string value to set</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.PropertyConfiguration.GetOption(System.String,System.String)">
+            <summary>
+            Get string parameter from the config.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <param name="defaultValue">value to return if parameter is not found</param>
+            <returns>value of the parameter</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.PropertyConfiguration.Dispose">
+            <summary>
+            Disposes this instance.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.Configuration.KeyValueConfiguration">
+            <summary>
+            This class is an implementaion of <see cref="T:Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration">IConnectionConfiguration</see>
+            interface, which contains all values in <c>KeyValueCollection</c>. It can be instantiated with any 
+            KeyValueCollection instance.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.KeyValueConfiguration.#ctor(Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+            <summary>
+            Creates object and set all configuration using given KeyValueCollection object.
+            </summary>
+            <param name="list">collection with configuration properties</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.KeyValueConfiguration.GetOption(System.String,System.String)">
+            <summary>
+            Get string parameter from the config.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <param name="defaultValue">value to return if parameter is not found</param>
+            <returns>value of the parameter</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.KeyValueConfiguration.SetOption(System.String,System.String)">
+            <summary>
+            Set string parameter into config.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <param name="strValue">string value to set</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.KeyValueConfiguration.GetInteger(System.String,System.Int32)">
+            <summary>
+            Get int parameter from the config.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <param name="defaultValue">value to return if parameter is not found</param>
+            <returns>value of the parameter</returns>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.KeyValueConfiguration.SetInteger(System.String,System.Int32)">
+            <summary>
+            Set int parameter into config.
+            </summary>
+            <param name="name">(key) of the parameter</param>
+            <param name="value">int value to set</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Configuration.KeyValueConfiguration.Dispose">
+            <summary>
+            Disposes this instance.
+            </summary>
+        </member>
+        <member name="T:RTools.Util.StreamTokenizerUntermException">
+            <summary>
+            Exception class for unterminated tokens.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerUntermException.#ctor(System.String)">
+            <summary>
+            Construct with a particular message.
+            </summary>
+            <param name="msg">The message to store in this object.</param>
+        </member>
+        <member name="T:RTools.Util.StreamTokenizerUntermQuoteException">
+            <summary>
+            Exception class for unterminated quotes.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerUntermQuoteException.#ctor(System.String)">
+            <summary>
+            Construct with a particular message.
+            </summary>
+            <param name="msg">The message to store in this object.</param>
+        </member>
+        <member name="T:RTools.Util.StreamTokenizerUntermCommentException">
+            <summary>
+            Exception class for unterminated block comments.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerUntermCommentException.#ctor(System.String)">
+            <summary>
+            Construct with a particular message.
+            </summary>
+            <param name="msg">The message to store in this object.</param>
+        </member>
+        <member name="T:RTools.Util.CharTypeBits">
+            <summary>
+            Bitwise enumeration for character types.
+            </summary>
+        </member>
+        <member name="F:RTools.Util.CharTypeBits.Word">
+            <summary>word characters (usually alpha, digits, and domain specific)</summary>
+        </member>
+        <member name="F:RTools.Util.CharTypeBits.Comment">
+            <summary># or something for line comments</summary>
+        </member>
+        <member name="F:RTools.Util.CharTypeBits.Whitespace">
+            <summary>whitespace</summary>
+        </member>
+        <member name="F:RTools.Util.CharTypeBits.Quote">
+            <summary>' or " type</summary>
+        </member>
+        <member name="F:RTools.Util.CharTypeBits.Digit">
+            <summary>usually 0 to 9</summary>
+        </member>
+        <member name="F:RTools.Util.CharTypeBits.HexDigit">
+            <summary>usually 0 to 9, a-f and A-F</summary>
+        </member>
+        <member name="F:RTools.Util.CharTypeBits.Eof">
+            <summary>eof char</summary>
+        </member>
+        <member name="T:RTools.Util.StreamTokenizerSettings">
+            <summary>
+            This contains the settings that control the behavior of the tokenizer.
+            This is separated from the StreamTokenizer so that common settings
+            are easy to package and keep together.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.#ctor(RTools.Util.StreamTokenizerSettings)">
+            <summary>
+            Copy constructor.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.Copy(RTools.Util.StreamTokenizerSettings)">
+            <summary>
+            Sets this object to be the same as the specified object.
+            Note that some settings which are entirely embodied by the character
+            type table.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.SetDefaults">
+            <summary>
+            Setup default parse behavior.
+            This resets to same behavior as on construction.
+            </summary>
+            <returns>bool - true for success.</returns>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.SetupForCodeParse">
+            <summary>
+            Apply settings which are commonly used for code parsing
+            C-style code, including C++, C#, and Java.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.ResetCharTypeTable">
+            <summary>
+            Clear the character type settings.  This leaves them unset,
+            as opposed to the default.  Use SetDefaults() for default
+            settings.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.WordChar(System.Int32)">
+            <summary>
+            Specify that a particular character is a word character.
+            Character table type manipulation method.
+            This adds the type to the char(s), rather
+            than overwriting other types.
+            </summary>
+            <param name="c">The character.</param>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.WordChars(System.Int32,System.Int32)">
+            <summary>
+            Specify that a range of characters are word characters.
+            Character table type manipulation method.
+            This adds the type to the char(s), rather
+            than overwriting other types.
+            </summary>
+            <param name="startChar">First character.</param>
+            <param name="endChar">Last character.</param>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.WordChars(System.String)">
+            <summary>
+            Specify that a string of characters are word characters.
+            Character table type manipulation method.
+            This adds the type to the char(s), rather
+            than overwriting other types.
+            </summary>
+            <param name="s"></param>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.WhitespaceChar(System.Int32)">
+            <summary>
+            Specify that a character is a whitespace character.
+            Character table type manipulation method.
+            This type is exclusive with other types.
+            </summary>
+            <param name="c">The character.</param>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.WhitespaceChars(System.Int32,System.Int32)">
+            <summary>
+            Specify that a range of characters are whitespace characters.
+            Character table type manipulation method.
+            This adds the characteristic to the char(s), rather
+            than overwriting other characteristics.
+            </summary>
+            <param name="startChar">First character.</param>
+            <param name="endChar">Last character.</param>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.OrdinaryChars(System.Int32,System.Int32)">
+            <summary>
+            Remove other type settings from a range of characters.
+            Character table type manipulation method.
+            </summary>
+            <param name="startChar"></param>
+            <param name="endChar"></param>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.OrdinaryChar(System.Int32)">
+            <summary>
+            Remove other type settings from a character.
+            Character table type manipulation method.
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.CommentChar(System.Int32)">
+            <summary>
+            Specify that a particular character is a comment-starting character.
+            Character table type manipulation method.
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.QuoteChar(System.Int32)">
+            <summary>
+            Specify that a particular character is a quote character.
+            Character table type manipulation method.
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.CharTypeToString(System.Byte)">
+            <summary>
+            Return a string representation of a character type setting.
+            Since the type setting is bitwise encoded, a character
+            can have more than one type.
+            </summary>
+            <param name="ctype">The character type byte.</param>
+            <returns>The string representation of the type flags.</returns>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.IsCharType(System.Byte,RTools.Util.CharTypeBits)">
+            <summary>
+            Check whether the specified char type byte has a 
+            particular type flag set.
+            </summary>
+            <param name="ctype">The char type byte.</param>
+            <param name="type">The CharTypeBits entry to compare to.</param>
+            <returns>bool - true or false</returns>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.IsCharType(System.Char,RTools.Util.CharTypeBits)">
+            <summary>
+            Check whether the specified char has a 
+            particular type flag set.
+            </summary>
+            <param name="c">The character.</param>
+            <param name="type">The CharTypeBits entry to compare to.</param>
+            <returns>bool - true or false</returns>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.IsCharType(System.Int32,RTools.Util.CharTypeBits)">
+            <summary>
+            Check whether the specified char has a 
+            particular type flag set.
+            </summary>
+            <param name="c">The character.</param>
+            <param name="type">The CharTypeBits entry to compare to.</param>
+            <returns>bool - true or false</returns>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.Display">
+            <summary>
+            Display the state of this object.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizerSettings.Display(System.String)">
+            <summary>
+            Display the state of this object, with a per-line prefix.
+            </summary>
+            <param name="prefix">The pre-line prefix.</param>
+        </member>
+        <member name="P:RTools.Util.StreamTokenizerSettings.CharTypes">
+            <summary>
+            This is the character type table.  Each byte is bitwise encoded
+            with the character attributes, such as whether that character is
+            word or whitespace.
+            </summary>
+        </member>
+        <member name="P:RTools.Util.StreamTokenizerSettings.GrabWhitespace">
+            <summary>
+            Whether or not to return whitespace tokens.  If not, they're ignored.
+            </summary>
+        </member>
+        <member name="P:RTools.Util.StreamTokenizerSettings.GrabEol">
+            <summary>
+            Whether or not to return EolTokens on end of line.  Eol tokens will not
+            break up other tokens which can be multi-line.  For example block comments 
+            and quotes will not be broken by Eol tokens.  Therefore the number of
+            Eol tokens does not give you the line count of a stream.
+            </summary>
+        </member>
+        <member name="P:RTools.Util.StreamTokenizerSettings.SlashSlashComments">
+            <summary>
+            Whether or not to look for // comments
+            </summary>
+        </member>
+        <member name="P:RTools.Util.StreamTokenizerSettings.SlashStarComments">
+            <summary>
+            Whether or not to look for /* */ block comments.
+            </summary>
+        </member>
+        <member name="P:RTools.Util.StreamTokenizerSettings.GrabComments">
+            <summary>
+            Whether or not to return comments.
+            </summary>
+        </member>
+        <member name="P:RTools.Util.StreamTokenizerSettings.DoUntermCheck">
+            <summary>
+            Whether or not to check for unterminated quotes and block comments.
+            If true, and one is encoutered, an exception is thrown of the appropriate type.
+            </summary>
+        </member>
+        <member name="P:RTools.Util.StreamTokenizerSettings.ParseNumbers">
+            <summary>
+            Whether or not digits are specified as Digit type in the
+            character table.
+            This setting is based on the character types table, so this
+            setting interacts with character type table manipulation.
+            This setting may become incorrect if you modify the character
+            types table directly.
+            </summary>
+        </member>
+        <member name="P:RTools.Util.StreamTokenizerSettings.ParseHexNumbers">
+            <summary>
+            Whether or not to parse Hex (0xABCD...) numbers.
+            This setting is based on the character types table, so this
+            setting interacts with character type table manipulation.
+            </summary>
+        </member>
+        <member name="T:RTools.Util.StreamTokenizer">
+            <summary>
+            A StreamTokenizer similar to Java's.  This breaks an input stream
+            (coming from a TextReader) into Tokens based on various settings.  The settings
+            are stored in the TokenizerSettings property, which is a
+            StreamTokenizerSettings instance.
+            </summary>
+            <remarks>
+            <para>
+            This is configurable in that you can modify TokenizerSettings.CharTypes[] array
+            to specify which characters are which type, along with other settings
+            such as whether to look for comments or not.
+            </para>
+            <para>
+            WARNING: This is not internationalized.  This treats all characters beyond
+            the 7-bit ASCII range (decimal 127) as Word characters.
+            </para>
+            <para>
+            There are two main ways to use this: 1) Parse the entire stream at
+            once and get an ArrayList of Tokens (see the Tokenize* methods), 
+            and 2) call NextToken() successively.
+            This reads from a TextReader, which you can set directly, and this
+            also provides some convenient methods to parse files and strings.
+            This returns an Eof token if the end of the input is reached.
+            </para>
+            <para>
+            Here's an example of the NextToken() style of use:
+            <code>
+            StreamTokenizer tokenizer = new StreamTokenizer();
+            tokenizer.GrabWhitespace = true;
+            tokenizer.Verbosity = VerbosityLevel.Debug; // just for debugging
+            tokenizer.TextReader = File.OpenText(fileName);
+            Token token;
+            while (tokenizer.NextToken(out token)) log.Info("Token = '{0}'", token);
+            </code>
+            </para>
+            <para>
+            Here's an example of the Tokenize... style of use:
+            <code>
+            StreamTokenizer tokenizer = new StreamTokenizer("some string");
+            ArrayList tokens = new ArrayList();
+            if (!tokenizer.Tokenize(tokens)) 
+            { 
+            	// error handling
+            }
+            foreach (Token t in tokens) Console.WriteLine("t = {0}", t);
+            </code>
+            </para>
+            <para>
+            Comment delimiters are hardcoded (// and /*), not affected by char type table.
+            </para>
+            <para>
+            This sets line numbers in the tokens it produces.  These numbers are normally
+            the line on which the token starts.
+            There is one known caveat, and that is that when GrabWhitespace setting
+            is true, and a whitespace token contains a newline, that token's line number
+            will be set to the following line rather than the line on which the token
+            started.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:RTools.Util.StreamTokenizer.NChars">
+            <summary>
+            This is the number of characters in the character table.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizer.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizer.#ctor(System.IO.TextReader)">
+            <summary>
+            Construct and set this object's TextReader to the one specified.
+            </summary>
+            <param name="sr">The TextReader to read from.</param>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizer.#ctor(System.String)">
+            <summary>
+            Construct and set a string to tokenize.
+            </summary>
+            <param name="str">The string to tokenize.</param>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizer.Initialize">
+            <summary>
+            Utility function, things common to constructors.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizer.InitializeStream">
+            <summary>
+            Clear the stream settings.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizer.Display">
+            <summary>
+            Display the state of this object.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizer.Display(System.String)">
+            <summary>
+            Display the state of this object, with a per-line prefix.
+            </summary>
+            <param name="prefix">The pre-line prefix.</param>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizer.PickNextState(System.Byte,System.Int32)">
+            <summary>
+            Pick the next state given just a single character.  This is used
+            at the start of a new token.
+            </summary>
+            <param name="ctype">The type of the character.</param>
+            <param name="c">The character.</param>
+            <returns>The state.</returns>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizer.PickNextState(System.Byte,System.Int32,RTools.Util.StreamTokenizer.NextTokenState)">
+            <summary>
+            Pick the next state given just a single character.  This is used
+            at the start of a new token.
+            </summary>
+            <param name="ctype">The type of the character.</param>
+            <param name="c">The character.</param>
+            <param name="excludeState">Exclude this state from the possible next state.</param>
+            <returns>The state.</returns>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizer.GetNextChar">
+            <summary>
+            Read the next character from the stream, or from backString
+            if we backed up.
+            </summary>
+            <returns>The next character.</returns>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizer.NextToken(RTools.Util.Token@)">
+            <summary>
+            Get the next token.  The last token will be an EofToken unless
+            there's an unterminated quote or unterminated block comment
+            and Settings.DoUntermCheck is true, in which case this throws
+            an exception of type StreamTokenizerUntermException or sub-class.
+            </summary>
+            <param name="token">The output token.</param>
+            <returns>bool - true for success, false for failure.</returns>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizer.GrabInt(RTools.Util.CharBuffer,System.Boolean,System.Char@)">
+            <summary>
+            Starting from current stream location, scan forward
+            over an int.  Determine whether it's an integer or not.  If so, 
+            push the integer characters to the specified CharBuffer.  
+            If not, put them in backString (essentially leave the
+            stream as it was) and return false.
+            <para>
+            If it was an int, the stream is left 1 character after the
+            end of the int, and that character is output in the thisChar parameter.
+            </para>
+            <para>The formats for integers are: 1, +1, and -1</para>
+            The + and - signs are included in the output buffer.
+            </summary>
+            <param name="sb">The CharBuffer to append to.</param>
+            <param name="allowPlus">Whether or not to consider + to be part
+            of an integer.</param>
+            <param name="thisChar">The last character read by this method.</param>
+            <returns>true for parsed an int, false for not an int</returns>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizer.Tokenize(System.Collections.ArrayList)">
+            <summary>
+            Parse the rest of the stream and put all the tokens
+            in the input ArrayList. This resets the line number to 1.
+            </summary>
+            <param name="tokens">The ArrayList to append to.</param>
+            <returns>bool - true for success</returns>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizer.TokenizeReader(System.IO.TextReader,System.Collections.ArrayList)">
+            <summary>
+            Parse all tokens from the specified TextReader, put
+            them into the input ArrayList.
+            </summary>
+            <param name="tr">The TextReader to read from.</param>
+            <param name="tokens">The ArrayList to append to.</param>
+            <returns>bool - true for success, false for failure.</returns>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizer.TokenizeFile(System.String,System.Collections.ArrayList)">
+            <summary>
+            Parse all tokens from the specified file, put
+            them into the input ArrayList.
+            </summary>
+            <param name="fileName">The file to read.</param>
+            <param name="tokens">The ArrayList to put tokens in.</param>
+            <returns>bool - true for success, false for failure.</returns>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizer.TokenizeString(System.String,System.Collections.ArrayList)">
+            <summary>
+            Parse all tokens from the specified string, put
+            them into the input ArrayList.
+            </summary>
+            <param name="str"></param>
+            <param name="tokens">The ArrayList to put tokens in.</param>
+            <returns>bool - true for success, false for failure.</returns>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizer.TokenizeStream(System.IO.Stream,System.Collections.ArrayList)">
+            <summary>
+            Parse all tokens from the specified Stream, put
+            them into the input ArrayList.
+            </summary>
+            <param name="s"></param>
+            <param name="tokens">The ArrayList to put tokens in.</param>
+            <returns>bool - true for success, false for failure.</returns>
+        </member>
+        <member name="M:RTools.Util.StreamTokenizer.TokenizeFile(System.String)">
+            <summary>
+            Tokenize a file completely and return the tokens in a Token[].
+            </summary>
+            <param name="fileName">The file to tokenize.</param>
+            <returns>A Token[] with all tokens.</returns>
+        </member>
+        <member name="P:RTools.Util.StreamTokenizer.TextReader">
+            <summary>
+            This is the TextReader that this object will read from.
+            Set this to set the input reader for the parse.
+            </summary>
+        </member>
+        <member name="P:RTools.Util.StreamTokenizer.Settings">
+            <summary>
+            The settings which govern the behavior of the tokenization.
+            </summary>
+        </member>
+        <member name="T:RTools.Util.StreamTokenizer.NextTokenState">
+            <summary>
+            The states of the state machine.
+            </summary>
+        </member>
+        <member name="T:RTools.Util.Token">
+            <summary>
+            Token class used by StreamTokenizer.
+            This represents a single token in the input stream.
+            This is subclassed to provide specific token types,
+            such as CharToken, FloatToken, etc.
+            </summary>
+        </member>
+        <member name="F:RTools.Util.Token.lineNumber_">
+            <summary>
+            The line number in the input stream where this token originated.
+            This is base-1.
+            </summary>
+        </member>
+        <member name="F:RTools.Util.Token.obj">
+            <summary>
+            A storage object for the data of this token.
+            </summary>
+        </member>
+        <member name="F:RTools.Util.Token.untermError">
+            <summary>
+            Backer for UntermError.
+            </summary>
+        </member>
+        <member name="F:RTools.Util.Token.untermErrorMsg">
+            An error message associated with unterm error.
+        </member>
+        <member name="M:RTools.Util.Token.#ctor(System.Int32)">
+            <summary>
+            Construct a Token with the specified line number.
+            </summary>
+            <param name="line">The line number where this
+            token comes from.</param>
+        </member>
+        <member name="M:RTools.Util.Token.Equals(System.Object)">
+            <summary>
+            Equals override.
+            </summary>
+            <param name="other">The object to compare to.</param>
+            <returns>bool - true for equals, false otherwise.</returns>
+        </member>
+        <member name="M:RTools.Util.Token.Equals(System.String)">
+            <summary>
+            Equals overload.
+            </summary>
+            <param name="s">The string to compare to.</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:RTools.Util.Token.Equals(System.Char)">
+            <summary>
+            Equals overload.
+            </summary>
+            <param name="c">The char to compare to.</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:RTools.Util.Token.op_Equality(RTools.Util.Token,System.Object)">
+            <summary>
+            Operator== overload.  Compare a token and an object.
+            </summary>
+            <param name="t">The token to compare.</param>
+            <param name="o">The other object.</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:RTools.Util.Token.op_Inequality(RTools.Util.Token,System.Object)">
+            <summary>
+            Operator!= overload.  Compare a token and an object.
+            </summary>
+            <param name="t">The token to compare.</param>
+            <param name="o">The other object.</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:RTools.Util.Token.op_Equality(RTools.Util.Token,System.Char)">
+            <summary>
+            Operator== overload.  Compare a token and a char.
+            </summary>
+            <param name="t">The token to compare.</param>
+            <param name="c">The char.</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:RTools.Util.Token.op_Inequality(RTools.Util.Token,System.Char)">
+            <summary>
+            Operator!= overload.  Compare a token and a char.
+            </summary>
+            <param name="t">The token to compare.</param>
+            <param name="c">The char.</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:RTools.Util.Token.op_Equality(RTools.Util.Token,System.String)">
+            <summary>
+            Operator== overload.  Compare a token and a string.
+            </summary>
+            <param name="t">The token to compare.</param>
+            <param name="s">The string.</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:RTools.Util.Token.op_Inequality(RTools.Util.Token,System.String)">
+            <summary>
+            Operator!= overload.  Compare a token and a string.
+            </summary>
+            <param name="t">The token to compare.</param>
+            <param name="s">The string.</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:RTools.Util.Token.GetHashCode">
+            <summary>
+            Override.  Returns the ToString().GetHashCode().
+            </summary>
+            <returns>The hash code.</returns>
+        </member>
+        <member name="M:RTools.Util.Token.ToLineString">
+            <summary>
+            Produce a string which includes the line number.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RTools.Util.Token.ToDebugString">
+            <summary>
+            Produce a string which includes the token type.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RTools.Util.Token.ConvertToType(System.Type)">
+            <summary>
+            Create an object of the specified type corresponding to
+            this token.
+            </summary>
+            <param name="t">The type of object to create.</param>
+            <returns>The new object, or null for error.</returns>
+        </member>
+        <member name="P:RTools.Util.Token.LineNumber">
+            <summary>
+            The line number where this token was found.  This is base-1.
+            </summary>
+        </member>
+        <member name="P:RTools.Util.Token.Object">
+            <summary>
+            The Object stored by this token.  This will be
+            a primitive C# type.
+            </summary>
+        </member>
+        <member name="P:RTools.Util.Token.UntermError">
+            <summary>
+            Whether or not there was an unterminated token problem
+            when creating this token.  See UntermErrorMessage for
+            a message associated with the problem.
+            </summary>
+        </member>
+        <member name="P:RTools.Util.Token.UntermErrorMsg">
+            <summary>
+            The error message if there was an unterminated token error
+            creating this token.
+            </summary>
+        </member>
+        <member name="P:RTools.Util.Token.StringValue">
+            <summary>
+            Return this token's value as a string.
+            </summary>
+            <returns>This token's value as a string.</returns>
+        </member>
+        <member name="T:RTools.Util.EolToken">
+            <summary>
+            Represents end-of-lines (line separator characters).
+            </summary>
+        </member>
+        <member name="M:RTools.Util.EolToken.#ctor">
+            <summary>Default constructor.</summary>
+        </member>
+        <member name="M:RTools.Util.EolToken.#ctor(System.Int32)">
+            <summary>Constructor that takes line number.</summary>
+        </member>
+        <member name="M:RTools.Util.EolToken.ToDebugString">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="M:RTools.Util.EolToken.ToString">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="M:RTools.Util.EolToken.Equals(System.Object)">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="M:RTools.Util.EolToken.GetHashCode">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="P:RTools.Util.EolToken.StringValue">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="T:RTools.Util.EofToken">
+            <summary>
+            Represents end of file/stream.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.EofToken.#ctor">
+            <summary>Default constructor.</summary>
+        </member>
+        <member name="M:RTools.Util.EofToken.#ctor(System.Int32)">
+            <summary>Constructor that takes line number.</summary>
+        </member>
+        <member name="M:RTools.Util.EofToken.ToString">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="M:RTools.Util.EofToken.ToDebugString">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="M:RTools.Util.EofToken.Equals(System.Object)">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="M:RTools.Util.EofToken.GetHashCode">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="P:RTools.Util.EofToken.StringValue">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="T:RTools.Util.StringToken">
+            <summary>
+            Abstract base class for string tokens.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.StringToken.#ctor(System.String)">
+            <summary>Default constructor.</summary>
+        </member>
+        <member name="M:RTools.Util.StringToken.#ctor(System.String,System.Int32)">
+            <summary>Constructor with the specified value
+            and line number.</summary>
+        </member>
+        <member name="M:RTools.Util.StringToken.ToDebugString">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="M:RTools.Util.StringToken.ToString">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="M:RTools.Util.StringToken.GetHashCode">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="P:RTools.Util.StringToken.StringValue">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="T:RTools.Util.WordToken">
+            <summary>
+            Token type for words, meaning sequences of word
+            characters.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.WordToken.#ctor(System.String)">
+            <summary>Constructor with the specified value.</summary>
+        </member>
+        <member name="M:RTools.Util.WordToken.#ctor(System.String,System.Int32)">
+            <summary>Constructor with the specified value
+            and line number.</summary>
+        </member>
+        <member name="T:RTools.Util.QuoteToken">
+            <summary>
+            Token type for Quotes such as "this is a quote".
+            </summary>
+        </member>
+        <member name="M:RTools.Util.QuoteToken.#ctor(System.String)">
+            <summary>Constructor with the specified value.</summary>
+        </member>
+        <member name="M:RTools.Util.QuoteToken.#ctor(System.String,System.Int32)">
+            <summary>Constructor with the specified value
+            and line number.</summary>
+        </member>
+        <member name="T:RTools.Util.CommentToken">
+            <summary>
+            Token type for comments, including line and block
+            comments.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.CommentToken.#ctor(System.String)">
+            <summary>Constructor with the specified value.</summary>
+        </member>
+        <member name="M:RTools.Util.CommentToken.#ctor(System.String,System.Int32)">
+            <summary>Constructor with the specified value
+            and line number.</summary>
+        </member>
+        <member name="T:RTools.Util.WhitespaceToken">
+            <summary>
+            Token type for whitespace such as spaces and tabs.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.WhitespaceToken.#ctor(System.String)">
+            <summary>Constructor with the specified value.</summary>
+        </member>
+        <member name="M:RTools.Util.WhitespaceToken.#ctor(System.String,System.Int32)">
+            <summary>Constructor with the specified value
+            and line number.</summary>
+        </member>
+        <member name="T:RTools.Util.CharToken">
+            <summary>
+            Token type for characters, meaning non-word characters.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.CharToken.#ctor(System.String,System.Int32)">
+            <summary>Constructor with the specified value
+            and line number.</summary>
+        </member>
+        <member name="M:RTools.Util.CharToken.#ctor(System.Char)">
+            <summary>Constructor with the specified value.</summary>
+        </member>
+        <member name="M:RTools.Util.CharToken.#ctor(System.Char,System.Int32)">
+            <summary>Constructor with the specified value.</summary>
+        </member>
+        <member name="M:RTools.Util.CharToken.ToDebugString">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="M:RTools.Util.CharToken.ToString">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="M:RTools.Util.CharToken.GetHashCode">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="M:RTools.Util.CharToken.Equals(System.Object)">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="P:RTools.Util.CharToken.StringValue">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="T:RTools.Util.FloatToken">
+            <summary>
+            Token type for floating point numbers, stored internally as a Double.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.FloatToken.#ctor(System.String)">
+            <summary>Constructor with the specified value.</summary>
+        </member>
+        <member name="M:RTools.Util.FloatToken.#ctor(System.Single)">
+            <summary>Constructor with the specified value.</summary>
+        </member>
+        <member name="M:RTools.Util.FloatToken.#ctor(System.Double)">
+            <summary>Constructor with the specified value.</summary>
+        </member>
+        <member name="M:RTools.Util.FloatToken.#ctor(System.String,System.Int32)">
+            <summary>Constructor with the specified value
+            and line number.</summary>
+        </member>
+        <member name="M:RTools.Util.FloatToken.#ctor(System.Double,System.Int32)">
+            <summary>Constructor with the specified value and line
+            number.</summary>
+        </member>
+        <member name="M:RTools.Util.FloatToken.ToDebugString">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="M:RTools.Util.FloatToken.ToString">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="M:RTools.Util.FloatToken.GetHashCode">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="M:RTools.Util.FloatToken.Equals(System.Object)">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="P:RTools.Util.FloatToken.StringValue">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="T:RTools.Util.IntToken">
+            <summary>
+            Token type for integer tokens. This handles both Int32 and Int64.
+            </summary>
+        </member>
+        <member name="M:RTools.Util.IntToken.#ctor(System.Int32)">
+            <summary>Constructor with the specified value.</summary>
+        </member>
+        <member name="M:RTools.Util.IntToken.#ctor(System.Int64)">
+            <summary>Constructor with the specified value.</summary>
+        </member>
+        <member name="M:RTools.Util.IntToken.#ctor(System.String)">
+            <summary>Constructor with the specified value.</summary>
+        </member>
+        <member name="M:RTools.Util.IntToken.#ctor(System.String,System.Int32)">
+            <summary>Constructor with the specified value
+            and line number.</summary>
+        </member>
+        <member name="M:RTools.Util.IntToken.#ctor(System.Int32,System.Int32)">
+            <summary>Constructor with the specified value
+            and line number.</summary>
+        </member>
+        <member name="M:RTools.Util.IntToken.#ctor(System.Int64,System.Int32)">
+            <summary> 
+            Constructor for a 64 bit int 
+            </summary> 
+        </member>
+        <member name="M:RTools.Util.IntToken.ParseHex(System.String,System.Int32)">
+            <summary>
+            Parse a string known to be a hex string.  This is faster
+            than Parse which doesn't assume the number is Hex.  This will
+            throw an exception if the input number isn't hex.
+            </summary>
+            <param name="s">The hex number as a string.</param>
+            <param name="lineNumber">The line where this token was found.</param>
+            <returns>A new IntToken set to the value in the input string.</returns>
+        </member>
+        <member name="M:RTools.Util.IntToken.Parse(System.String)">
+            <summary>
+            Convert the input string to an integer, if possible
+            </summary>
+            <param name="s">The string to parse.</param>
+        </member>
+        <member name="M:RTools.Util.IntToken.ToDebugString">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="M:RTools.Util.IntToken.ToString">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="M:RTools.Util.IntToken.GetHashCode">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="M:RTools.Util.IntToken.Equals(System.Object)">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="P:RTools.Util.IntToken.StringValue">
+            <summary>Override, see base <see cref="T:RTools.Util.Token"/></summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.IConnectionAcceptor">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.IConnectionAcceptorBase">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.NewConnectionArgs">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.ConnectionAcceptor">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.ConnectionEventArgs">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.ConnectionMessage">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.ConnectionMessagePackagerImpl">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.IMessagePackager">
+            <summary>
+             Packager is StructreHandler for server-to-client way
+             and HAS StructureHandler for client-to-server way
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.ConnectionMessagePackagerImpl.IMessageHandler">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.ConnectionMessagePackagerImpl.IMessageHandler.OnMessage(Genesyslab.Platform.Commons.Connection.ConnectionMessage)">
+             Fired when new message is received.
+            
+             @param message The message from remote party
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.ConnectionState">
+            <summary>
+            ConnectionState enum defines all possible connection states.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.ConnectionState.Opening">
+            <summary>
+            Connection opening is in progress.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.ConnectionState.Opened">
+            <summary>
+            Connection is opened.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.ConnectionState.Closing">
+            <summary>
+            Connection closing is in progress.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.ConnectionState.Closed">
+            <summary>
+            Connection is closed.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.IIPAdressFamilySelector">
+            <summary>
+            <c>IIPAdressFamilySelector</c> allows choosing desired IP protocol used by instance of IConnection 
+            or IConnectionAcceptor object.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.PackedMessage">
+            <exclude/>
+            <summary>
+            Used internally to write message to stream. External usage is not supported.
+            Can be changed or even removed at any time.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.PackedMessage.MaxBufferLen">
+            Length message buffer (bytes array).
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.PackedMessage.MaxStringLen">
+            Max length of string array type attribute.
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.PackedMessage.MaxBinaryLen">
+            Max length of bytes array type attribute.
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.PackedMessage.buf">
+            Message buffer.
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.PackedMessage.len">
+            Message length.
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.PackedMessage.msgType">
+            Message type.
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.PackedMessage.numAttr">
+            Number of attributes.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.PackedMessage.#ctor(Genesyslab.Platform.Commons.Connection.ConnectionMessage,System.Text.Encoding)">
+             Constructor.
+             For outgoing messages.
+            
+             @param message Message to pack.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.PackedMessage.#ctor(System.Int32,System.Text.Encoding)">
+             Constructor.
+             For outgoing messages.
+            
+             @param msg_id Message type.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.PackedMessage.AddIntAttrib(System.Int32,System.Int32)">
+             Add int type attribute to message.
+            
+             @param attrId  Attribute ID.
+             @param attrVal Attibute.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.PackedMessage.AddLongAttrib(System.Int32,System.Int64)">
+             Add long type attribute to message.
+            
+             @param attrId  Attribute ID.
+             @param attrVal Attibute.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.PackedMessage.AddStringAttrib(System.Int32,System.String)">
+             Add String type attribute to message.
+            
+             @param attrId  Attribute ID.
+             @param attr_val Attibute.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.PackedMessage.AddBStringAttrib(System.Int32,System.Byte[])">
+             Add BString type attribute to message.
+            
+             @param attrId Attribute ID.
+             @param bb      Attibute.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.PackedMessage.AddBinaryAttrib(System.Int32,System.Byte[])">
+             Add bytes array type attribute to message.
+            
+             @param attrId Attribute ID.
+             @param bb      Attibute.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.PackedMessage.AddTKVListAttrib(System.Int32,Genesyslab.Platform.Commons.Collections.KeyValueCollection)">
+             Add TKVList type attribute to message.
+            
+             @param attrId  Attribute ID.
+             @param attrVal Attibute.
+             @throws Exception If attribute too long.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.PackedMessage.GetNumAttr">
+             Getter.
+            
+             @return Attributes number.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.PackedMessage.WriteTo(Genesyslab.Platform.Commons.Connection.IWritePoint)">
+             Send message to socket.
+             If message length  > MAX_PACKET_LEN, message previously will
+             splitted to lot of EXTENDED_PACKET`s .
+            
+             @param endpoint Stream to write.
+             @throws IOException thrown by stream.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.PackedMessage.AddUnsignedShort(System.Int32)">
+             Add unsigned short (2 bytes) type value to messages buffer (bytes array).
+            
+             @param x Value.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.PackedMessage.AddInt(System.Int32)">
+             Add int type value to messages buffer (bytes array).
+            
+             @param x Value.
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.PackedMessage.AddLong(System.Int64)">
+             Add long type value to messages buffer (bytes array).
+            
+             @param x Value.
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.SelectorManager">
+            <exclude/>
+            <summary>
+            Summary description for SelectorManager.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.ShiftByteArrayOutputStream">
+            <exclude/>
+            <summary>
+            Summary description for ShiftByteArrayOutputStream.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.ShiftByteArrayOutputStream.ShiftBack(System.Int32)">
+            <summary>
+            Shifts byte array so, that byte at position <code>pos</code>
+            becomes the first byte in array.
+            </summary>
+            <param name="pos">position to shift from</param>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.ShiftByteArrayOutputStream.GetBuffer">
+            <summary>
+            Return internal buffer of this stream.
+            </summary>
+            <returns>internal stream buffer</returns>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.Constants">
+            <exclude/>
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.Constants.MaxPacketLen">
+            Max length of packet for sending to socket.
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.Constants.MaxDataLen">
+            Max length of splitted message data.
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.Constants.ExtendedPacketTag">
+            EXTENDED_PACKET tag, used in body of packet.
+        </member>
+        <member name="F:Genesyslab.Platform.Commons.Connection.Constants.ExtendedPacketTagLength">
+            Length of EXTENDED_PACKET tag.
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.StreamParser">
+            <exclude/>
+            <summary>
+            Summary description for StreamParser.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.StreamParser.ProcessPacket(System.Int32)">
+             Process packet of data. The packet can be regular, interceptor or
+             extended packet. <code>packetLen</code> includes length of data
+             and 4 bytes of length marker.
+            
+             @param packetLen length of packet
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.StreamParser.GetPacketLen">
+             Return packet length
+            
+             @return packet length or 0 if more data needed or -1
+                  if the packet is invalid
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.Timer.ITimerActionTicket">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Timer.ITimerActionTicket.Cancel">
+            Cancel execution of an action if it has not been executed or
+            executed periodically.
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.Timer.IScheduler">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Timer.IScheduler.Schedule(System.Int64,Genesyslab.Platform.Commons.Connection.Timer.ITimerAction)">
+             Schedule an action to be executed after specified delay.
+             <code>TimerActionTicket</code> can be used to cancel task execution
+            
+             @param delay delay (in ms) to wait before task execution
+             @param action action to perform
+             @return ticket for the action
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Timer.IScheduler.Schedule(System.Int64,System.Int64,Genesyslab.Platform.Commons.Connection.Timer.ITimerAction)">
+             Schedule a periodical action to be executed after specified delay.
+             <code>TimerActionTicket</code> can be used to cancel task execution
+            
+             @param delay delay (in ms) to wait before task execution
+             @param period delay (in ms) between tasks execution
+             @param action action to perform
+             @return ticket for the action
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Timer.IScheduler.Shutdown">
+            Stop this Sheduler. The state of the service after calling this
+            method is undefined.
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.Timer.TimerFactory">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.Timer.TimerTask">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.Timer.ITimer">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.Timer.SystemTimer">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.Timer.SchedulerProvider">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.TlsSupport">
+            <summary>
+            Base class for TLS support in PSDK. This is a common part for client and server TLS support.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.TlsSupport.Enabled">
+            <summary>
+            Enables TLS mode.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.TlsClientSupport">
+            <summary>
+            TlsClientSupport class contains TLS configuration properties for client side.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.TlsClientSupport.Configure(Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration)">
+            <summary>
+            Configures TLS properties using IConnectionConfiguration object.
+            </summary>
+            <param name="config">Configuration container.</param>
+            <param name="logger">ILogger object.</param>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.TlsClientSupport.ClientCertificates">
+            <summary>
+            Collection that contains client certificates (for client authentication on server). Can be null.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.TlsClientSupport.ServerCertificateName">
+            <summary>
+            ServerCertificateName must match the name on the server's certificate
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.TlsClientSupport.CheckCertificateRevocation">
+            <summary>
+            Enables or disables verification of certificate revocation. False by default.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.TlsClientSupport.EnabledSslProtocols">
+            <summary>
+            The SslProtocols value that represents the protocol used for authentication.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.TlsServerSupport">
+            <summary>
+            TlsServerSupport class contains TLS configuration properties for server side.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.TlsServerSupport.Configure(Genesyslab.Platform.Commons.Connection.Configuration.IConnectionConfiguration)">
+            <summary>
+            Configures TLS properties using IConnectionConfiguration object.
+            </summary>
+            <param name="config">Configuration container.</param>
+            <param name="logger">ILogger object.</param>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.TlsServerSupport.EnabledSslProtocols">
+            <summary>
+            The SslProtocols value that represents the protocol used for authentication.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.Commons.Connection.TlsServerSupport.CheckCertificateRevocation">
+            <summary>
+            Enables or disables verification of certificate revocation. False by default.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.IWritePoint">
+            <exclude/>
+            <summary>
+            Summary description for WritePoint.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.SocketWritePoint">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.Xml.XmlMessage">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Xml.XmlMessage.WriteTo(Genesyslab.Platform.Commons.Connection.IWritePoint)">
+            <summary>
+             Send message to socket.
+             If message length  > MAX_PACKET_LEN, message previously will
+             splitted to lot of EXTENDED_PACKET`s .
+            </summary>
+             <param name="endpoint">Stream to write.</param>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Connection.Xml.XmlMessageProducerFactory">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.Commons.Connection.Xml.IXmlStructureHandler.NeedsProcessing(System.Object,System.String,System.Xml.XmlElement)">
+            <summary>
+             Indicates that complex (compound) attribute is processed.
+             For now have sence in web-protocols only (to help maintain xml structure)
+             and ignored in other protocols.
+            </summary>
+            <param name="state">state of the handler</param>
+            <param name="attributeId">attribute name</param>
+        </member>
+    </members>
+</doc>

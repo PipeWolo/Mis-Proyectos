@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Import Namespace="Navigator.Clases" %>
+<%@ Import Namespace="System.Linq" %>
+<%@ Import Namespace="System.Collections.Generic" %>
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="es">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport" />
+    <title>Hogar de Cristo</title>
+
+    <link rel="shortcut icon" type="image/png" href="<%=ResolveUrl("~/assets/img/logo/favicon.png")%>">
+
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="<%=ResolveUrl("~/assets/plugins/bootstrap/css/bootstrap.min.css")%>">
+    <link rel="stylesheet" href="<%=ResolveUrl("~/assets/plugins/fontawesome/css/all.min.css")%>">
+
+    <!-- CSS Libraries -->
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="<%=ResolveUrl("~/assets/css/style.css")%>">
+    <link rel="stylesheet" href="<%=ResolveUrl("~/assets/css/components.css")%>">
+
+    <script>
+        sessionStorage.setItem('user', '<%=((List<KVP>)Session["DatosCampana"])%>');
+        sessionStorage.setItem('Prueba', '<%=(Session["Prueba"])%>');
+    </script>
+    <script>
+        window.onbeforeunload = function (e) {
+            var salir = $("#hsalir").val();
+
+            if (salir == "0") {
+                var advertencia = "Advertencia:\r\nEsta saliendo del formulario sin tipificar la llamada\r\nConfirma salir de todos modos";
+                var ret = window.confirm(advertencia);
+                if (!ret) return advertencia;
+            }
+        };
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="layout-3">
+    <form runat="server" autocomplete="off">
+        <div id="app">
+            <div class="main-wrapper container">
+                <div class="navbar-bg"></div>
+                <nav class="navbar navbar-expand-lg main-navbar">
+                    <a href="#" class="navbar-brand">
+                        <img src="<%=ResolveUrl("~/assets/img/logo/logo.png")%>" alt="logo">
+                        <input type="hidden" id="hsalir" value="0" />
+                    </a>
+                </nav>
+
+
+                <!-- Main Content -->
+                <div class="main-content">
+                    <section class="section">   
+                        <div class="section-body">
+                            <asp:ContentPlaceHolder ID="body" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </section>
+                </div>
+                
+                <asp:ContentPlaceHolder ID="modals" runat="server">
+                </asp:ContentPlaceHolder>
+                <footer class="main-footer">
+                    <div class="footer-left" style="width: 100%; text-align: center;">
+                        Copyright &copy;
+                    <script>document.write(new Date().getFullYear())</script>
+                        <div class="bullet"></div>
+                        Desarrollado por Entel Contact Center
+                    </div>
+                    <div class="footer-right">
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </form>
+
+    <!-- General JS Scripts -->
+    <script src="<%=ResolveUrl("~/assets/plugins/jquery/jquery.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/assets/plugins/tooltip/popper.js")%>"></script>
+    <script src="<%=ResolveUrl("~/assets/plugins/tooltip/tooltip.js")%>"></script>
+    <script src="<%=ResolveUrl("~/assets/plugins/bootstrap/js/bootstrap.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/assets/plugins/nicescroll/jquery.nicescroll.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/assets/js/scripts.js")%>"></script>
+
+    <!-- JS Libraies -->
+    <script src="<%=ResolveUrl("~/assets/plugins/sweetalert/sweetalert.min.js")%>"></script>
+
+    <!-- Page Specific JS File -->
+    <script src="<%=ResolveUrl("~/controller/ctlr_master.js")%>"></script>
+    <script src="<%=ResolveUrl("~/controller/ctlr_util.js")%>"></script>
+    <script src="<%=ResolveUrl("~/scripts/master.js")%>"></script>
+
+    <asp:ContentPlaceHolder ID="script" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+
+</html>

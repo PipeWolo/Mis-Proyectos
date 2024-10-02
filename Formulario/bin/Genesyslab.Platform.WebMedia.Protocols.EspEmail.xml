@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genesyslab.Platform.WebMedia.Protocols.EspEmail</name>
+    </assembly>
+    <members>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.EspEmail.AbstractPrintable">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.EspEmail.AbstractList`1">
+            <summary>
+            Summary description for AbstractList.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.EspEmail.AbstractList`1.list">
+            <exclude/>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.EspEmail.AbstractMessage">
+            <summary>
+            AbstractMessage class. Base class for all messages in protocol.
+            </summary>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.EspEmail.AbstractMessage.protId">
+            <exclude/>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.EspEmail.AbstractMessage.protocolDescr">
+            <exclude/>
+        </member>
+        <member name="F:Genesyslab.Platform.WebMedia.Protocols.EspEmail.AbstractMessage.end_point">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.EspEmail.AbstractMessage.#ctor">
+            <summary>
+            AbstractMessage default constructor.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.AbstractMessage.Name">
+            <summary>
+            Gets name of the message.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.AbstractMessage.Id">
+            <summary>
+            Gets Id of the message.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.AbstractMessage.Item(System.String)">
+            <summary>
+            Gets or sets the values of message properties. Please do not use 'set' accessor because of performance impact.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.AbstractMessage.Endpoint">
+            <summary>
+            Gets Endpoint from where message was received
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.AbstractMessage.ProtocolDescription">
+            <summary>
+            Gets ProtocolDescription.
+            </summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.AbstractMessage.ProtocolId">
+            <summary>
+            Gets Id of current protocol.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Internal.CustomMarshalManager">
+            <summary>
+            Summary description for CustomMarshaling.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.EspEmail.EmailAttachmentList">
+            <summary>
+            File attachments for RequestCreateWebEmailIn message.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.EspEmail.EspEmailMessagesResolver">
+            <summary>
+            Summary description for UCSMessagesResolver.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.EspEmail.EspEmailProtocol">
+            <summary>
+            Use an <c>EspEmailProtocol</c> object to establish
+            communication between client application and ESP based Email Server.
+            </summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.EspEmail.EspEmailProtocol.#ctor(Genesyslab.Platform.Commons.Protocols.Endpoint)">
+            <summary>
+            Creates a new <c>EspEmailProtocol</c> object.
+            </summary>
+            <param name="settings">The endpoint (server) you wish to connect to</param>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Requests.RequestCreateWebEmailIn">
+            <summary>
+            <!-- provide an alternative to ESJ existing service based on webapi protocol.
+            
+            The alternative will provide the same service through ESP protocol and enable the 
+            possibility to deprecate the webapi protocol in next releases
+            
+            -	Use standardized Genesys ESP protocol
+            
+            ESJ itself does not handle the XML part of received webapi protocol request but instead, 
+            ESJ is submitting the received stream to Genesys.webapi.media.irs.common.* from 
+            multimedia _icc_api.jar library to be processed and unpack content of XML envelop 
+            (see related exception below).  -->			
+            </summary>
+            <remarks>
+            	<strong>Required parameters:</strong>
+            		<list type="table">
+              		  <listheader>
+                			<term>Name</term>
+                			<description>Description</description>
+                 	</listheader>
+            	    	<item>
+              	  		<term><see cref="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Requests.RequestCreateWebEmailIn.Subject" /></term>
+                			<description>
+            							...
+                			</description>
+                 	</item>
+            	    	<item>
+              	  		<term><see cref="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Requests.RequestCreateWebEmailIn.Text" /></term>
+                			<description>
+            							...
+                			</description>
+                 	</item>
+            	    	<item>
+              	  		<term><see cref="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Requests.RequestCreateWebEmailIn.FromAddress" /></term>
+                			<description>
+            							...
+                			</description>
+                 	</item>
+            	    	<item>
+              	  		<term><see cref="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Requests.RequestCreateWebEmailIn.FirstName" /></term>
+                			<description>
+            							...
+                			</description>
+                 	</item>
+            	    	<item>
+              	  		<term><see cref="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Requests.RequestCreateWebEmailIn.LastName" /></term>
+                			<description>
+            							...
+                			</description>
+                 	</item>
+            		</list>
+            	<strong>Related Events:</strong>
+            		<list type="table">
+                	<listheader>
+              	  	<term>Name</term>
+                		<description>Description</description>
+                	</listheader>
+                	<item>
+                		<term><see cref="T:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Events.EventCreateWebEmailIn" /></term>
+                		<description>
+            					...
+            				</description>
+                 </item>
+                	<item>
+                		<term><see cref="T:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Events.EventError" /></term>
+                		<description>
+            					Indicates that the request encountered an error.
+            				</description>
+                 </item>
+            		</list>
+            	</remarks>
+            <!-- Code Example --> <!--
+            	<example>
+            		...:
+            		<code>
+            			...
+            		</code>
+            	</example> --> 
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Requests.RequestCreateWebEmailIn.Subject">
+            <summary>...</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Requests.RequestCreateWebEmailIn.Text">
+            <summary>...</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Requests.RequestCreateWebEmailIn.Mailbox">
+            <summary>...</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Requests.RequestCreateWebEmailIn.ParentId">
+            <summary>...</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Requests.RequestCreateWebEmailIn.FromAddress">
+            <summary>...</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Requests.RequestCreateWebEmailIn.FirstName">
+            <summary>...</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Requests.RequestCreateWebEmailIn.LastName">
+            <summary>...</summary>
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Requests.RequestCreateWebEmailIn.Attachments">
+            <summary>...</summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Events.EventCreateWebEmailIn">
+            <summary>...
+            </summary>
+            <remarks> 
+            	<strong>Selected Properties:</strong>
+            		<list type="table">
+            			<listheader>
+                		<term>Name</term>
+                		<description>Description</description>
+                	</listheader>
+                	<item>
+                		<term><see cref="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Events.EventCreateWebEmailIn.NewInteractionId" /></term>
+                		<description>Returns the ID of the new inbound e-mail interaction.</description>
+                	</item>
+            		</list> 
+            	<strong>Related Requests:</strong>
+            		<list type="table">
+                	<listheader>
+                		<term>Name</term>
+                		<description>Description</description>
+                	</listheader>
+                	<item>
+                		<term><see cref="T:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Requests.RequestCreateWebEmailIn" /></term>
+                		<description>...</description>
+                	</item>
+            		</list>
+            </remarks> <!--
+            <example>Here is a sample of the console output for a typical request.
+            	<code>
+            	...
+            	</code>
+            </example> --> 
+        </member>
+        <member name="P:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Events.EventCreateWebEmailIn.NewInteractionId">
+            <summary>Returns the ID of the new inbound e-mail interaction.</summary>
+        </member>
+        <member name="T:Genesyslab.Platform.WebMedia.Protocols.EspEmail.Events.EventError">
+            <summary>Indicates that an error has occurred.</summary>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.EspEmail.EspEmailFactory.FillActions">
+            <exclude/>
+        </member>
+        <member name="M:Genesyslab.Platform.WebMedia.Protocols.EspEmail.XmlEspEmailMessageSerializer.#ctor">
+            <summary>
+            Constructs <c>XmlContactServerMessageSerializer</c> object.
+            </summary>
+        </member>
+    </members>
+</doc>

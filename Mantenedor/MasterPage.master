@@ -1,0 +1,250 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Import Namespace="Navigator.Clases" %>
+<%@ Import Namespace="System.Linq" %>
+<!DOCTYPE html>
+
+<html class="no-js" lang="es">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport" />
+    <title>HDC Outbound Configurador</title>
+
+    <link rel="shortcut icon" type="image/png" href="<%=ResolveUrl("~/assets/img/logo/favicon.png")%>">
+
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="<%=ResolveUrl("~/assets/plugins/bootstrap/css/bootstrap.min.css")%>">
+    <link rel="stylesheet" href="<%=ResolveUrl("~/assets/plugins/fontawesome-free/5.10.2/css/all.min.css")%>">
+
+    <!-- CSS Libraries -->
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="<%=ResolveUrl("~/assets/css/style.css?V=1.1")%>">
+    <link rel="stylesheet" href="<%=ResolveUrl("~/assets/css/components.css")%>">
+    <link rel="stylesheet" href="<%=ResolveUrl("~/assets/css/custom.css")%>">
+    
+
+    <link rel="stylesheet" href="<%=ResolveUrl("~/themes/ui-lightness/jquery-ui-1.10.3.custom.css")%>" />
+    <script>
+        sessionStorage.setItem('userid', '<%=((Usuario)Session["LoggedUser"]).ID_USUARIO%>');
+        sessionStorage.setItem('usuario', '<%=((Usuario)Session["LoggedUser"]).USUARIO%>');
+        sessionStorage.setItem('nombre', '<%=((Usuario)Session["LoggedUser"]).NOMBRE%>');
+        sessionStorage.setItem('perfilid', '<%=((Usuario)Session["LoggedUser"]).ID_PERFIL%>');
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="sidebar-mini">
+    <form runat="server" autocomplete="off">
+        <div id="app">
+            <div class="main-wrapper main-wrapper-1">
+                <div class="navbar-bg"></div>
+                <nav class="navbar navbar-expand-lg main-navbar">
+                    <div class="form-inline mr-auto">
+                        <ul class="navbar-nav mr-3">
+                            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+                        </ul>
+                    </div>
+                    <ul class="navbar-nav navbar-right">
+                        <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            <img alt="image" src="<%=ResolveUrl("~/assets/img/avatar/avatar.png")%>" class="rounded-circle mr-1">
+                            <div class="d-sm-none d-lg-inline-block">
+                                Bienvenido(a),
+                               
+                                <%=((Usuario)Session["LoggedUser"]).NOMBRE%>
+                            </div>
+                        </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item has-icon btnConfiguracionCuenta" href="#"><i class="fas fa-key"></i><span>Cambiar Clave</span></a>
+                                <asp:ScriptManager ID="ScriptManager1" runat="server" ScriptMode="Release">
+                                </asp:ScriptManager>
+                                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                    <ContentTemplate>
+                                        <asp:LinkButton CssClass="dropdown-item has-icon text-danger" ID="btnCerrar" runat="server" OnClick="btnCerrar_Click" Text="<i class='fas fa-sign-out-alt'></i>Cerrar sesión"></asp:LinkButton>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="main-sidebar sidebar-style-2">
+                    <aside id="sidebar-wrapper">
+                        <div class="sidebar-brand">
+                            <a>
+                                <img src="<%=ResolveUrl("~/assets/img/logo/logo.png")%>" alt="logo" style="width: 35%;">
+                            </a>
+                        </div>
+                        <div class="sidebar-brand sidebar-brand-sm">
+                            <a>
+                                <img src="<%=ResolveUrl("~/assets/img/logo/favicon.png")%>" alt="logo" width="30"></a>
+                        </div>
+                        <ul class="sidebar-menu">
+                            <%=menuHTML %>
+                        </ul>
+                    </aside>
+                </div>
+
+                <!-- Main Content -->
+                <div class="main-content">
+                    <section class="section">
+                        <asp:ContentPlaceHolder ID="body" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </section>
+                </div>
+            </div>
+            <footer class="main-footer">
+                <div class="footer-left">
+                    Copyright &copy;
+                   
+                        <script>document.write(new Date().getFullYear())</script>
+                    <div class="bullet"></div>
+                    Desarrollado por Entel Contact Center
+                   
+                </div>
+                <div class="footer-right">
+                </div>
+            </footer>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modalConfiguracionCuenta" data-backdrop="false" data-keyboard="false">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    
+                <div class="modal-header">
+                    <h5 class="modal-title">Cambiar Clave</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active" style="font-size: 16px; max-width: 100%!important;"><a href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Datos personales</a></li>
+                                    </ul>
+                                    <br />
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>Nombre</label>
+                                        <input type="text" class="form-control" disabled="disabled" id="txtConfiguracionCuentaNombre" runat="server"/>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <label>Correo Electronico</label>
+                                        <input type="text" class="form-control" disabled="disabled" id="txtConfiguracionCuentaCorreo" runat="server" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" id="modalConfiguracionCuentaCambiarContraseña">
+                                <div class="col-xs-12 col-sm-12  col-md-12">
+                                    <br />
+                                    <ul class="nav nav-tabs">
+                                        <li class="active" style="font-size: 16px; max-width: 100%!important;"><a href="#"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp;Cambiar contraseña</a></li>
+                                    </ul>
+                                    <br />
+                                </div>
+                                <div class="col-xs-12 col-sm-12  col-md-4">
+                                    <div class="form-group">
+                                        <label>Clave Actual <strong class="red">(*)</strong></label>
+                                        <input runat="server" type="password" class="form-control" id="txtConfiguracionCuentaContrasenaActual" maxlength="100" />
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12  col-md-4">
+                                    <div class="form-group">
+                                        <label>Nueva Clave <strong class="red">(*)</strong></label>
+                                        <input runat="server" type="password" class="form-control" id="txtConfiguracionCuentaContrasenaNueva" maxlength="100" />
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12  col-md-4">
+                                    <div class="form-group">
+                                        <label>Confirme su Nueva Clave <strong class="red">(*)</strong></label>
+                                        <input runat="server" type="password" class="form-control" id="txtConfiguracionCuentaContrasenaNuevaConfirma" maxlength="100" />
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <br />
+                                    <div class="notice notice-warning">
+                                        <strong>Notas:</strong><br />
+                                        <br />
+                                        <ul>
+                                            <li><span>Los campos marcados con <strong class="red">(*)</strong> son obligatorios.</span></li>
+                                            <li><span>La clave debe tener por menos una letra mayúscula, un número, un carácter especial<strong>(. , - _ @ # $)</strong> y entre 14 y 25 caracteres.</span></li>
+                                            <li><span>No puede utilizar una clave que haya sido usada las ultimas 3 veces.</span></li>
+                                            <li><span>Su clave expirara en 30 días.</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="row">
+                                <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                                    <ContentTemplate>
+                                        <asp:LinkButton CssClass="btn btn-primary" ID="btnConfiguracionCuentaCambiar" runat="server" OnClick="btnConfiguracionCuentaCambiar_Click" Text="Cambiar contraseña" OnClientClick="ctrl_cuenta.StartLoader()"></asp:LinkButton>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="modal" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+
+    <!-- General JS Scripts -->
+    <script src="<%=ResolveUrl("~/assets/plugins/jquery/jquery.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/assets/plugins/bootstrap/js/popper.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/jquery/jquery-ui.js")%>"></script>
+    <script src="<%=ResolveUrl("~/assets/plugins/bootstrap/js/bootstrap.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/jquery/jquery.iframe-transport.js")%>"></script>
+    <script src="<%=ResolveUrl("~/assets/plugins/promise/promise.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/assets/plugins/tooltip/tooltip.js")%>"></script>
+    <script src="<%=ResolveUrl("~/assets/plugins/nicescroll/jquery.nicescroll.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/assets/js/scripts.js")%>"></script>
+
+    <!-- JS Libraies -->
+    <script src="<%=ResolveUrl("~/assets/plugins/sweetalert2/sweetalert2.all.min.js")%>"></script>
+
+
+    <!--daterangepicker-->
+    <link href="<%=ResolveUrl("~/assets/plugins/datatables/1.10.19/dataTables.bootstrap4.min.css")%>" rel="stylesheet" />
+    <script src="<%=ResolveUrl("~/assets/plugins/datatables/1.10.19/jquery.dataTables.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/assets/plugins/datatables/1.10.19/dataTables.bootstrap4.min.js")%>"></script>
+
+    <link href="<%=ResolveUrl("~/assets/plugins/busy-load/dist/app.min.css")%>" rel="stylesheet" />
+    <script src="<%=ResolveUrl("~/assets/plugins/busy-load/dist/app.min.js")%>"></script>
+    <!-- Select2 -->
+    <link href="<%=ResolveUrl("~/assets/plugins/select2/select2.min.css")%>" rel="stylesheet" />
+    <script src="<%=ResolveUrl("~/assets/plugins/select2/select2.min.js")%>" type="text/javascript"></script>
+    <script src="<%=ResolveUrl("~/assets/plugins/button-loader/jquery.buttonLoader.min.js")%>"></script>
+
+    <script src="<%=ResolveUrl("~/assets/plugins/jquery-mask/jquery.mask.min.js")%>"></script>
+    <!-- Page Specific JS File -->
+    <script src="<%=ResolveUrl("~/controllers/ctlr_master.js")%>"></script>
+    <script src="<%=ResolveUrl("~/controllers/ctlr_util.js")%>?v=2"></script>
+    <script src="<%=ResolveUrl("~/scripts/master.js")%>"></script>
+    <%--  <script type="text/javascript" src="<%=ResolveUrl("~/jquery/jquery.ui.datepicker-es.js")%>"></script>--%>
+    <script type="text/javascript" src="<%=ResolveUrl("~/scripts/fechas.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/navigator/clases.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/navigator/json2.js")%>"></script>
+     
+    <script src="<%=ResolveUrl("~/Cuenta/controller/ctrl_cuenta.js")%>"></script>
+    <script src="<%=ResolveUrl("~/Cuenta/scripts/cuenta.js")%>"></script>
+    
+    <asp:ContentPlaceHolder ID="script" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+
+</html>

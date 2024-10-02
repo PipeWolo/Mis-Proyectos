@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genesyslab.Platform.Commons.Collections.Binding</name>
+    </assembly>
+    <members>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Binding.ActionsTable">
+            <summary>
+            Summary description for ActionsTable.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Binding.Internal.BindingEngine">
+            <summary>
+            Summary description for BindingEngine.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Binding.AbstractBindingFactory">
+            <summary>
+            Generated class should be inherited from this class, and fill map 'classes'
+            with Types of classes as keys, and ActionsTable list as values in its constructor.
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Binding.IBindingFactory">
+            <summary>
+            Summary description for IBindingFactory
+            </summary>
+        </member>
+        <member name="T:Genesyslab.Platform.Commons.Collections.Binding.UnmarshalContext">
+            <summary>
+            Summary description for Context.
+            </summary>
+        </member>
+    </members>
+</doc>
