@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "jsbarcode": "^3.12.1",
+    "pdfkit-table": "^0.1.99"
+  },
+  "devDependencies": {
+    "eslint": "^9.35.0"
+  }
+}
